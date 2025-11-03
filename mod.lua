@@ -321,3 +321,4 @@ function Mod:onFootstep(char, num)
         Assets.playSound(sound_path)
     end
 end
+

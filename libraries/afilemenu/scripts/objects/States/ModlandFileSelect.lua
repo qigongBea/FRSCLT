@@ -534,20 +534,14 @@ function ModlandFileSelect:setResultText(text)
 end
 
 function ModlandFileSelect:swapIntoMod(mod)
-    Gamestate.switch({})
-    -- Clear the mod
-    Kristal.clearModState()
-
-    -- Reload mods and return to memu
-    Kristal.loadAssets("", "mods", "", function ()
-        Kristal.loadMod(mod)
-    end)
-
-    Kristal.DebugSystem:refresh()
-    -- End input if it's open
-    if not Kristal.Console.is_open then
-        TextInput.endInput()
-    end
+    Game.state = "EXIT"
+    Game.fader:fadeOut(function()
+        local orig_room = Mod.info.map
+        Mod.info.map = "chapter_select"
+        Game:load()
+        Mod.info.map = orig_room
+        return
+    end, {speed = 1})
 end
 
 function ModlandFileSelect:getHeartPos()

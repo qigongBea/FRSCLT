@@ -17,7 +17,7 @@
     "chapter": 6,
 
     // The map that you start in when first starting the mod.
-    "map": "bumperzone",
+    "map": "chapter_select",
     "useSaves": false,
 
     // The party. The first character is the player.
@@ -62,6 +62,58 @@
             "map": "hometown/torielhouse/kris_room",
             "configMenuOverride": true,
             "hookOverlay": true,
+            "chapter_select": true,
+        },
+        "obscurachapters": {
+            "infoProject": "Menu by Hyperboid", // If not set, defaults to "By: [Mod.info.author]"
+            "infoAuthor": "DELTARUNE: Forecasted", // If not set, defaults to "[Mod.info.name] v[Mod.info.version]"
+            "include_example": false, // Remove the default ch1 and ch2 (from the lib.json)
+            "chapters":[
+                {
+                    "image": "chapters/ch1",
+                    "name": "The Beginning",
+                    "sound": "ui_spooky_action"
+                },
+                {
+                    "image": "chapters/ch2",
+                    "name": "A Cyber's World",
+                    "sound": "deathnoise"
+                },
+                {
+                    "image": "chapters/ch3",
+                    "name": "Channel 3",
+                    "unlocked": true,
+                    "sound": "cardrive"
+                },
+                {
+                    "image": "chapters/ch4",
+                    "unlocked": true,
+                    "name": "Snowy Side-Dish!",
+                    "sound": "bluh"
+                },
+                {
+                    "image": "chapters/ch5",
+                    "name": "Dark After Dark",
+                    "unlocked": true,
+                    "sound": "bluh"
+                },
+                {
+                    "image": "chapters/ch6",
+                    "name": "In Too Deep",
+                    "unlocked": true,
+                    "sound": "bluh",
+                    "index": "6",
+                    "room": "bumperzone",
+                    "mod": "drfc-in-too-deep-restored"
+                },
+                {
+                    "image": "chapters/ch7",
+                    "name": "Access Denied",
+                    "unlocked": false,
+                    "sound": "bluh",
+                    "instant": true
+                }
+            ]
         }
     }
 }

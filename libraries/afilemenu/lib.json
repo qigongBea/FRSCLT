@@ -15,6 +15,7 @@
         "configMenuOverride": true,
         // Experimental. Makes holding ESC in-game bring you to the file select.
         "hookOverlay": false,
+        "chapterSelect": true,
         // What we call "Chapters"
         "chaptername": {
             "long": "Chapter",

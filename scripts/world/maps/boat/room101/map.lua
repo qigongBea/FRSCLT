@@ -1,6 +1,7 @@
-local Depths, super = Class(Map)
+---@class Map.boat.room101 : Map
+local map, super = Class(Map)
 
-function Depths:onEnter()
+function map:onEnter()
   local img = self:getImageLayer("stars_big")
   local img1 = self:getImageLayer("stars_mid")
   local img2 = self:getImageLayer("stars_small")
@@ -21,6 +22,11 @@ function Depths:onEnter()
   --Game.world.camera.attached_y = false -- prevent next line from getting overridden
   --Game.world.camera.x = Game.world.height / 1.5
   --Game.world.camera.y = Game.world.height / 1.5
+  
+  self.window_layer = self:getTileLayer("window") ---@type TileLayer
+  self.window_hitbox = self:getHitbox("i have no use") ---@type Hitbox
+  self.window_hitbox.collidable = Plot:between("boat_act1_start", "boat_act3_room101_confrontation")
+  self.window_layer.visible = self.window_hitbox.collidable
 end
 
-return Depths
+return map

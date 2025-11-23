@@ -26,10 +26,10 @@ eggGuy = function(cutscene, event)
   local eggGuy = cutscene:getCharacter("eggGuy")
   eggGuy:setSprite("talk")
   cutscene:setSpeaker(eggGuy)
-  cutscene:text("* Hello,[wait:5] I'm the Wall Guardian.[wait:5] You might also know me as,[wait:5] \"a man.\"", eggGuy)
-  cutscene:text("* I think I've heard of you before,[wait:5] somewhere across my journey.", eggGuy)
-  cutscene:text("* I'd give you an egg if I could,[wait:5] but... I've ran out!", eggGuy)
-  cutscene:text("* I am such a failure...[wait:5] It's a wonder I'm not fired from my guard job yet!", eggGuy)
+  cutscene:text("* Hello,[wait:5] I'm the guy who wrote this sign.", eggGuy)
+  cutscene:text("* I've gotten tired of my job here,[wait:5] I mostly joined for Cheron...", eggGuy)
+  cutscene:text("* Hey,[wait:5] would you be interested in taking my post!?", eggGuy)
+  cutscene:text("* Ha,[wait:5] just kidding,[wait:5] I know you're on an adventure.", eggGuy)
   eggGuy:setSprite("idle")
 end,
 
@@ -72,7 +72,7 @@ terminal = function(cutscene, event)
   end
 end,
 terminal_update = function(cutscene, event)
-  if not Plot:isBefore("depths_powered3") then --note: make powered3 1 after update done
+  if not Plot:isBefore("depths_powered1") then --note: make powered3 1 after update done
     local img3 = Game.world.map:getImageLayer("powered")
     local platform = cutscene:getCharacter("platform")
     cutscene:playSound("noise")

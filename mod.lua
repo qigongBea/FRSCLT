@@ -56,15 +56,15 @@ end
 
 function Mod:unlockQuest(quest, silent)
     if not silent and Game.stage then
-        local popup = Game.stage:addChild(QuestCreatedPopup(quest))
-        popup.layer = 1500
+        --local popup = Game.stage:addChild(QuestCreatedPopup(quest))
+        --popup.layer = 1500
     end
 end
 
 function Mod:completeQuest(quest, silent)
     if not silent and Game.stage then
-        local popup = Game.stage:addChild(QuestCompletedPopup(quest))
-        popup.layer = 1500
+        --local popup = Game.stage:addChild(QuestCompletedPopup(quest))
+        --popup.layer = 1500
     end
 end
 

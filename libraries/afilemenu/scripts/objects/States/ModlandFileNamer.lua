@@ -70,6 +70,7 @@ function ModlandFileNamer:onLeave(new_state)
 end
 
 function ModlandFileNamer:draw()
+    Draw.setColor(COLORS.gray)
     local mod_name = "Chapter 6"
     Draw.printShadow(mod_name, 16, 8)
 end

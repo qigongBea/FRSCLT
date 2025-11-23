@@ -2,6 +2,7 @@
 local ChapterSelect, super = Class(Object)
 
 ---@class ChapterSelect.Chapter
+---@class ChapterSelect.Intermission
 ---@field sound string|love.sound
 ---@field image string|love.Image
 ---@field unlocked boolean?
@@ -43,8 +44,12 @@ function ChapterSelect:init()
         self.last_scroll_target = 0
         self:updateScroll()
     end)
+    -- create warning overlay
+    self.warning = nil
+    self.showing_warning = false
 end
-
+local intermission_reached = false
+local developer_mode = false
 function ChapterSelect:loadChapters()
     ---@type ChapterSelect.Chapter[]
     self.chapters = Kristal.getLibConfig("obscurachapters",
@@ -58,7 +63,7 @@ function ChapterSelect:loadChapters()
         value.index = value.index or index
         local mod = Kristal.Mods.getMod(value.mod)
         if mod then
-            local save_path = "saves/"..mod.id
+            local save_path = "saves/drfc-in-too-deep-restored"
             value.slots = {}
             for i=1,3 do
                 local slot = {
@@ -151,12 +156,19 @@ function ChapterSelect:draw()
     Draw.popCanvas()
     Draw.setColor(self:getDrawColor())
     Draw.draw(canvas)
+    --if self.showing_warning and self.warning then
+        --self.warning:emit("draw")
+    --end
 end
 
 function ChapterSelect:drawVersionInfo()
     love.graphics.push()
     love.graphics.translate(16,434)
-    Draw.setColor(COLORS.gray)
+    if intermission_reached then
+        Draw.setColor(8/255, 24/255, 0/255, 255/255)
+    else
+        Draw.setColor(COLORS.gray)
+    end
     love.graphics.setFont(self.smfont)
     love.graphics.print(self.info[1])
     local mod_version = Mod.info.version
@@ -206,22 +218,42 @@ end
 
 function ChapterSelect:setColorSelect(x,y)
     if (x == nil or self.selected_x == x) and (y == nil or self.selected_y == y) then
-        Draw.setColor(COLORS.yellow)
+        if intermission_reached then
+            Draw.setColor(69/255, 216/255, 0/255, 255/255)
+        else
+            Draw.setColor(COLORS.yellow)
+        end
         return true
     else
-        Draw.setColor(COLORS.white)
+        if intermission_reached then
+            Draw.setColor(17/255, 53/255, 0/255, 255/255)
+        else
+            Draw.setColor(COLORS.white)
+        end
         return false
     end
 end
 
 function ChapterSelect:setChapterColor(y)
     if self.selected_y == y then
-        Draw.setColor(COLORS.yellow)
+        if intermission_reached then
+            Draw.setColor(69/255, 216/255, 0/255, 255/255)
+        else
+            Draw.setColor(COLORS.yellow)
+        end
         return true
     elseif self.chapters[y] and self.chapters[y].unlocked == false then
-        Draw.setColor(COLORS.gray)
+        if intermission_reached then
+            Draw.setColor(8/255, 24/255, 0/255, 255/255)
+        else
+            Draw.setColor(COLORS.gray)
+        end
     else
-        Draw.setColor(COLORS.white)
+        if intermission_reached then
+            Draw.setColor(17/255, 53/255, 0/255, 255/255)
+        else
+            Draw.setColor(COLORS.white)
+        end
         return false
     end
 end
@@ -230,6 +262,10 @@ function ChapterSelect:onKeyPressed(key)
     if not Kristal.getLibConfig("obscurachapters", "interactable_while_fading") and self.alpha < 1 then
         return
     end
+    --if self.showing_warning then
+        --self.warning:emit("keypressed", key, false)
+        --return
+    --end
     if self.state == "SELECT" then
         self:onKeyPressedSelect(key)
     else
@@ -368,34 +404,118 @@ function ChapterSelect:drawChapter(index, chapter)
 end
 
 -- === PATCH START ===
-local intermission_reached = false
---print("[Forecasted][color:red] You're in DEVELOPER MODE! Pressing L switches between Intermission and In Too Deep.")
--- Add a helper method to swap chapter 6 data.
-function ChapterSelect:toggleIntermission()
-    intermission_reached = not intermission_reached
-    print("[Forecasted] Intermission:", intermission_reached)
+if developer_mode then
+    Kristal.Console:warn("Developer Mode: Press L to toggle Intermission.")
+    function ChapterSelect:toggleIntermission()
+        intermission_reached = not intermission_reached
 
-    local ch = self.chapters and self.chapters[6]
-    if not ch then return end
+        local ch = self.chapters and self.chapters[6]
+        if not ch then return end
 
-    if intermission_reached then
-        ch.name  = "Intermission"
-        ch.image = Assets.getTexture("chapters/ch6.5")
-    else
-        ch.name  = "In Too Deep"
-        ch.image = Assets.getTexture("chapters/ch6")
+        if intermission_reached then
+            ch.name  = "Intermission"
+            ch.image = Assets.getTexture("chapters/ch6.5")
+            ch.sound = "rewind"
+            Kristal.Console:log("[Forecasted] Intermission Enabled.")
+            self:applyIntermissionWhiteout()
+            Kristal.Console:log("[Forecasted] Whiteout Enabled.")
+        else
+            ch.name  = "In Too Deep"
+            ch.image = Assets.getTexture("chapters/ch6")
+            ch.sound = "ch6"
+            Kristal.Console:log("[Forecasted] Intermission Disabled.")
+            self:clearIntermissionWhiteout()
+            Kristal.Console:log("[Forecasted] Whiteout Cleared.")
+        end
+    end
+
+    local _old_onKeyPressed = ChapterSelect.onKeyPressed
+    function ChapterSelect:onKeyPressed(key)
+        if key == "l" then
+            self:toggleIntermission()
+            return
+        end
+        _old_onKeyPressed(self, key)
+    end
+else
+    function ChapterSelect:toggleIntermission()
+        local save_path = "saves/drfc-in-too-deep-restored"
+        local reset_file = love.filesystem.getInfo(save_path .. "/reset.json") ~= nil
+        intermission_reached = reset_file
+
+        local ch = self.chapters and self.chapters[6]
+        if not ch then return end
+
+        if intermission_reached then
+            ch.name  = "Intermission"
+            ch.image = Assets.getTexture("chapters/ch6.5")
+            ch.sound = "rewind"
+            Kristal.Console:log("[Forecasted] Intermission Enabled (Auto).")
+            self:applyIntermissionWhiteout()
+            Kristal.Console:log("[Forecasted] Whiteout Enabled (Auto)")
+        else
+            ch.name  = "In Too Deep"
+            ch.image = Assets.getTexture("chapters/ch6")
+            ch.sound = "ch6"
+            Kristal.Console:log("[Forecasted] Intermission Disabled (Auto).")
+            self:clearIntermissionWhiteout()
+            Kristal.Console:log("[Forecasted] Whiteout Cleared (Auto)")
+        end
+    end
+
+    -- Automatically call toggleIntermission on init
+    local _old_init = ChapterSelect.init
+    function ChapterSelect:init(...)
+        if _old_init then _old_init(self, ...) end
+        self:toggleIntermission()
     end
 end
 
--- Extend onKeyPressed to listen for L
---local _old_onKeyPressed = ChapterSelect.onKeyPressed
---function ChapterSelect:onKeyPressed(key)
-    --if key == "l" then
-        --self:toggleIntermission()
-        --return
-    --end
-    --_old_onKeyPressed(self, key)
---end
+-- Store original data so it can be restored
+local original_chapter_data = {}
+
+function ChapterSelect:applyIntermissionWhiteout()
+    if not self.chapters then return end
+
+    for i, ch in ipairs(self.chapters) do
+        -- Save originals the first time
+        if not original_chapter_data[i] then
+            original_chapter_data[i] = {
+                name  = ch.name,
+                image = ch.image,
+            }
+        end
+
+        if i ~= 7 and i ~= 6 then
+            ch.name  = "--"
+            ch.image = Assets.getTexture("chapters/whiteout")
+            ch.unlocked = false
+        elseif i == 7 then
+            ch.name  = "DELTARUNE"
+            ch.image = Assets.getTexture("chapters/blackout")
+        end
+    end
+end
+
+function ChapterSelect:clearIntermissionWhiteout()
+    if not self.chapters then return end
+
+    for i, ch in ipairs(self.chapters) do
+        local old = original_chapter_data[i]
+        if old then
+            if i ~= 6 then
+                ch.name  = old.name
+                ch.image = old.image
+            end
+            if i ~= 7 then
+                ch.unlocked = true
+            else
+                ch.unlocked = false
+            end
+        end
+    end
+end
+
 -- === PATCH END ===
 
 function ChapterSelect:close()

@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 25,
-  nextobjectid = 97,
+  nextobjectid = 100,
   properties = {
     ["border"] = "ground_zero",
     ["depths"] = true,
@@ -249,36 +249,6 @@ return {
       properties = {},
       objects = {
         {
-          id = 51,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 254,
-          y = 432,
-          width = 130,
-          height = 58,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["plotmax"] = "*boat_act3_room101_confrontation"
-          }
-        },
-        {
-          id = 56,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 170,
-          y = 280,
-          width = 102,
-          height = 106.667,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["plotmax"] = "*boat_act3_room101_confrontation"
-          }
-        },
-        {
           id = 64,
           name = "",
           type = "",
@@ -339,6 +309,19 @@ return {
           y = 320,
           width = 80,
           height = 280,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 99,
+          name = "i have no use",
+          type = "",
+          shape = "rectangle",
+          x = 0.0416667,
+          y = 640.021,
+          width = 40,
+          height = 160,
           rotation = 0,
           visible = true,
           properties = {}
@@ -565,6 +548,22 @@ return {
             ["plotmax"] = "*boat_act3_room101_confrontation",
             ["speed"] = 0.1,
             ["texture"] = "npcs/pirates/ball"
+          }
+        },
+        {
+          id = 97,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 255.212,
+          y = 281.197,
+          width = 124.545,
+          height = 39,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["plotmin"] = "boat_act3_room101_confrontation",
+            ["text1"] = "* You probably shouldn't jump out of the broken window."
           }
         }
       }

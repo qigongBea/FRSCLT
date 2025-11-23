@@ -83,7 +83,7 @@ return {
             end)
             Game.world:addChild(soul)
             cutscene:wait(1.75)
-            gonerText("YOUR SOUL...[wait:40]\nIT IS GETTING WEAKER.\n[wait:60]")
+            gonerText("YOUR SOUL...[wait:40]\nITS POWER PERSISTS.\n[wait:60]")
             cutscene:wait(0.5)
             gonerText("WE ARE LOSING[wait:40]\nCONNECTION...[wait:60]")
             cutscene:wait(0.5)

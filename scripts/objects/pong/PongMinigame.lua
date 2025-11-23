@@ -215,29 +215,46 @@ function PongMinigame:doEnding(wait, loser)
     end)]]
     wait(2.5)
 
-    self.old_x = self.left_paddle.x
-    self.old_y = self.left_paddle.y
+    if self.left_paddle == loser then
+        self.old_x = self.left_paddle.x
+        self.old_y = self.left_paddle.y
 
-    local shake = self.timer:every(1/30, function ()
-        self.left_paddle.x = self.old_x + love.math.random(-2, 2)
-        self.left_paddle.y = self.old_y + love.math.random(-2, 2)
-    end)
-
-    self:startCutscene("pirates.victory", loser):after(function ()
-        self.timer:cancel(shake)
-        loser:fadeTo(0, 2)
-        self.timer:tween(2, loser.sprite, {scale_x = 0, scale_y = 0}, "in-quad")
-        self.timer:after(2, function ()
-            loser.sprite:explode()
+        local shake = self.timer:every(1/30, function ()
+            self.left_paddle.x = self.old_x + love.math.random(-2, 2)
+            self.left_paddle.y = self.old_y + love.math.random(-2, 2)
+        end)
+        self:startCutscene("pirates.victory", loser):after(function ()
+            self.timer:cancel(shake)
+            loser:fadeTo(0, 2)
+            self.timer:tween(2, loser.sprite, {scale_x = 0, scale_y = 0}, "in-quad")
             self.timer:after(2, function ()
-                if self.left_paddle == loser then
-                    self.victory = true
-                else
-                    self.victory = false
-                end
+                loser.sprite:explode()
+                self.timer:after(2, function ()
+                        self.victory = true
+                end)
             end)
         end)
-    end)
+    else
+        self.old_x = self.right_paddle.x
+        self.old_y = self.right_paddle.y
+
+        local shake = self.timer:every(1/30, function ()
+            self.right_paddle.x = self.old_x + love.math.random(-2, 2)
+            self.right_paddle.y = self.old_y + love.math.random(-2, 2)
+        end)
+        self:startCutscene("pirates.losery", loser):after(function ()
+            self.timer:cancel(shake)
+            loser:fadeTo(0, 2)
+            self.timer:tween(2, loser.sprite, {scale_x = 0, scale_y = 0}, "in-quad")
+            self.timer:after(2, function ()
+                loser.sprite:explode()
+                self.timer:after(0.25, function ()
+                    Game:gameOver(587.1875, 298)
+                    self:remove()
+                end)
+            end)
+        end)
+    end
 end
 
 ---@param wait fun(n)

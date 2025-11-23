@@ -630,6 +630,7 @@ stay on the Evergroves Cruise!
         Game.world.music:play("creepychase", 1)
         Game:setFlag("room101_confrontation", true)
         Plot:set("boat_act3_room101_confrontation")
+        Game:saveQuick()
     end,
 
 }

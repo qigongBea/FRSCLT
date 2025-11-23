@@ -30,7 +30,7 @@ these cannonballs!
         
     end,
 
-    playerGetHit = function (cutscene)
+    playerGetHitA = function (cutscene)
         cutscene:text("* Kris! Watch out!", "angry", "susie")
         cutscene:text([=[
 [miniface:noelle]YAAAHAHAHAHA
@@ -51,7 +51,24 @@ cutscene:text([=[
 ]=], nil, "pirates/ralsei")
 
     end,
+    playerGetHitB = function (cutscene)
+        cutscene:text("* Damnit,[wait:5] Kris![wait:5] We're gonna sink if you're not careful!", "teeth", "susie")
+        cutscene:text([=[
+[miniface:noelle]YAAAHAHAHAHA,[wait:5]
+[miniface:noelle]WE'RE WINNIN'!
+]=], nil, "pirates/noelle")
 
+cutscene:text([=[
+[miniface:susie]DID YA SEE THAT CAPTAIN?[wait:5]
+[miniface:susie]I HIT EM AGAIN,[wait:5] I HIT EM AGAIN!
+]=], nil, "pirates/susie")
+cutscene:text([=[
+[miniface:ralsei]Aye,[wait:5] for the last time,[wait:5] I saw it![wait:5]
+[miniface:ralsei]Just one more hit,[wait:5] scallywag!
+]=], nil, "pirates/ralsei")
+
+    end,
+    
     enemyGetHitA = function (cutscene)
         cutscene:text("* HA![wait:5]\n* How do you like that?!", "teeth", "susie")
         cutscene:text([=[
@@ -149,6 +166,10 @@ his ship...
 ]=], nil, "pirates/ralsei")
     end,
 
+
+    losery = function (cutscene)
+        cutscene:text("* That doesn't sound good.", "shock", "susie")
+    end,
     ---@param losing_paddle PongPaddle?
     preroundstart = function (cutscene, losing_paddle)
         local player_won = losing_paddle == cutscene.game.left_paddle
@@ -164,7 +185,11 @@ his ship...
                 cutscene:gotoCutscene("pirates.enemyGetHitB")
             end
         else
-            cutscene:gotoCutscene("pirates.playerGetHit")
+            if player_hp == 2 then
+                cutscene:gotoCutscene("pirates.playerGetHitA")
+            elseif player_hp == 1 then
+                cutscene:gotoCutscene("pirates.playerGetHitB")
+            end
         end
     end,
 

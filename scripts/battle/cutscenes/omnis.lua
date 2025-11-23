@@ -12,7 +12,7 @@ end)
     ]]
     deathapproaches = function(cutscene)
         -- 1. ursula gets knight-cutscene-bullshit-swooned by omnis
-        cutscene:wait(0.5)
+        cutscene:wait(2)
         Game.battle.music:pause()
         Game.battle.battle_ui.encounter_text.skipping = true
         Game.fader.alpha = 1

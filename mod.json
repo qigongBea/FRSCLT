@@ -77,31 +77,31 @@
                 {
                     "image": "chapters/ch2",
                     "name": "A Cyber's World",
-                    "sound": "deathnoise"
+                    "sound": "ch2"
                 },
                 {
                     "image": "chapters/ch3",
                     "name": "Channel 3",
                     "unlocked": true,
-                    "sound": "cardrive"
+                    "sound": "ch3"
                 },
                 {
                     "image": "chapters/ch4",
                     "unlocked": true,
                     "name": "Snowy Side-Dish!",
-                    "sound": "bluh"
+                    "sound": "ch4"
                 },
                 {
                     "image": "chapters/ch5",
                     "name": "Dark After Dark",
                     "unlocked": true,
-                    "sound": "bluh"
+                    "sound": "ch5"
                 },
                 {
                     "image": "chapters/ch6",
                     "name": "In Too Deep",
                     "unlocked": true,
-                    "sound": "bluh",
+                    "sound": "ch6",
                     "index": "6",
                     "room": "bumperzone",
                     "mod": "drfc-in-too-deep-restored"

@@ -6,6 +6,8 @@ function map:init(world,data)
     self.border = "simple"
 end
 function map:onEnter()
+    --local WarningScript = require("mods.forecasted-restored.libraries.obscurachapters.scripts.objects.WarningScript")
+    --Game.world.stage:addChild(WarningScript())
     self.world:openMenu(ChapterSelect())
     self.world.player.visible = false
     -- It's the funniest thing ever! If you press F6, you'll see A SINGLE GREEN PIXEL!!!

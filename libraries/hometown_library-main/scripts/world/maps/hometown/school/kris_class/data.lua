@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.11.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 12,
-  nextobjectid = 70,
+  nextobjectid = 82,
   properties = {
     ["border"] = "leaves",
     ["light"] = true,
@@ -223,6 +223,32 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        },
+        {
+          id = 70,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 138,
+          y = 246,
+          width = 74,
+          height = 30,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 73,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 138,
+          y = 308,
+          width = 74,
+          height = 30,
+          rotation = 0,
+          visible = true,
+          properties = {}
         }
       }
     },
@@ -291,10 +317,10 @@ return {
           name = "script",
           type = "",
           shape = "rectangle",
-          x = 505,
-          y = 165.25,
-          width = 0,
-          height = 0,
+          x = 469.136,
+          y = 141.852,
+          width = 77.7045,
+          height = 18.3523,
           rotation = 0,
           visible = true,
           properties = {
@@ -345,7 +371,107 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["cutscene"] = "nightCutscenes.catti"
+            ["cutscene"] = "nightCutscenes.catti",
+            ["solid"] = true
+          }
+        },
+        {
+          id = 71,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 429.917,
+          y = 321.966,
+          width = 38.1667,
+          height = 36.6969,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "nightCutscenes.mkid",
+            ["solid"] = true
+          }
+        },
+        {
+          id = 74,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 428.135,
+          y = 385.97,
+          width = 53.8854,
+          height = 46.1969,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "nightCutscenes.snowy",
+            ["solid"] = true
+          }
+        },
+        {
+          id = 75,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 425.917,
+          y = 239.833,
+          width = 38.0834,
+          height = 52.3333,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "nightCutscenes.tem",
+            ["solid"] = true
+          }
+        },
+        {
+          id = 76,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 151.583,
+          y = 385.985,
+          width = 56.4698,
+          height = 46.1818,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "nightCutscenes.jockington",
+            ["solid"] = true
+          }
+        },
+        {
+          id = 78,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 547.677,
+          y = 24.1029,
+          width = 75.6459,
+          height = 51.0833,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "nightCutscenes.schooldoor",
+            ["plotmax"] = "*nf_school_interact2Alph",
+            ["solid"] = true
+          }
+        },
+        {
+          id = 79,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 547.685,
+          y = 24.0817,
+          width = 75.6459,
+          height = 51.0833,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "nightCutscenes.schooldoor2",
+            ["plotmax"] = "*nf_school_interact5Alph",
+            ["plotmin"] = "nf_school_interact2Alph",
+            ["solid"] = true
           }
         }
       }
@@ -684,7 +810,7 @@ return {
           type = "",
           shape = "point",
           x = 504,
-          y = 225.818,
+          y = 225.75,
           width = 0,
           height = 0,
           rotation = 0,
@@ -710,7 +836,7 @@ return {
           type = "",
           shape = "point",
           x = 104,
-          y = 291.783,
+          y = 300,
           width = 0,
           height = 0,
           rotation = 0,
@@ -723,7 +849,7 @@ return {
           type = "",
           shape = "point",
           x = 175.667,
-          y = 292,
+          y = 300,
           width = 0,
           height = 0,
           rotation = 0,

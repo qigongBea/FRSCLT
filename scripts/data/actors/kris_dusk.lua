@@ -14,6 +14,10 @@ function actor:init()
         ["walk/up"] = {-5, -2},
         ["walk/down"] = {-3, -1},
     })
+    --function actor:onSpriteInit(sprite)
+        --sprite:addFX(OutlineFX()):setColor(Utils.unpackColor(Utils.hexToRgb("#ffffff")))
+        --sprite:addFX(PaletteFX("party/kris/dusk/palette", 1))
+    --end
 end
 
 return actor

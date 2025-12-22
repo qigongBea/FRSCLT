@@ -44,6 +44,7 @@ local nightCutsenes = {
         -- Technically a deviation from original but it was weird to be able to walk on the bed
         cutscene:wait(0.5)
         cutscene:wait(cutscene:walkTo(kris, "kriswalkbed"))
+        Game.world.menu = nil
         --Kristal.callEvent("createQuest", "Meet Susie", "susiemeet", "Susie found something strange. She's waiting by QC's for you.", 0)
         Game:getQuest("meetsusie"):unlock()
     end;
@@ -242,6 +243,45 @@ local nightCutsenes = {
         cutscene:text("*[voice:reset] Sorry for your loss...", "catti_down")
     end;
 
+    mkid = function(cutscene, event)
+        cutscene:text("*[voice:reset] Yo,[wait:5] Kris![wait:5] You gotta partner with Berdly!?")
+        cutscene:text("*[voice:reset] Well,[wait:5] at least you'll get an A...[wait:5] maybe.")
+    end;
+
+    tem = function(cutscene, event)
+        if event.interact_count == 1 then
+            cutscene:text("*[voice:reset] KRISP!![wait:5]\n* tem lost eg,[wait:5] but tem have new partner!")
+        elseif event.interact_count >= 2 then
+            cutscene:text("*[voice:reset] tem partner with...[wait:5]\nEG SISTER!!")
+        end
+    end;
+
+    snowy = function(cutscene, event)
+        cutscene:text("*[voice:reset] Hey,[wait:5] Kris! Why shouldn't you take up time travel?")
+        cutscene:text("*[voice:reset] Because there's NO FUTURE in it!![wait:5] Ha ha ha![wait:5] What'd you think!?[wait:5] Funny,[wait:5] right!?")
+        cutscene:text("*[voice:reset] ...")
+        cutscene:text("*[voice:reset] Kris,[wait:5] you've gotta be less silent if you want anybody other than Noelle to talk to you.")
+    end;
+    
+    jockington = function(cutscene, event)
+        cutscene:text("*[voice:reset] Kris![wait:5] You KNOW Jockington and Catti are ALWAYS partners!")
+        cutscene:text("*[voice:reset] Didn't Ms. Alphys tell you to partner with Berdly?")
+    end;
+
+    blocked = function(cutscene, event)
+        local kris = assert(cutscene:getCharacter("kris"))
+        cutscene:setSpeaker("susie")
+        cutscene:text("* (Kris,[wait:5] we're going to Castle Town,[wait:5] RIGHT??)", "shy")
+        cutscene:wait(cutscene:walkTo(kris, kris.x, kris.y+30))
+    end;
+
+    blockedalph = function(cutscene, event)
+        local kris = assert(cutscene:getCharacter("kris"))
+        cutscene:setSpeaker("alphys")
+        cutscene:text("* L-lets go towards the unused classroom!", "nervous_angry")
+        cutscene:wait(cutscene:walkTo(kris, kris.x, kris.y+30))
+    end;
+
     school = function(cutscene, event)
         Game:setFlag("susieGone", true)
         local interactionsAlph = Plot:get() - 5000
@@ -309,6 +349,14 @@ local nightCutsenes = {
             cutscene:look(kris, "down")
             Plot:set("nf_school_interact1Alph")
         elseif interactionsAlph == 1 then
+            local kris = assert(cutscene:getCharacter("kris"))
+            local alphys = cutscene:getCharacter("alphys_lw")
+            cutscene:look(alphys, "right")
+            cutscene:setSpeaker(alphys)
+            cutscene:text("* K-Kris,[wait:5] I know partnering with Berdly isn't the BEST,[wait:5] but...", "nervous", "alphys")
+            cutscene:text("* I don't think your mother would be happy if you left the class...", "nervous_b", "alphys")
+            cutscene:wait(cutscene:walkTo(kris, kris.x, kris.y+20))
+        elseif interactionsAlph == 2 then
             local alphys = cutscene:getCharacter("alphys_lw")
             cutscene:setSpeaker("alphys_lw")
             cutscene:look(alphys, "right")
@@ -318,9 +366,11 @@ local nightCutsenes = {
             cutscene:text("* If you see Susie in the halls...", "nervous_concern")
             cutscene:wait(1)
             cutscene:text("* Tell her I said thank you.", "nervous")
-            Plot:set("nf_school_interact2Alph")
+            Plot:set("nf_school_interact3Alph")
             event:remove()
-        elseif interactionsAlph == 2 then
+        elseif interactionsAlph == 4 then
+            --not needed due to what the next one does
+        elseif interactionsAlph == 5 then
             event:remove()
             --WHERE THE SUSIE FLAG SHOULD GO GRAHHHHHHHH
             Music:stop()
@@ -439,131 +489,136 @@ local nightCutsenes = {
             Game.world.music:play("school")
             cutscene:look(kris, "down")
             --Alphys joins party
+            Plot:set("nf_school_interact6Alph")
         end
     end;
 
 
     berdly = function(cutscene, event)
-        local alphys = cutscene:getCharacter("alphys_lw")
-        local berdly = cutscene:getCharacter("berdly_lw")
-        local susie = cutscene:getCharacter("susie_lw")
-        local kris = cutscene:getCharacter("kris")
-        cutscene:setSpeaker("berdly")
-        cutscene:text("* Bold of you to assume I'd partner with you,[wait:5] KRIS!", "neutral")
-        cutscene:text("* I get it,[wait:5] don't worry.", "neutral")
-        cutscene:text("* Who WOULDN'T want to partner with me!", "LMAO")
-        cutscene:text("* After all,[wait:5] I am the smartest student in class...", "smirk")
-        local x, y = cutscene:getMarker("alphys1")
-        cutscene:walkTo(alphys, x, y, 2, "right")
-        cutscene:text("* But I'm reserved for the second smartest.[wait:10]\n* Sorry Kris.  ", "smirk")
-        cutscene:text("* Maybe Susan will show up for once,[wait:5] you two would make a great pair!", "LMAO")
-        cutscene:look(alphys, "up")
-        cutscene:wait(1)
-        cutscene:look(berdly, "up")
-        cutscene:wait(1)
-        cutscene:look(berdly, "left")
-        cutscene:wait(0.5)
-        cutscene:text("* ...", "neutral")
-        cutscene:text("* I guess your last project grade wasn't THAT[wait:5] bad...", "surprised")
-        cutscene:text("* ...Do you,[wait:5] actually want to partner with me,[wait:5] or..", "worried")
-
-        local choice = cutscene:choicer({ "Yes", "No" })
-        if choice == 0 then
-            cutscene:text("* HEY![wait:10] I-I didn't want to partner with you anyways!", "angry")
+        if Plot:isBefore("nf_school_interact2Alph") then
+            local alphys = cutscene:getCharacter("alphys_lw")
+            local berdly = cutscene:getCharacter("berdly_lw")
+            local susie = cutscene:getCharacter("susie_lw")
+            local kris = cutscene:getCharacter("kris")
+            cutscene:setSpeaker("berdly")
+            cutscene:text("* Bold of you to assume I'd partner with you,[wait:5] KRIS!", "neutral")
+            cutscene:text("* I get it,[wait:5] don't worry.", "neutral")
+            cutscene:text("* Who WOULDN'T want to partner with me!", "LMAO")
+            cutscene:text("* After all,[wait:5] I am the smartest student in class...", "smirk")
+            local x, y = cutscene:getMarker("alphys1")
+            cutscene:walkTo(alphys, x, y, 2, "right")
+            cutscene:text("* But I'm reserved for the second smartest.[wait:10]\n* Sorry Kris.  ", "smirk")
+            cutscene:text("* Maybe Susan will show up for once,[wait:5] you two would make a great pair!", "LMAO")
+            cutscene:look(alphys, "up")
+            cutscene:wait(1)
+            cutscene:look(berdly, "up")
+            cutscene:wait(1)
+            cutscene:look(berdly, "left")
+            cutscene:wait(0.5)
+            cutscene:text("* ...", "neutral")
+            cutscene:text("* I guess your last project grade wasn't THAT[wait:5] bad...", "surprised")
+            cutscene:text("* ...Do you,[wait:5] actually want to partner with me,[wait:5] or..", "worried_smile", "berdly")
+            local choice = cutscene:choicer({ "Yes", "No" })
+            if choice == 1 then
+                cutscene:text("* Really!?[wait:5] Well,[wait:5] great!", "surprised")
+                cutscene:text("* For once in your life you made a GOOD choice![wait:5] Good job,[wait:5] Kris!", "LMAO")
+                cutscene:look(alphys, "down")
+                cutscene:text("* Now you can FINALLY get an \"A+\" instead of-", "smirk", { auto = true })
+            else
+                cutscene:text("* HEY![wait:10] I-I didn't want to partner with you anyways!", "angry")
+                cutscene:look(alphys, "down")
+                cutscene:text("* I don't need my \"A+\" streak ruined by a \"C+\" stu-", "angry", { auto = true })
+            end
+            cutscene:setSpeaker("alphys")
+            cutscene:look(berdly, "up")
+            cutscene:look(kris, "up")
+            cutscene:text("* Uh...[wait:10]\n * H-has anyone seen the chalk?", "concern_lw")
+            cutscene:text("* This is the third time it's gone missing,[wait:5] and...", "nervous")
+            cutscene:text("* Y-you all know I can't start class without-", "nervous_concern", { auto = true })
+            Music:stop()
+            local img1 = Game.world.map:getImageLayer("dooropen")
+            Assets.playSound("dooropen")
+            img1.visible = true
+            susie.visible = true
+            local x, y = cutscene:getMarker("susie1")
+            cutscene:wait(1)
+            cutscene:look(alphys, "right")
+            cutscene:text("* H...\n * Hi,[wait:5] SUSIE.", "shock_smile")
+            cutscene:walkTo(susie, x, y, 1, "down")
+            cutscene:setSpeaker("susie")
+            cutscene:wait(1.5)
+            cutscene:text("* Hey...[wait:10]\n * Sorry I'm late,[wait:5] again.", "nervous_side")
+            cutscene:text("* Had a,[wait:5] uh,[wait:5] stomach bug.[wait:10]\n* Or something...", "nervous")
+            cutscene:wait(1)
+            cutscene:look(susie, "left")
+            cutscene:text("* Also,[wait:5] here's the chalk that's been missing.", "smirk")
+            local x, y = cutscene:getMarker("susie2")
+            cutscene:walkTo(susie, x, y, 2, "left")
+            cutscene:wait(2.5)
+            Assets.playSound("bump")
+            cutscene:wait(1)
+            cutscene:text("* Found it in the supply closet.", "teeth_smile")
+            cutscene:wait(0.5)
+            cutscene:setSpeaker("alphys")
+            cutscene:wait(1)
+            cutscene:look(alphys, "left")
+            cutscene:wait(0.3)
+            cutscene:look(alphys, "up")
+            cutscene:wait(0.3)
             cutscene:look(alphys, "down")
-            cutscene:text("* I don't need my \"A+\" streak ruined by a \"C+\" stu-", "angry", { auto = true })
-        elseif choice == 1 then
-            cutscene:text("* Really!?[wait:5] Well,[wait:5] great!", "surprised")
-            cutscene:text("* For once in your life you made a GOOD choice![wait:5] Good job,[wait:5] Kris!", "LMAO")
+            cutscene:wait(0.3)
+            cutscene:look(alphys, "right")
+            cutscene:wait(1)
+            cutscene:text("* T-thank you,[wait:5] Susie.", "nervous_b")
+            cutscene:text("* We can finally start our l-lesson plan for the week...", "nervous_blush")
+            cutscene:text("* We are,[wait:5] way,[wait:5] behind schedule.", "nervous_concern")
+            cutscene:wait(1)
+            cutscene:text("* Are you u-uhhh...[wait:10]\n * Is everything alright,[wait:5] Susie?", "nervous")
+            cutscene:text("* You're acting rather strange today...", "nervous_b")
+            cutscene:wait(1)
+            cutscene:wait(0.5)
+            cutscene:setSpeaker("susie")
+            cutscene:look(susie, "right")
+            cutscene:wait(0.5)
+            cutscene:look(susie, "left")
+            cutscene:text("* Yeah I uh,[wait:5] gotta leave.", "sus_nervous")
+            cutscene:text("* Sorry about that,[wait:5] I guess.", "neutral")
+            cutscene:setSpeaker("alphys")
+            local x, y = cutscene:getMarker("susie1")
+            cutscene:walkTo(susie, x, y, 3, "right")
+            cutscene:wait(1)
+            cutscene:text("* W-wait don't leave![wait:10]\n * We really need to get back on schedule!", "nervous_concern")
+            cutscene:look(susie, "left")
+            cutscene:text("* If you need help at home don't be afraid to tell me!", "nervous_concern")
+            cutscene:wait(1)
+            cutscene:look(susie, "right")
+            cutscene:setSpeaker("susie")
+            cutscene:text("* Kris,[wait:5] your uh...[wait:10]\n * Mom is outside.[wait:10] Waiting for you.", "suspicious")
+            cutscene:text("* And Alphys...", "nervous_side")
+            cutscene:look(susie, "right")
+            cutscene:wait(2)
+            cutscene:look(susie, "left")
+            cutscene:text("* I'll try to be back soon,[wait:5] alright?", "sincere")
+            cutscene:wait(1)
+            local x, y = cutscene:getMarker("susie3")
+            cutscene:walkTo(susie, x, y, 2, "up")
+            cutscene:wait(2)
+            susie.visible = false
+            Assets.playSound("doorclose")
+            img1.visible = false
+            cutscene:wait(2)
+            cutscene:setSpeaker("alphys_lw")
+            cutscene:text("* Bye,[wait:5] S-Susie.", "nervous_concern")
+            cutscene:wait(2)
             cutscene:look(alphys, "down")
-            cutscene:text("* Now you can FINALLY get an \"A+\" instead of a-", "smirk", { auto = true })
-        end
-        cutscene:setSpeaker("alphys")
-        cutscene:look(berdly, "up")
-        cutscene:look(kris, "up")
-        cutscene:text("* Uh...[wait:10]\n * H-has anyone seen the chalk?", "concern")
-        cutscene:text("* This is the third time it's gone missing,[wait:5] and...", "nervous")
-        cutscene:text("* Y-you all know I can't start class without-", "nervous_concern", { auto = true })
-        Music:stop()
-        local img1 = Game.world.map:getImageLayer("dooropen")
-        Assets.playSound("dooropen")
-        img1.visible = true
-        susie.visible = true
-        local x, y = cutscene:getMarker("susie1")
-        cutscene:wait(1)
-        cutscene:look(alphys, "right")
-        cutscene:text("* H...\n * Hi,[wait:5] SUSIE.", "shock_smile")
-        cutscene:walkTo(susie, x, y, 1, "down")
-        cutscene:setSpeaker("susie")
-        cutscene:wait(1.5)
-        cutscene:text("* Hey...[wait:10]\n * Sorry I'm late,[wait:5] again.", "nervous_side")
-        cutscene:text("* Had a,[wait:5] uh,[wait:5] stomach bug.[wait:10]\n* Or something...", "nervous")
-        cutscene:wait(1)
-        cutscene:look(susie, "left")
-        cutscene:text("* Also,[wait:5] here's the chalk that's been missing.", "smirk")
-        local x, y = cutscene:getMarker("susie2")
-        cutscene:walkTo(susie, x, y, 2, "left")
-        cutscene:wait(2.5)
-        Assets.playSound("bump")
-        cutscene:wait(1)
-        cutscene:text("* Found it in the supply closet.", "teeth_smile")
-        cutscene:wait(0.5)
-        cutscene:setSpeaker("alphys")
-        cutscene:wait(1)
-        cutscene:look(alphys, "left")
-        cutscene:wait(0.3)
-        cutscene:look(alphys, "up")
-        cutscene:wait(0.3)
-        cutscene:look(alphys, "down")
-        cutscene:wait(0.3)
-        cutscene:look(alphys, "right")
-        cutscene:wait(1)
-        cutscene:text("* T-thank you,[wait:5] Susie.", "nervous_b")
-        cutscene:text("* We can finally start our l-lesson plan for the week...", "nervous_blush")
-        cutscene:text("* We are,[wait:5] way,[wait:5] behind schedule.", "nervous_concern")
-        cutscene:wait(1)
-        cutscene:text("* Are you u-uhhh...[wait:10]\n * Is everything alright,[wait:5] Susie?", "nervous")
-        cutscene:text("* You're acting rather strange today...", "nervous_b")
-        cutscene:wait(1)
-        cutscene:wait(0.5)
-        cutscene:setSpeaker("susie")
-        cutscene:look(susie, "right")
-        cutscene:wait(0.5)
-        cutscene:look(susie, "left")
-        cutscene:text("* Yeah I uh,[wait:5] gotta leave.", "sus_nervous")
-        cutscene:text("* Sorry about that,[wait:5] I guess.", "neutral")
-        cutscene:setSpeaker("alphys")
-        local x, y = cutscene:getMarker("susie1")
-        cutscene:walkTo(susie, x, y, 3, "right")
-        cutscene:wait(1)
-        cutscene:text("* W-wait don't leave![wait:10]\n * We really need to get back on schedule!", "nervous_concern")
-        cutscene:look(susie, "left")
-        cutscene:text("* If you need help at home don't be afraid to tell me!", "nervous_concern")
-        cutscene:wait(1)
-        cutscene:look(susie, "right")
-        cutscene:setSpeaker("susie")
-        cutscene:text("* Kris,[wait:5] your uh...[wait:10]\n * Mom is outside.[wait:10] Waiting for you.", "suspicious")
-        cutscene:text("* And Alphys...", "nervous_side")
-        cutscene:look(susie, "right")
-        cutscene:wait(2)
-        cutscene:look(susie, "left")
-        cutscene:text("* I'll try to be back soon,[wait:5] alright?", "sincere")
-        cutscene:wait(1)
-        local x, y = cutscene:getMarker("susie3")
-        cutscene:walkTo(susie, x, y, 2, "up")
-        cutscene:wait(2)
-        susie.visible = false
-        Assets.playSound("doorclose")
-        img1.visible = false
-        cutscene:wait(2)
-        cutscene:setSpeaker("alphys_lw")
-        cutscene:text("* Bye,[wait:5] S-Susie.", "nervous_concern")
-        cutscene:wait(2)
-        cutscene:look(alphys, "down")
-        cutscene:text("* Kris,[wait:5] you should probably go catch up with your mother.", "smile")
-        cutscene:text("* (Shouldn't she be teaching her class right now...?)", "neutral_L")
-        Game.world.music:play("school")
-        cutscene:look(kris, "down")
+            cutscene:text("* Kris,[wait:5] you should probably go catch up with your mother.", "smile")
+            cutscene:text("* (Shouldn't she be teaching her class right now...?)", "neutral_L")
+            Game.world.music:play("school")
+            cutscene:look(kris, "down")
+            Plot:set("nf_school_interact2Alph")
+        else
+            cutscene:text("* Looks like our partnership must be put to a halt,[wait:5] Kris!", "LMAO", "berdly")
+        end;
     end;
 
 
@@ -668,7 +723,12 @@ local nightCutsenes = {
             --Cutscene choicer "Yes, No"
             local choice = cutscene:choicer({ "I'm alright", "No I'm not" })
             susie:resetSprite()
-            cutscene:text("* Alright.[wait:10] Phew.", "nervous_side")
+            if choice == 2 then
+                cutscene:text("* Dude,[wait:5] STOP MESSING AROUND ALREADY!!!![wait:10] Phew...", "nervous")
+                cutscene:wait(1)
+            else
+                cutscene:text("* Alright.[wait:10] Phew.", "nervous_side")
+            end
             cutscene:text("* Sorry about...[wait:10] all of that.", "sus_nervous")
             cutscene:text("* I'm just,[wait:5] y'know,[wait:5] veeery confused...", "suspicious")
             cutscene:wait(1.5)
@@ -677,7 +737,7 @@ local nightCutsenes = {
             cutscene:look(susie, "down")
             cutscene:text("* Do you think Ralsei's alright?", "annoyed")
             cutscene:look(susie, "left")
-            cutscene:text("* After he...", "annoyed_down")
+            cutscene:text("* After that guy...", "annoyed_down")
             cutscene:text("* ...", "bangs_neutral")
             cutscene:wait(1)
             cutscene:text("* Uhh...", "annoyed_down")
@@ -687,12 +747,17 @@ local nightCutsenes = {
             cutscene:attachFollowers()
             Game.world.music:play("school", 1, 0.95)
             cutscene:look(kris, "down")
+            Plot:set("nf_school_interact4Alph")
         end
         Game:setFlag("interactedSus", interactionsSus + 1)
     end;
 
     closet = function(cutscene, event)
         local susie = cutscene:getCharacter("susie_lw")
+        if not Plot:isBefore("nf_school_interact5Alph") then
+            cutscene:text("* Let's go talk to Alphys.[wait:10]\n* Maybe she has a key.", "nervous_side", "susie")
+            return
+        end
         cutscene:setSpeaker("susie")
         cutscene:text("* It's...[wait:10] locked?", "surprise_frown")
         cutscene:text("* Why is it locked while school is in session?", "suspicious")
@@ -701,6 +766,10 @@ local nightCutsenes = {
 
     classroom1 = function(cutscene, event)
         if not Game:hasPartyMember("alphys") then
+            if not Plot:isBefore("nf_school_interact5Alph") then
+                cutscene:text("* Let's go talk to Alphys.[wait:10]\n* Maybe she has a key.", "nervous_side", "susie")
+                return
+            end
             local susie = cutscene:getCharacter("susie_lw")
             cutscene:setSpeaker("susie")
             cutscene:text("* This one's locked too??", "sad")
@@ -710,6 +779,7 @@ local nightCutsenes = {
             cutscene:wait(0.5)
             cutscene:look(susie, "right")
             cutscene:text("* Let's go talk to Alphys.[wait:10]\n* Maybe she has a key.", "nervous_side")
+            Plot:set("nf_school_interact5Alph")
         else
             local susie = cutscene:getCharacter("susie_lw")
             local kris = cutscene:getCharacter("kris")
@@ -933,58 +1003,98 @@ local nightCutsenes = {
     end;
 
     alphyswarn = function(cutscene, event)
+        local kris = assert(cutscene:getCharacter("kris"))
         cutscene:setSpeaker("alphys")
         cutscene:text("* L-lets go towards the unused classroom!", "nervous_angry")
+        cutscene:wait(cutscene:walkTo(kris, kris.x-20, kris.y))
     end;
 
-    awakening = function(cutscene, event)
-        local alphys = cutscene:getCharacter("alphys")
-        local kris = cutscene:getCharacter("kris")
-        local susie = cutscene:getCharacter("susie")
-        cutscene:detachFollowers()
-        local x, y = cutscene:getMarker("alphys10")
-        cutscene:slideTo(alphys, x, y, 2)
-
-        local x, y = cutscene:getMarker("kris10")
-        cutscene:slideTo(kris, x, y, 2)
-
-        local x, y = cutscene:getMarker("susie10")
-        cutscene:slideTo(susie, x, y, 2)
-
-        cutscene:wait(5)
-        susie:setSprite("down")
-        alphys:setSprite("fallen")
-        kris:setSprite("landed")
-        cutscene:wait(1)
+    alphyswarnb = function(cutscene, event)
+        local kris = assert(cutscene:getCharacter("kris"))
         cutscene:setSpeaker("alphys")
-        cutscene:shakeCharacter("alphys")
-        Assets.playSound("bump")
-        cutscene:wait(1)
-        cutscene:text("* Owww...[wait:10] My head...", "concern_dark")
-        cutscene:wait(1)
-        alphys:resetSprite()
-        Assets.playSound("noise")
-        cutscene:shakeCamera()
-        cutscene:wait(1)
-        cutscene:look(alphys, "left")
-        cutscene:wait(0.3)
-        cutscene:look(alphys, "up")
-        cutscene:wait(0.3)
-        cutscene:look(alphys, "down")
-        cutscene:wait(0.3)
-        cutscene:look(alphys, "right")
-        cutscene:fadeOut(0)
-        Assets.playSound("locker")
-        cutscene:wait(1)
-        local wait, box = cutscene:text("[instant]To be Snew Future...[stopinstant][wait:4s]", {auto = true, wait = false})
-        box.box.visible = false
-        box.text.alpha = 0
-        box.text:fadeTo(1,1)
-        cutscene:wait(3)
-        box.text:fadeTo(0,1)
-        cutscene:wait(wait)
-        cutscene:wait(2)
-        Game:load(nil,4)
+        cutscene:text("* K-Kris,[wait:5] I'm sure your mother can wait a bit longer!", "nervous_angry")
+        cutscene:wait(cutscene:walkTo(kris, kris.x, kris.y-20))
+    end;
+
+    susiewarn = function(cutscene, event)
+        local kris = assert(cutscene:getCharacter("kris"))
+        if Plot:isBefore("nf_school_interact5Alph") then
+            cutscene:setSpeaker("susie")
+            cutscene:text("* (Kris,[wait:5] I wasn't being serious when I said your mom was outside!!!!)", "shy")
+            cutscene:wait(cutscene:walkTo(kris, kris.x, kris.y-20))
+        else
+            cutscene:setSpeaker("susie")
+            cutscene:text("* (Kris,[wait:5] we're going to talk to Alphys about the locked doors!!)", "shy_b")
+            cutscene:wait(cutscene:walkTo(kris, kris.x, kris.y-20))
+        end
+    end;
+    susiewarnb = function(cutscene, event)
+        local kris = assert(cutscene:getCharacter("kris"))
+        if Plot:isBefore("nf_school_interact5Alph") then
+            cutscene:setSpeaker("susie")
+            cutscene:text("* (Kris,[wait:5] we're going to Castle Town,[wait:5] RIGHT??)", "shy")
+            cutscene:wait(cutscene:walkTo(kris, kris.x-20, kris.y))
+        else
+            cutscene:setSpeaker("susie")
+            cutscene:text("* (Kris,[wait:5] we're going to talk to Alphys about the locked doors!!)", "shy_b")
+            cutscene:wait(cutscene:walkTo(kris, kris.x-20, kris.y))
+        end
+    end;
+    awakening = function(cutscene, event)
+        if Plot:isBefore("nf_awakened") then
+            local alphys = cutscene:getCharacter("alphys")
+            local kris = cutscene:getCharacter("kris")
+            local susie = cutscene:getCharacter("susie")
+            cutscene:fadeOut(0)
+            cutscene:detachFollowers()
+            local x, y = cutscene:getMarker("alphys10")
+            cutscene:slideTo(alphys, x, y, 2)
+
+            local x, y = cutscene:getMarker("kris10")
+            cutscene:slideTo(kris, x, y, 2)
+
+            local x, y = cutscene:getMarker("susie10")
+            cutscene:slideTo(susie, x, y, 2)
+
+            Assets.playSound("fallen")
+            Game.fader:fadeIn(0)
+            susie:setSprite("down")
+            alphys:setSprite("fallen")
+            kris:setSprite("landed")
+            cutscene:wait(1)
+            cutscene:setSpeaker("alphys")
+            cutscene:shakeCharacter("alphys")
+            Assets.playSound("bump")
+            cutscene:wait(1)
+            cutscene:text("* Owww...[wait:10] My head...", "concern_dark")
+            cutscene:wait(1)
+            alphys:resetSprite()
+            Assets.playSound("noise")
+            cutscene:shakeCamera()
+            cutscene:wait(1)
+            cutscene:look(alphys, "left")
+            cutscene:wait(0.3)
+            cutscene:look(alphys, "up")
+            cutscene:wait(0.3)
+            cutscene:look(alphys, "down")
+            cutscene:wait(0.3)
+            cutscene:look(alphys, "right")
+            cutscene:fadeOut(0)
+            Assets.playSound("locker")
+            cutscene:wait(1)
+            local wait, box = cutscene:text("[instant]To be continued...[stopinstant][wait:7s]", {auto = true, wait = false})
+            box.box.visible = false
+            box.text.alpha = 0
+            box.text:fadeTo(1,1)
+            cutscene:wait(3)
+            box.text:fadeTo(0,1)
+            cutscene:wait(wait)
+            cutscene:wait(2)
+            Plot:set("nf_awakened")
+            local path = "saves/" .. Mod.info.id .. "/chapter7.json"
+            love.filesystem.write(path, "1")
+            Kristal.loadMod(Mod.info.id)
+        end
     end;
 
     test = function(cutscene, event)

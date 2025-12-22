@@ -226,10 +226,7 @@ function ModlandFileSelect:onKeyPressed(key, is_repeat)
                     if self.chapter_select then
                         self:swapIntoMod(self.chapter_select)
                     else
-                        Game.state = "EXIT"
-                        Game.fader:fadeOut(function()
-                            Game:load(nil,nil,true)
-                        end)
+                        Game:returnToMenu()
                     end
                 end
             elseif self.selected_y == 5 then
@@ -431,7 +428,7 @@ function ModlandFileSelect:update()
 end
 
 function ModlandFileSelect:draw()
-    local mod_name = Mod.info.chaptername or string.upper((Kristal.getLibConfig("afilemenu", "chaptername").long).." "..(Kristal.getLibConfig("afilemenu", "chapter") or Game.chapter))
+    local mod_name = string.upper((Kristal.getLibConfig("afilemenu", "chaptername").long).." "..(Kristal.getLibConfig("afilemenu", "chapter") or Game.chapter))
     Draw.setColor(PALETTE["filemenu_header"])
     Draw.printShadow(mod_name, 16, 8)
     
@@ -455,7 +452,7 @@ function ModlandFileSelect:draw()
         Draw.printShadow(self:gasterize "Erase", 280, 380)
         if not self.chapter_select then
             setColor(3, 4)
-            Draw.printShadow(self:gasterize "Scene Select", self.bottom_row_heart[3] + 28, 380)
+            Draw.printShadow(self:gasterize "Mod Select", self.bottom_row_heart[3] + 28, 380)
         else
             setColor(3, 4)
             Draw.printShadow(self:gasterize "Chapter Select", self.bottom_row_heart[3] + 28, 380)
@@ -534,14 +531,20 @@ function ModlandFileSelect:setResultText(text)
 end
 
 function ModlandFileSelect:swapIntoMod(mod)
-    Game.state = "EXIT"
-    Game.fader:fadeOut(function()
-        local orig_room = Mod.info.map
-        Mod.info.map = "chapter_select"
-        Game:load()
-        Mod.info.map = orig_room
-        return
-    end, {speed = 1})
+    Kristal.setState("Empty")
+    -- Clear the mod
+    Kristal.clearModState()
+
+    -- Reload mods and return to memu
+    Kristal.loadAssets("", "mods", "", function ()
+        Kristal.loadMod(mod)
+    end)
+
+    Kristal.DebugSystem:refresh()
+    -- End input if it's open
+    if not Kristal.Console.is_open then
+        TextInput.endInput()
+    end
 end
 
 function ModlandFileSelect:getHeartPos()

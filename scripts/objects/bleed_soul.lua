@@ -1,7 +1,7 @@
 local BleedSoul, super = Class(Soul)
 
 function BleedSoul:init(x, y)
-    super:init(self, x, y)
+    super.init(self, x, y)
 
     self.x = x
     self.y = y
@@ -15,7 +15,7 @@ function BleedSoul:init(x, y)
 end
 
 function BleedSoul:update()
-    super:update(self)
+    super.update(self)
     if not self.bleeding then
         self.sprite:setSprite("player/heart_dodge")
         self:setColor(1, 0, 0)

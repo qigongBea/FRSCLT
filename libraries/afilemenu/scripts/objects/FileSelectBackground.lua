@@ -25,7 +25,6 @@ function FileSelectBackground:init()
     self.background_alpha = 1
     self.background_fade = 0.7
     self.giantdarkdoor = Assets.getTexture("fileselect/giantdarkdoor")
-    Kristal.callEvent("afmCreateBackground", self)
 end
 
 function FileSelectBackground:draw()
@@ -88,6 +87,73 @@ function FileSelectBackground:draw_greatdoor()
     Draw.setColor(COLORS.white(0.25))
     Draw.draw(self.giantdarkdoor, 45, 50, 0, 2,2)
     love.graphics.pop()
+end
+
+function FileSelectBackground:draw_ch7()
+    local bg_canvas = Draw.pushCanvas(320, 240)
+    love.graphics.clear(0, 0, 0, 1)
+
+    -- background wave (keep translation here only)
+    love.graphics.push()
+    love.graphics.translate(0, 10)
+
+    love.graphics.setShader(self.BACKGROUND_SHADER)
+    self.BACKGROUND_SHADER:send("bg_sine", self.animation_sine)
+    self.BACKGROUND_SHADER:send("bg_mag", 6)
+    self.BACKGROUND_SHADER:send("wave_height", 240)
+    self.BACKGROUND_SHADER:send(
+        "texsize",
+        { self.background_image_wave:getWidth(), self.background_image_wave:getHeight() }
+    )
+
+    self.BACKGROUND_SHADER:send("sine_mul", 1)
+    Draw.setColor(1, 1, 1, self.background_alpha * 0.8)
+    Draw.draw(self.background_image_wave, 0, math.floor(-10 - (self.background_alpha * 20)))
+
+    self.BACKGROUND_SHADER:send("sine_mul", -1)
+    Draw.draw(self.background_image_wave, 0, math.floor(-10 - (self.background_alpha * 20)))
+
+    Draw.setColor(1, 1, 1, 1)
+    love.graphics.setShader()
+
+    self:drawAnimStrip(
+        self.background_image_animation,
+        (self.animation_sine / 12),
+        0,
+        (((10 - (self.background_alpha * 20)) + 240) - 70),
+        (self.background_alpha * 0.46)
+    )
+
+    self:drawAnimStrip(
+        self.background_image_animation,
+        ((self.animation_sine / 12) + 0.4),
+        0,
+        (((10 - (self.background_alpha * 20)) + 240) - 70),
+        (self.background_alpha * 0.56)
+    )
+
+    self:drawAnimStrip(
+        self.background_image_animation,
+        ((self.animation_sine / 12) + 0.8),
+        0,
+        (((10 - (self.background_alpha * 20)) + 240) - 70),
+        (self.background_alpha * 0.7)
+    )
+
+    love.graphics.pop()
+
+    -- === Chapter 7 image aligned to bottom ===
+    local img = Assets.getTexture("fileselect/chapter7")
+    local scale = 0.5
+    local y = 240 - (img:getHeight() * scale)
+
+    Draw.setColor(1, 1, 1, 1)
+    Draw.draw(img, 0, y, 0, scale, scale)
+
+    Draw.popCanvas()
+
+    Draw.setColor(1, 1, 1, self.background_fade)
+    Draw.draw(bg_canvas, 0, 0, 0, 2, 2)
 end
 
 function FileSelectBackground:drawAnimStrip(sprite, subimg, x, y, alpha)

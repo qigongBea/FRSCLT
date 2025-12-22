@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="16" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="13" nextobjectid="41">
+ <editorsettings>
+  <export target="data.lua" format="lua"/>
+ </editorsettings>
+ <properties>
+  <property name="name" value="The Void"/>
+ </properties>
+ <objectgroup color="#ff00ff" id="4" name="objects">
+  <object id="40" name="script" x="-39.0833" y="-13.3333" width="697.083" height="523.167">
+   <properties>
+    <property name="cutscene" value="reconnection.connect"/>
+    <property name="once" type="bool" value="false"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#0000ff" id="3" name="collision" opacity="0.5"/>
+ <objectgroup color="#ff0000" id="12" name="paths"/>
+ <objectgroup color="#7f00ff" id="5" name="markers">
+  <object id="38" name="spawn" x="240" y="280">
+   <point/>
+  </object>
+ </objectgroup>
+</map>

@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.11.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 7,
-  nextobjectid = 53,
+  nextobjectid = 58,
   properties = {
     ["border"] = "leaves",
     ["cond"] = "not Game",
@@ -676,35 +676,105 @@ return {
           }
         },
         {
-          id = 51,
-          name = "script",
-          type = "",
-          shape = "rectangle",
-          x = 795,
-          y = 655.25,
-          width = 283,
-          height = 28.5,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["cond"] = "Game:hasPartyMember(\"alphys\")",
-            ["cutscene"] = "nightCutscenes.alphyswarn"
-          }
-        },
-        {
           id = 52,
           name = "script",
           type = "",
           shape = "rectangle",
-          x = 1065.5,
-          y = 428.75,
+          x = 1111.17,
+          y = 428.417,
           width = 283,
           height = 91.5,
           rotation = 0,
           visible = true,
           properties = {
             ["cond"] = "Game:hasPartyMember(\"alphys\")",
-            ["cutscene"] = "nightCutscenes.alphyswarn"
+            ["cutscene"] = "nightCutscenes.alphyswarn",
+            ["once"] = false
+          }
+        },
+        {
+          id = 53,
+          name = "script",
+          type = "",
+          shape = "rectangle",
+          x = 200.08,
+          y = 435.915,
+          width = 78.0795,
+          height = 18.3523,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "nightCutscenes.blocked",
+            ["once"] = false,
+            ["plotmax"] = "*nf_school_interact5Alph"
+          }
+        },
+        {
+          id = 54,
+          name = "script",
+          type = "",
+          shape = "rectangle",
+          x = 795,
+          y = 654.75,
+          width = 283,
+          height = 28.5,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cond"] = "Game:hasPartyMember(\"alphys\")",
+            ["cutscene"] = "nightCutscenes.alphyswarnb",
+            ["once"] = false
+          }
+        },
+        {
+          id = 55,
+          name = "script",
+          type = "",
+          shape = "rectangle",
+          x = 1394,
+          y = 428.5,
+          width = 28,
+          height = 91.25,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cond"] = "not Game:hasPartyMember(\"alphys\")",
+            ["cutscene"] = "nightCutscenes.susiewarnb",
+            ["once"] = false
+          }
+        },
+        {
+          id = 56,
+          name = "script",
+          type = "",
+          shape = "rectangle",
+          x = 199.96,
+          y = 436.034,
+          width = 78.0795,
+          height = 18.3523,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "nightCutscenes.blockedalph",
+            ["once"] = false,
+            ["plotmin"] = "nf_school_interact6Alph"
+          }
+        },
+        {
+          id = 57,
+          name = "script",
+          type = "",
+          shape = "rectangle",
+          x = 795,
+          y = 655,
+          width = 283,
+          height = 28.5,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cond"] = "not Game:hasPartyMember(\"alphys\")",
+            ["cutscene"] = "nightCutscenes.susiewarn",
+            ["once"] = false
           }
         }
       }
@@ -729,7 +799,7 @@ return {
           type = "",
           shape = "point",
           x = 240,
-          y = 476,
+          y = 490,
           width = 0,
           height = 0,
           rotation = 0,
@@ -781,7 +851,7 @@ return {
           type = "",
           shape = "point",
           x = 281.424,
-          y = 478.788,
+          y = 490,
           width = 0,
           height = 0,
           rotation = 0,

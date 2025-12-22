@@ -44,6 +44,11 @@ local PLOT = {
     nf_school_init = 5000;
     nf_school_interact1Alph = 5001;
     nf_school_interact2Alph = 5002;
+    nf_school_interact3Alph = 5003;
+    nf_school_interact4Alph = 5004;
+    nf_school_interact5Alph = 5005;
+    nf_school_interact6Alph = 5006;
+    nf_awakened = 5007;
 }
 
 return PLOT

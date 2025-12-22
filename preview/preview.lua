@@ -16,8 +16,9 @@ function preview:draw(fade)
     for i = 1,3 do
         Draw.setColor(COLORS.white(.8/i))
         love.graphics.translate(math.sin(RUNTIME*((4-i)/3)), math.sin(RUNTIME*2*((4-i)/3)))
+        love.graphics.scale(0.5)
         Draw.draw(self.DEPTH, 0,0,0,1,1, self.DEPTH:getWidth()/2, self.DEPTH:getHeight()/2)
-        love.graphics.scale(0.8)
+        love.graphics.scale(2)
     end
 
     Draw.popCanvas()

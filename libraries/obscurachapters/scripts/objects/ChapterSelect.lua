@@ -18,6 +18,10 @@ local ChapterSelect, super = Class(Object)
 ---@field completion_file boolean
 ---@field shadow_crystal boolean
 
+local intermission_reached = false
+local developer_mode = false
+local ch7_reached = false
+
 function ChapterSelect:init()
     super.init(self,0,0,SCREEN_WIDTH,SCREEN_HEIGHT)
     self.font = Assets.getFont("main")
@@ -48,8 +52,7 @@ function ChapterSelect:init()
     self.warning = nil
     self.showing_warning = false
 end
-local intermission_reached = false
-local developer_mode = false
+
 function ChapterSelect:loadChapters()
     ---@type ChapterSelect.Chapter[]
     self.chapters = Kristal.getLibConfig("obscurachapters",
@@ -314,6 +317,15 @@ function ChapterSelect:onKeyPressedSelect(key)
     local old_sel_x = self.selected_x
     local old_sel_y = self.selected_y
     if Input.is("down", key) then
+        local max_row = #self.chapters + 1
+
+        -- special behavior: from Quit/Options → Chapter 6
+        if intermission_reached and self.selected_y == max_row then
+            self.selected_y = 6  -- jump directly to chapter 6
+            Assets.playSound("ui_move")
+            return
+        end
+
         repeat
             self.selected_y = self.selected_y + 1
         until self:isValidSelection()
@@ -413,6 +425,7 @@ if developer_mode then
         if not ch then return end
 
         if intermission_reached then
+            self.selected_y = 6
             ch.name  = "Intermission"
             ch.image = Assets.getTexture("chapters/ch6.5")
             ch.sound = "rewind"
@@ -442,11 +455,18 @@ else
         local save_path = "saves/drfc-in-too-deep-restored"
         local reset_file = love.filesystem.getInfo(save_path .. "/reset.json") ~= nil
         intermission_reached = reset_file
+        
+        local ch7_file = love.filesystem.getInfo(save_path .. "/chapter7.json") ~= nil
+        ch7_reached = ch7_file
 
         local ch = self.chapters and self.chapters[6]
         if not ch then return end
 
+        local ch7 = self.chapters and self.chapters[7]
+        if not ch7 then return end
+
         if intermission_reached then
+            self.selected_y = 6
             ch.name  = "Intermission"
             ch.image = Assets.getTexture("chapters/ch6.5")
             ch.sound = "rewind"
@@ -487,12 +507,18 @@ function ChapterSelect:applyIntermissionWhiteout()
         end
 
         if i ~= 7 and i ~= 6 then
-            ch.name  = "--"
+            ch.name  = "- -"
             ch.image = Assets.getTexture("chapters/whiteout")
             ch.unlocked = false
         elseif i == 7 then
-            ch.name  = "DELTARUNE"
-            ch.image = Assets.getTexture("chapters/blackout")
+            ch.name  = "INTERSOMNIA"
+            if ch7_reached ~= true then
+                ch.image = Assets.getTexture("chapters/blackout")
+            else
+                ch.image = Assets.getTexture("chapters/ch7_unlock")
+                ch.unlocked = true
+                ch.sound = "ch7"
+            end
         end
     end
 end
@@ -508,6 +534,8 @@ function ChapterSelect:clearIntermissionWhiteout()
                 ch.image = old.image
             end
             if i ~= 7 then
+                ch.unlocked = true
+            elseif i == 7 and ch7_reached == true then
                 ch.unlocked = true
             else
                 ch.unlocked = false

@@ -235,10 +235,10 @@ function ModlandCompletionSelect:update()
 end
 
 function ModlandCompletionSelect:draw()
-    local mod_name = Mod.info.chaptername or string.upper((Kristal.getLibConfig("afilemenu", "chaptername").long).." "..(Kristal.getLibConfig("afilemenu", "chapter") or Game.chapter))
+    local mod_name = string.upper((Kristal.getLibConfig("afilemenu", "chaptername").long).." "..(Kristal.getLibConfig("afilemenu", "chapter") or Game.chapter))
     Draw.setColor(PALETTE["filemenu_header"])
     Draw.printShadow(mod_name, 16, 8)
-
+    
     Draw.setColor(PALETTE["filemenu_selected"])
 
     Draw.printShadow(self:getTitle(), 80, 60)

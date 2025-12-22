@@ -4,22 +4,25 @@ function Dummy:init()
     super.init(self)
 
     -- Enemy name
-    self.name = "Dummy"
+    self.name = "Omnis"
     -- Sets the actor, which handles the enemy's sprites (see scripts/data/actors/dummy.lua)
-    self:setActor("dummy")
+    self:setActor("omnis")
 
     -- Enemy health
-    self.max_health = 450
-    self.health = 450
+    self.max_health = 3500
+    self.health = 600
     -- Enemy attack (determines bullet damage)
-    self.attack = 4
+    self.attack = 10
     -- Enemy defense (usually 0)
-    self.defense = 0
+    self.defense = 6
     -- Enemy reward
     self.money = 100
 
+    -- make sure cutscene doesnt start twice
+    self.cutscene_started = false
+
     -- Mercy given when sparing this enemy before its spareable (20% for basic enemies)
-    self.spare_points = 20
+    self.spare_points = 0
 
     -- List of possible wave ids, randomly picked each turn
     self.waves = {
@@ -32,19 +35,18 @@ function Dummy:init()
     }
 
     -- Check text (automatically has "ENEMY NAME - " at the start)
-    self.check = "AT 4 DF 0\n* Cotton heart and button eye\n* Looks just like a fluffy guy."
+    self.check = "AT 10 DF 6\n* The Omnis of your journey."
 
     -- Text randomly displayed at the bottom of the screen each turn
     self.text = {
-        "* The dummy gives you a soft\nsmile.",
-        "* The power of fluffy boys is\nin the air.",
-        "* Smells like cardboard.",
+        "* Omnis is readying his next attack.",
+        "* You look out the window, the statue stares back.",
+        "* Ursula looks nervous.",
     }
     -- Text displayed at the bottom of the screen when the enemy has low health
-    self.low_health_text = "* The dummy looks like it's\nabout to fall over."
+    self.low_health_text = "* Omnis looks like he's about to bleed."
 
     -- Register act called "Smile"
-    self:registerAct("Smile")
     -- Register party act with Ralsei called "Tell Story"
     -- (second argument is description, usually empty)
     self:registerAct("Tell Story", "", {"ralsei"})
@@ -89,6 +91,15 @@ function Dummy:onAct(battler, name)
     -- If the act is none of the above, run the base onAct function
     -- (this handles the Check act)
     return super.onAct(self, battler, name)
+end
+
+function Dummy:onDefeat(damage, battler)
+    if self.cutscene_started then
+        return
+    end
+    self.cutscene_started = true
+    
+    Game.battle:startCutscene("omnis", "deathapproaches")
 end
 
 return Dummy

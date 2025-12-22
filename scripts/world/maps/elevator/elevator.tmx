@@ -9,11 +9,11 @@
   <property name="step_sound" value="evergroves"/>
  </properties>
  <tileset firstgid="1" source="../../tilesets/tenna_encounter_leadup.tsx"/>
- <imagelayer id="8" name="loop" offsetx="121.995" offsety="-484" repeaty="1">
+ <imagelayer id="8" name="loop" offsetx="141.995" offsety="-485.333" repeaty="1">
   <image source="../../../../assets/sprites/backgrounds/skyline_elevator_looper.png" width="320" height="336"/>
  </imagelayer>
- <imagelayer id="6" name="Image Layer 1" locked="1" offsetx="0" offsety="-148">
-  <image source="../../../../assets/sprites/backgrounds/skyline_elevator.png" width="600" height="600"/>
+ <imagelayer id="6" name="Image Layer 1" offsetx="171.663" offsety="-511.33">
+  <image source="../../../../assets/sprites/backgrounds/skyline_elevator.png" width="256" height="870"/>
  </imagelayer>
  <layer id="1" name="Tile Layer 1" width="15" height="15">
   <data encoding="csv">

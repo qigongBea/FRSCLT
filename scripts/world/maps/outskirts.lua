@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.11.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -79,14 +79,15 @@ return {
           name = "script",
           type = "",
           shape = "rectangle",
-          x = 195.5,
-          y = 210,
-          width = 52.5,
-          height = 114.5,
+          x = 114.256,
+          y = 209.935,
+          width = 746.5,
+          height = 116.031,
           rotation = 0,
           visible = true,
           properties = {
-            ["cutscene"] = "nightCutscenes.awakening"
+            ["cutscene"] = "nightCutscenes.awakening",
+            ["once"] = true
           }
         }
       }

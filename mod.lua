@@ -1,16 +1,27 @@
 
 function Mod:afmGetMusic()
     if Mod.ghast_tear_real then return end
+    if Mod:intermissionReached() then return "AUDIO_DRONE" end
+    --if Mod:ch7Reached() then return "spireselect" end
     return "sinkingfeeling"
 end
 
 
 function Mod:afmGetChapterName()
-    
+    --if Mod:ch7Reached() then return "Chapter 7" end
+    return "Chapter 6"
+end
+
+function Mod:afmGetStyle()
+    --if Mod:ch7Reached() then
+        --return "ch7"
+    --end
+    return "DEVICE"
 end
 
 function Mod:getPaletteColor(key)
     if Mod.ghast_tear_real then return end
+    if Mod:intermissionReached() then return end
     if key == "filemenu_deselected" then
         return {0.5, 0.5, 0.5}
     elseif key == "filemenu_selected" then
@@ -26,6 +37,8 @@ end
 
 function Mod:afmCreateBackground(bg)
     if Mod.ghast_tear_real then return end
+    if Mod:intermissionReached() then return end
+    --if Mod:ch7Reached() then return end
     local gbg = AdvancedGonerBackground()
     bg.sprite = Assets.getTexture("backgrounds/IMAGE_DEPTH_2")
     bg:addChild(gbg)
@@ -44,13 +57,23 @@ function Mod:postInit()
         startTimestamp = math.floor(os.time() - Game.playtime),
         instance = 0
     })
+    if Mod:intermissionReached() then
+        Mod:stashPreIntermissionSaves()
+        return
+    end
     print("Loaded "..self.info.name.."!")
 end
 
 function Mod:afmPostInit(new_file)
     if Mod.ghast_tear_real then Mod.ghast_tear_real = nil end
     if new_file then
-        Game.world:startCutscene("nightCutscenes.susie")
+        if Mod:intermissionReached() then
+            Game.world:loadMap("basket")
+            --Plot:set("nf_school_init")
+            Game.world.menu = nil
+        else
+            Game.world:startCutscene("nightCutscenes.susie")
+        end
     end
 end
 
@@ -125,6 +148,76 @@ function Mod:init()
             error("Attempt to create non existent map \"" .. tostring(id) .. "\"")
         end
     end)
+end
+
+function Mod:stashPreIntermissionSaves()
+    local base = "saves/" .. Mod.info.id
+    local stash = base .. "/pre-intermission"
+    local marker = base .. "/stash_completed"
+
+    if love.filesystem.getInfo(marker) then
+        return
+    end
+
+    if not love.filesystem.getInfo(stash) then
+        love.filesystem.createDirectory(stash)
+    end
+
+    local targets = { "file_1.json", "file_2.json", "file_3.json" }
+    local stashed_any = false
+
+    for _, filename in ipairs(targets) do
+        local src = base .. "/" .. filename
+        local dst = stash .. "/" .. filename
+        local info = love.filesystem.getInfo(src)
+
+        if info and info.type == "file" then
+            local data = love.filesystem.read(src)
+            if data then
+                love.filesystem.write(dst, data)
+
+                local check = love.filesystem.getInfo(dst)
+                if check and check.type == "file" then
+                    love.filesystem.remove(src)
+                    stashed_any = true
+                end
+            end
+        end
+    end
+
+    if stashed_any then
+        love.filesystem.write(marker, "ok")
+    end
+end
+
+function Mod:intermissionReached()
+    if Mod:ch7Reached() then return false end
+    local save_path = "saves/" .. Mod.info.id
+    local reset_file = love.filesystem.getInfo(save_path .. "/reset.json") ~= nil
+    return reset_file;
+end
+
+function Mod:ch7Reached()
+    local save_path = "saves/" .. Mod.info.id
+    local ch7_file = love.filesystem.getInfo(save_path .. "/chapter7.json") ~= nil
+    return ch7_file;
+end
+
+---@return Video
+function Mod:video(id, callback)
+    local video = Video(id)
+    local callback_obj = Callback({
+        update = function (cbk)
+            if not video:isPlaying() then
+                if callback and callback(video, cbk) == false then return end
+                video:remove()
+            end
+        end
+    })
+    video:addChild(callback_obj)
+    video.x = SCREEN_WIDTH/2
+    video.origin_x = 0.5
+    return video
 end
 
 function Mod:load(data)

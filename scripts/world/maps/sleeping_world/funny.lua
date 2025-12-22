@@ -1,5 +1,5 @@
 return {
-  version = "1.11",
+  version = "1.10",
   luaversion = "5.1",
   tiledversion = "1.11.2",
   class = "",
@@ -222,19 +222,6 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
-        },
-        {
-          id = 16,
-          name = "the best collider ever... sleeping world stray pixel <3",
-          type = "",
-          shape = "rectangle",
-          x = 428,
-          y = 320,
-          width = 2,
-          height = 2,
-          rotation = 0,
-          visible = true,
-          properties = {}
         }
       }
     },
@@ -314,8 +301,8 @@ return {
           name = "script",
           type = "",
           shape = "rectangle",
-          x = 380,
-          y = 320,
+          x = 516.239,
+          y = -247.572,
           width = 80,
           height = 240,
           rotation = 0,

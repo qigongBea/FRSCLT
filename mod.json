@@ -108,10 +108,11 @@
                 },
                 {
                     "image": "chapters/ch7",
-                    "name": "Access Denied",
+                    "name": "- -",
                     "unlocked": false,
                     "sound": "bluh",
-                    "instant": true
+                    //"room": "bumperzone",
+                    //"mod": "drfc-in-too-deep-restored"
                 }
             ]
         }

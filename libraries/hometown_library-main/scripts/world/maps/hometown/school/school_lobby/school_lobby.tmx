@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="47" height="21" tilewidth="40" tileheight="40" infinite="0" nextlayerid="7" nextobjectid="53">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="47" height="21" tilewidth="40" tileheight="40" infinite="0" nextlayerid="7" nextobjectid="58">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -165,21 +165,51 @@
     <property name="cutscene" value="nightCutscenes.alphyswarn"/>
    </properties>
   </object>
-  <object id="51" name="script" x="795" y="655.25" width="283" height="28.5">
+  <object id="52" name="script" x="1111.17" y="428.417" width="283" height="91.5">
    <properties>
     <property name="cond" value="Game:hasPartyMember(&quot;alphys&quot;)"/>
     <property name="cutscene" value="nightCutscenes.alphyswarn"/>
+    <property name="once" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="52" name="script" x="1065.5" y="428.75" width="283" height="91.5">
+  <object id="53" name="script" x="200.08" y="435.915" width="78.0795" height="18.3523">
+   <properties>
+    <property name="cutscene" value="nightCutscenes.blocked"/>
+    <property name="once" type="bool" value="false"/>
+    <property name="plotmax" value="*nf_school_interact5Alph"/>
+   </properties>
+  </object>
+  <object id="54" name="script" x="795" y="654.75" width="283" height="28.5">
    <properties>
     <property name="cond" value="Game:hasPartyMember(&quot;alphys&quot;)"/>
-    <property name="cutscene" value="nightCutscenes.alphyswarn"/>
+    <property name="cutscene" value="nightCutscenes.alphyswarnb"/>
+    <property name="once" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="55" name="script" x="1394" y="428.5" width="28" height="91.25">
+   <properties>
+    <property name="cond" value="not Game:hasPartyMember(&quot;alphys&quot;)"/>
+    <property name="cutscene" value="nightCutscenes.susiewarnb"/>
+    <property name="once" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="56" name="script" x="199.96" y="436.034" width="78.0795" height="18.3523">
+   <properties>
+    <property name="cutscene" value="nightCutscenes.blockedalph"/>
+    <property name="once" type="bool" value="false"/>
+    <property name="plotmin" value="nf_school_interact6Alph"/>
+   </properties>
+  </object>
+  <object id="57" name="script" x="795" y="655" width="283" height="28.5">
+   <properties>
+    <property name="cond" value="not Game:hasPartyMember(&quot;alphys&quot;)"/>
+    <property name="cutscene" value="nightCutscenes.susiewarn"/>
+    <property name="once" type="bool" value="false"/>
    </properties>
   </object>
  </objectgroup>
  <objectgroup color="#ff00ff" id="6" name="markers">
-  <object id="26" name="entrykris" x="240" y="476">
+  <object id="26" name="entrykris" x="240" y="490">
    <point/>
   </object>
   <object id="27" name="spawn" x="940" y="800">
@@ -191,7 +221,7 @@
   <object id="29" name="entrydark" x="940" y="40">
    <point/>
   </object>
-  <object id="46" name="susie1" x="281.424" y="478.788">
+  <object id="46" name="susie1" x="281.424" y="490">
    <point/>
   </object>
  </objectgroup>

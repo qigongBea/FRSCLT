@@ -1,10 +1,10 @@
-local actor, super = Class(Actor, "dummy")
+local actor, super = Class(Actor, "omnis")
 
 function actor:init()
     super.init(self)
 
     -- Display name (optional)
-    self.name = "Dummy"
+    self.name = "Omnis"
 
     -- Width and height for this actor, used to determine its center
     self.width = 27

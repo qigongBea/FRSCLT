@@ -1,60 +1,32 @@
 {
-    // The ID of your mod. Should be unique!!
     "id": "drfc-in-too-deep-restored",
-    // Displays on the main menu.
     "name": "Depths (Restored)",
-    // Displays underneath the name. Optional.
     "subtitle": "",
 
-    // The version of your mod.
     "version": "v1.0.0",
-    // What version of the engine your mod was made with.
     "engineVer": "v0.10.0-dev",
 
-    // The Deltarune chapter you'd like to base your mod off of.
-    // Do keep in mind that you can control chapter-specific features
-    // one by one using the config below.
     "chapter": 6,
-
-    // The map that you start in when first starting the mod.
     "map": "chapter_select",
     "useSaves": false,
-
-    // The party. The first character is the player.
     "party": ["kris"],
-	
-	
-    // The inventory. Contains three darkburgers, a cell phone and a shadow crystal by default.
     "inventory": {
         "items": ["ancientsweet", "deluxedinner", "deluxedinner", "scarlixir", "flowercandy", "flowercandy"],
         "key_items": ["cell_phone", "shadowcrystal", "exitKey"],
         "storage": ["favwich", "butjuice", "glowshard", "glowshard", "javacookie"]
     },
 
-    // Equipment for your party. Not specifying equipment defaults to the following.
     "equipment": {
         "kris": {"armor": ["tennatie", "princessrbn"], "weapon": "jingleblade"},
         "susie": {"armor": ["powerband", "waferguard"], "weapon": "absorbax"}
     },
 
-    // Should never be true, but just in case. Restarts the entire engine when leaving the mod.
-    // If you need this, you're most likely doing something wrong.
     "hardReset": false,
-
     "chaptername": "Chapter 6",
-
-    // Whether the mod is hidden from the mod selection.
     "hidden": false,
-
-    // Whether the game window's title should be set to the mod's name, when the engine is run
-    // with this mod as the target mod.
     "setWindowTitle": false,
-
-    // Config values for the engine and any libraries you may have.
-    // These config values can control chapter-specific features as well.
     "config": {
         "kristal": {
-            // End of config
             "enemyAuras": true,
             "speechBubble" : "depths"
         },
@@ -62,12 +34,12 @@
             "map": "hometown/torielhouse/kris_room",
             "configMenuOverride": true,
             "hookOverlay": true,
-            "chapter_select": true,
+            "chapter_select": true
         },
         "obscurachapters": {
-            "infoProject": "Menu by Hyperboid", // If not set, defaults to "By: [Mod.info.author]"
-            "infoAuthor": "DELTARUNE: Forecasted", // If not set, defaults to "[Mod.info.name] v[Mod.info.version]"
-            "include_example": false, // Remove the default ch1 and ch2 (from the lib.json)
+            "infoProject": "Menu by Hyperboid", 
+            "infoAuthor": "DELTARUNE: Forecasted",
+            "include_example": false,
             "chapters":[
                 {
                     "image": "chapters/ch1",
@@ -110,9 +82,7 @@
                     "image": "chapters/ch7",
                     "name": "- -",
                     "unlocked": false,
-                    "sound": "bluh",
-                    //"room": "bumperzone",
-                    //"mod": "drfc-in-too-deep-restored"
+                    "sound": "bluh"
                 }
             ]
         }

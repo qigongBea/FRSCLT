@@ -2,7 +2,7 @@
 local map, super = Class(Map)
 function map:init(world,data)
     super.init(self,world,data)
-    self.border = "simple"
+    self.border = "none"
 end
 
 function map:update()

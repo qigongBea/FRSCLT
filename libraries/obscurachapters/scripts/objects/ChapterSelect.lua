@@ -51,6 +51,7 @@ function ChapterSelect:init()
     -- create warning overlay
     self.warning = nil
     self.showing_warning = false
+    love.window.setTitle("DELTARUNE")
 end
 
 function ChapterSelect:loadChapters()

@@ -45,7 +45,7 @@ function Mod:afmCreateBackground(bg)
 end
 
 function Mod:postInit()
-    love.window.setTitle("DELTARUNE Chapter 6")
+    love.window.setTitle("DELTARUNE")
     love.window.setIcon(Assets.getTextureData("icons/deltarune"))
     Kristal.setPresence({
         details = "DELTARUNE Chapter 6",
@@ -67,6 +67,48 @@ end
 function Mod:afmPostInit(new_file)
     if Mod.ghast_tear_real then Mod.ghast_tear_real = nil end
     if new_file then
+        local equipments = Mod.info.equipment
+        if equipments then
+            for id, equipped in pairs(equipments) do
+                local member = Game.party_data[id]
+                if member then
+                    if equipped.weapon then
+                        member:setWeapon(equipped.weapon ~= "" and equipped.weapon or nil)
+                    end
+                    local armors = equipped.armor or {}
+                    for i = 1, #armors do
+                        if armors[i] then
+                            member:setArmor(i, armors[i] ~= "" and armors[i] or nil)
+                        end
+                    end
+                else
+                    Kristal.Console:error("Attempted to set equipment for non-existent member " .. id)
+                end
+            end
+        end
+    
+        local inventory = Mod.info.inventory
+        if inventory then
+            Game.inventory:clear()
+            Game.light_inventory:clear()
+            Game.dark_inventory:clear()
+            if inventory.items then
+                for i, item in ipairs(inventory.items) do
+                    Game.inventory:setItem("items", i, item)
+                end
+            end
+            if inventory.key_items then
+                for i, item in ipairs(inventory.key_items) do
+                    Game.inventory:setItem("key_items", i, item)
+                end
+            end
+            if inventory.storage then
+                for i, item in ipairs(inventory.storage) do
+                    Game.inventory:setItem("storage", i, item)
+                end
+            end
+        end
+        
         if Mod:intermissionReached() then
             Game.world:loadMap("basket")
             --Plot:set("nf_school_init")

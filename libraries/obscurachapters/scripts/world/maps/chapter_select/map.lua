@@ -3,9 +3,10 @@ local map, super = Class(Map)
 function map:init(world,data)
     super.init(self,world,data)
     self.music = "AUDIO_DRONE"
-    self.border = "simple"
+    self.border = "none"
 end
 function map:onEnter()
+    love.window.setTitle("DELTARUNE")
     --local WarningScript = require("mods.forecasted-restored.libraries.obscurachapters.scripts.objects.WarningScript")
     --Game.world.stage:addChild(WarningScript())
     self.world:openMenu(ChapterSelect())

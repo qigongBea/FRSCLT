@@ -1,10 +1,12 @@
 ---@param cutscene WorldCutscene
 return function (cutscene)
+    Game:setBorder("none", 0)
     cutscene:after(function ()
         Game.world:loadMap(Mod.post_bumper_room or "fileselect")
         Mod.post_bumper_room = nil
     end)
     if Kristal.hasAnySaves() then
+        love.window.setTitle("DELTARUNE Chapter 6")
         return
     end
     cutscene.world.music:stop()

@@ -1,4 +1,3 @@
-
 function Mod:afmGetMusic()
     if Mod.ghast_tear_real then return end
     if Mod:intermissionReached() then return "AUDIO_DRONE" end

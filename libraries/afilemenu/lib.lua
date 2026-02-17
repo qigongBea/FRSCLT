@@ -29,6 +29,10 @@ function lib:init()
                                 Kristal.returnToMenu()
                             end
                         else
+                            love.audio.stop()
+                            Music.clear()
+                            Kristal.resetWindow()
+                            
                             Game:load(nil,nil,true)
                         end
                         self.quit_timer = 0

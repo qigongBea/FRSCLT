@@ -25,6 +25,7 @@ function FileSelectBackground:init()
     self.background_alpha = 1
     self.background_fade = 0.7
     self.giantdarkdoor = Assets.getTexture("fileselect/giantdarkdoor")
+    Kristal.callEvent("afmCreateBackground", self)
 end
 
 function FileSelectBackground:draw()

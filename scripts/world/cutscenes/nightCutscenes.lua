@@ -1,12 +1,6 @@
 ---@type table<string, fun(cutscene:WorldCutscene, ...):...>
 local nightCutsenes = {
     susie = function(cutscene, event)
-        local kris = assert(cutscene:getCharacter("kris"), "no kris???")
-        local susie = cutscene:getCharacter("susie")
-        kris:setSprite("laying_phone")
-        kris:setPosition(Game.world.map:getMarker("krisstart"))
-        kris:setFacing("left")
-        Game.world.music:setVolume(0)
         Game.world.fader.alpha = 1
         cutscene:fadeOut(0.5, { music = true })
         cutscene:wait(1.5)
@@ -18,18 +12,52 @@ local nightCutsenes = {
         cutscene:wait(0.3)
         Assets.playSound("item")
         cutscene:wait(1)
-        cutscene:setSpeaker("susie")
-        cutscene:text("* Hello?", "surprise_frown")
-        cutscene:text("* You picked up!! [wait:10]I was getting worried my new phone wasn't working.", "surprise_smile")
-        cutscene:text("* Wake your ass up and meet me in town!! [wait:10]I found something...[wait:10] bad.", "shy")
-        cutscene:text("* I'll explain more when you get here.", "nervous")
-        cutscene:text("* But try not to wake up Toriel.[wait:10] She's not too happy about last time.", "smile")
-        cutscene:text("* I'll be waiting by QC's-", "shy_b", { auto = true })
+
+        local function plainText(str)
+            text = DialogueText("[voice:susie]" .. str, 0, 100, 640, 480,
+                { align="center" })
+            text.layer = WORLD_LAYERS["top"] + 100
+            text.skip_speed = true
+            text.parallax_x = 0
+            text.parallax_y = 0
+            Game.world:addChild(text)
+        
+            cutscene:wait(function()
+                if text:isTyping() then
+                    if Input.pressed("cancel") or Input.down("menu") then
+                        text.state.skipping = true
+                        text.state.waiting = 0
+                        text.state.progress = math.huge
+                    end
+                    return false
+                end
+                return true
+            end)
+        
+            cutscene:wait(function()
+                return Input.pressed("confirm") or Input.down("menu")
+            end)
+        
+            text:remove()
+        end             
+
+        plainText("Hello?")
+        plainText("You picked up!![wait:10]\nI was getting worried my\nnew phone wasn't working.")
+        plainText("Wake your ass up and\nmeet me in town!! [wait:10]\nI found something...[wait:10] bad.")
+        plainText("I'll explain more when you get here.")
+        plainText("But try not to wake up Toriel.[wait:10]\nShe's not too happy about\nthe last time.")
+        plainText("I'll be waiting by QC's,[wait:5] 'kay?")
         Assets.playSound("item")
         cutscene:setSpeaker("kris")
         cutscene:wait(1)
-        cutscene:text("* (She hung up the phone.)")
-        cutscene:wait(1)
+
+        Game.world:loadMap("hometown/torielhouse/kris_room")
+        local kris = assert(cutscene:getCharacter("kris"), "no kris???")
+        local susie = cutscene:getCharacter("susie")
+        kris:setSprite("laying_phone")
+        kris:setPosition(Game.world.map:getMarker("krisstart"))
+        kris:setFacing("left")
+        Game.world.music:setVolume(0)
 
         cutscene:fadeIn(1.5, { music = true })
         cutscene:wait(2)
@@ -51,7 +79,7 @@ local nightCutsenes = {
 
     chariel = function(cutscene, event)
         cutscene:text("* (It's Chariel, [wait:5]the beloved living room chair.) ")
-        cutscene:text("* (...[wait:5]Toriel wouldn't let you\ntake this one.) ")
+        cutscene:text("* (...[wait:5] Toriel wouldn't let you\ntake this one.) ")
     end;
 
     phone = function(cutscene, event)

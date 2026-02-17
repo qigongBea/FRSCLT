@@ -223,11 +223,11 @@ function ModlandFileSelect:onKeyPressed(key, is_repeat)
                     self.selected_y = 1
                     self:updateSelected()
                 elseif self.selected_x == 3 then
-                    if self.chapter_select then
-                        self:swapIntoMod(self.chapter_select)
-                    else
-                        Game:returnToMenu()
-                    end
+                    love.audio.stop()
+                    Music.clear()
+                    Kristal.resetWindow()
+                    
+                    Game:load(nil,nil,true)
                 end
             elseif self.selected_y == 5 then
                 if self.selected_x == 1 then
@@ -452,7 +452,7 @@ function ModlandFileSelect:draw()
         Draw.printShadow(self:gasterize "Erase", 280, 380)
         if not self.chapter_select then
             setColor(3, 4)
-            Draw.printShadow(self:gasterize "Mod Select", self.bottom_row_heart[3] + 28, 380)
+            Draw.printShadow(self:gasterize "Chapter Select", self.bottom_row_heart[3] + 28, 380)
         else
             setColor(3, 4)
             Draw.printShadow(self:gasterize "Chapter Select", self.bottom_row_heart[3] + 28, 380)

@@ -31,7 +31,7 @@
             "speechBubble" : "depths"
         },
         "afilemenu": {
-            "map": "hometown/torielhouse/kris_room",
+            "map": "blank",
             "configMenuOverride": true,
             "hookOverlay": true,
             "chapter_select": true

@@ -1,6 +1,12 @@
-# DELTARUNE: Forecasted
+# DELTARUNE: Forecasted 三角符文：预报
 
-## This is a fanmade take on DELTARUNE: Chapter 6 made originally by the [funnyFeline YT Channel](https://www.youtube.com/@funnyfeline1), but now, it's being restored! It was made public, and although it was buggy mess, I was able to restore most of it and fill in the blanks.
+This is the repo for testing the multi-language system for the deltarune fangame *DELTARUNE Forecasted*. English and Simplified Chinese will be supported.
+First demo vid next week. Link will be provided below then.
+
+---
+Following is the content of the oringinal readme:
+
+This is a fanmade take on DELTARUNE: Chapter 6 made originally by the [funnyFeline YT Channel](https://www.youtube.com/@funnyfeline1), but now, it's being restored! It was made public, and although it was buggy mess, I was able to restore most of it and fill in the blanks.
 
 ## Custom Features:
 - Custom Borders <img width="2559" height="1439" alt="kris and susie chillin' with borders on" src="https://github.com/user-attachments/assets/e13954a0-ea79-402f-9d4f-c04050e8d9bb" />

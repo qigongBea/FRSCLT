@@ -1,7 +1,10 @@
 # DELTARUNE: Forecasted 三角符文：预报
 
 This is the repo for testing the multi-language system for the deltarune fangame *DELTARUNE Forecasted*. English and Simplified Chinese will be supported.
-First demo vid next week. Link will be provided below then.
+
+Previews:
+- [Multi-language Test #1](https://www.bilibili.com/video/BV1BAwMzgEyt/?spm_id_from=0.0.homepage.video_card.click)
+- [Preview #0](https://www.bilibili.com/video/BV1w9SSBPENm/) (not recommended to watch)
 
 ---
 Following is the content of the oringinal readme:

@@ -1,0 +1,19 @@
+{
+    "id": "langLib",
+    "authors": "Elioze",
+    "version": "1.0",
+    "engineVer": "v0.10.0",
+    "config": {
+        //Set Lower character and there Upper counterparts
+        "lowerAndUpper": 
+        {
+            //French Characters
+            "à": "À", "â": "Â", "ä": "Ä",
+            "é": "É", "è": "È", "ê": "Ê", "ë": "Ë",
+            "î": "Î", "ï": "Ï",
+            "ô": "Ô", "ö": "Ö",
+            "ù": "Ù", "û": "Û", "ü": "Ü",
+            "ç": "Ç"
+        }
+    }
+}

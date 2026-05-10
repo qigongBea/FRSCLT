@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="23" height="10" tilewidth="40" tileheight="40" infinite="0" nextlayerid="6" nextobjectid="61">
+ <editorsettings>
+  <export target="mainroom.lua" format="lua"/>
+ </editorsettings>
+ <properties>
+  <property name="border" value="shelter"/>
+  <property name="light" type="bool" value="true"/>
+  <property name="music" value="in-the-shelter"/>
+ </properties>
+ <layer id="1" name="Tile Layer 1" width="23" height="10">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <imagelayer id="2" name="mainroom" offsetx="120" offsety="0">
+  <image source="../../../../assets/sprites/backgrounds/mainroom.png" width="706" height="422"/>
+ </imagelayer>
+ <objectgroup color="#0000ff" id="3" name="collisions">
+  <object id="3" x="254" y="102.5" width="152" height="41.5"/>
+  <object id="8" x="408" y="81" width="280.5" height="42.5"/>
+  <object id="12" x="76" y="348" width="314" height="72"/>
+  <object id="15" x="381.933" y="400.314" width="173" height="34.5"/>
+  <object id="22" x="546" y="350" width="278" height="72.2805"/>
+  <object id="24" x="828" y="132" width="26" height="134"/>
+  <object id="30" x="230" y="36" width="84" height="108"/>
+  <object id="32" x="688" y="148" width="44.1227" height="11.3073">
+   <polygon points="4,-22 46,-22 46,20"/>
+  </object>
+  <object id="33" x="776" y="294" width="145.5" height="37.5">
+   <polygon points="4,-78 46,-36 46,-78"/>
+  </object>
+  <object id="51" x="120" y="212" width="15.1364" height="46.6818">
+   <polygon points="0,0 48,0 0,48"/>
+  </object>
+  <object id="56" x="220.977" y="113.023" width="15.1364" height="46.6818">
+   <polygon points="-12.977,34.977 11.023,34.977 -12.977,58.977"/>
+  </object>
+  <object id="58" x="111" y="261" width="14" height="86"/>
+  <object id="59" x="822" y="258" width="8" height="93"/>
+ </objectgroup>
+ <objectgroup color="#ff00ff" id="5" name="objects">
+  <object id="31" name="transition" x="192" y="136" width="38.5" height="64.1781">
+   <properties>
+    <property name="map" value="shelter/awakening"/>
+    <property name="marker" value="awakeningdoor"/>
+   </properties>
+   <polygon points="-24,-18 10,-50 10,42 -24,76"/>
+  </object>
+  <object id="35" name="transition" x="720" y="160" width="35.3229" height="81.5">
+   <properties>
+    <property name="map" value="shelter/hallway"/>
+   </properties>
+   <polygon points="14,8 58,8 58,52"/>
+  </object>
+  <object id="40" name="cameratarget" x="-0.666667" y="-15.2727" width="920.667" height="416.667" visible="0">
+   <properties>
+    <property name="lockx" type="bool" value="false"/>
+    <property name="locky" type="bool" value="true"/>
+    <property name="marker" value="camfocus"/>
+    <property name="time" type="float" value="0.1"/>
+   </properties>
+  </object>
+  <object id="60" name="interactable" x="382" y="358" width="172" height="76">
+   <properties>
+    <property name="text1" value="* Too late to back out now."/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#7f00ff" id="4" name="markers">
+  <object id="1" name="spawn" x="470.14" y="334.617">
+   <point/>
+  </object>
+  <object id="38" name="mainroomdoor" x="698.5" y="211.5">
+   <point/>
+  </object>
+  <object id="39" name="camfocus" x="470" y="184">
+   <point/>
+  </object>
+  <object id="47" name="awaken" x="253" y="214.5">
+   <point/>
+  </object>
+ </objectgroup>
+</map>

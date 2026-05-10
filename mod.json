@@ -1,0 +1,90 @@
+{
+    "id": "drfc-in-too-deep-restored",
+    "name": "Depths (Restored)",
+    "subtitle": "",
+
+    "version": "v1.0.0",
+    "engineVer": "v0.10.0-dev",
+
+    "chapter": 6,
+    "map": "chapter_select",
+    "useSaves": false,
+    "party": ["kris"],
+    "inventory": {
+        "items": ["ancientsweet", "deluxedinner", "deluxedinner", "scarlixir", "flowercandy", "flowercandy"],
+        "key_items": ["cell_phone", "shadowcrystal", "exitKey"],
+        "storage": ["favwich", "butjuice", "glowshard", "glowshard", "javacookie"]
+    },
+
+    "equipment": {
+        "kris": {"armor": ["tennatie", "princessrbn"], "weapon": "jingleblade"},
+        "susie": {"armor": ["powerband", "waferguard"], "weapon": "absorbax"}
+    },
+
+    "hardReset": false,
+    "chaptername": "Chapter 6",
+    "hidden": false,
+    "setWindowTitle": false,
+    "config": {
+        "kristal": {
+            "enemyAuras": true,
+            "speechBubble" : "depths"
+        },
+        "afilemenu": {
+            "map": "blank",
+            "configMenuOverride": true,
+            "hookOverlay": true,
+            "chapter_select": true
+        },
+        "obscurachapters": {
+            "infoProject": "Menu by Hyperboid", 
+            "infoAuthor": "DELTARUNE: Forecasted",
+            "include_example": false,
+            "chapters":[
+                {
+                    "image": "chapters/ch1",
+                    "name": "The Beginning", //now useless. chapter name now storaged in lang_XX.json
+                    "sound": "ui_spooky_action"
+                },
+                {
+                    "image": "chapters/ch2",
+                    "name": "A Cyber's World",
+                    "sound": "ch2"
+                },
+                {
+                    "image": "chapters/ch3",
+                    "name": "Channel 3",
+                    "unlocked": true,
+                    "sound": "ch3"
+                },
+                {
+                    "image": "chapters/ch4",
+                    "unlocked": true,
+                    "name": "Snowy Side-Dish!",
+                    "sound": "ch4"
+                },
+                {
+                    "image": "chapters/ch5",
+                    "name": "Dark After Dark",
+                    "unlocked": true,
+                    "sound": "ch5"
+                },
+                {
+                    "image": "chapters/ch6",
+                    "name": "In Too Deep",
+                    "unlocked": true,
+                    "sound": "ch6",
+                    "index": "6",
+                    "room": "bumperzone",
+                    "mod": "drfc-in-too-deep-restored"
+                },
+                {
+                    "image": "chapters/ch7",
+                    "name": "- -",
+                    "unlocked": false,
+                    "sound": "bluh"
+                }
+            ]
+        }
+    }
+}

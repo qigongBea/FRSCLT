@@ -1,0 +1,20 @@
+{
+    "id": "afilemenu",
+    "name": "File Select",
+    "authors": [
+        "Hyperboid"
+    ],
+    "config": {
+        "map": null,
+        "music": null,
+        "style": "DEVICE",
+        "noStyledOptions": false,
+        "configMenuOverride": true,
+        "hookOverlay": false,
+        "chapterSelect": false,
+        "chaptername": {
+            "long": "Chapter",
+            "short": "Ch"
+        }
+    }
+}

@@ -383,9 +383,9 @@ function ChapterSelect:drawChapter(index, chapter)
     Draw.draw(chapter.image, 504, -5, 0, 2, 2)
     if self.state == "CHAPTER" and self.selected_y == index then
         local first = self:setColorSelect(1)
-        love.graphics.print("Play", 201, 1)
+        love.graphics.print(Game:locRaw("ui_chapter_select_play"), 201, 1)
         self:setColorSelect(2)
-        love.graphics.print("Do Not", 381,1)
+        love.graphics.print(Game:locRaw("ui_chapter_select_donot"), 381,1)
         Draw.setColor(Game:getSoulColor())
         Draw.draw(self.heart, first and 171 or 351, 9, 0, 2,2)
         

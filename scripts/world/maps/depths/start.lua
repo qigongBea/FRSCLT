@@ -282,7 +282,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* You look out into the darkness, and then down at yourself.\n中-English混合排版。!?强?!",
+            ["text1"] = "* You look out into the darkness, and then down at yourself.",
             ["text2"] = "* The light of your SOUL shines within you."
           }
         }

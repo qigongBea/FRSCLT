@@ -1,6 +1,15 @@
-# DELTARUNE: Forecasted
+# DELTARUNE: Forecasted 三角符文：预报
 
-## This is a fanmade take on DELTARUNE: Chapter 6 made originally by the [funnyFeline YT Channel](https://www.youtube.com/@funnyfeline1), but now, it's being restored! It was made public, and although it was buggy mess, I was able to restore most of it and fill in the blanks.
+This is the repo for testing the multi-language system for the deltarune fangame *DELTARUNE Forecasted*. English and Simplified Chinese will be supported.
+
+Previews:
+- [Multi-language Test #1](https://www.bilibili.com/video/BV1BAwMzgEyt/?spm_id_from=0.0.homepage.video_card.click)
+- [Preview #0](https://www.bilibili.com/video/BV1w9SSBPENm/) (not recommended to watch)
+
+---
+Game Introduction
+
+This is a fanmade take on DELTARUNE: Chapter 6 made originally by the [funnyFeline YT Channel](https://www.youtube.com/@funnyfeline1), but now, it's being restored! It was made public, and although it was buggy mess, I was able to restore most of it and fill in the blanks.
 
 ## Custom Features:
 - Custom Borders <img width="2559" height="1439" alt="kris and susie chillin' with borders on" src="https://github.com/user-attachments/assets/e13954a0-ea79-402f-9d4f-c04050e8d9bb" />
@@ -9,9 +18,7 @@
 - Custom Puzzles <img width="2559" height="1439" alt="image" src="https://github.com/user-attachments/assets/143e9853-65d1-4f88-9e55-8ac6d28c2e10" />
 - Another Night in Hometown <img width="2559" height="1439" alt="looking at noelle's house at night" src="https://github.com/user-attachments/assets/38237094-a241-4e3d-9955-b898b27ca373" />
 
-### IMPORTANT: PLEASE PLEASE PLEASE do not take me as the owner of this project's entire concept. This concept is owned by the Forecasted team, and even if not canon to DELTARUNE: New Future, is not mine.
-
-## Our Current Progress:
+## Current Progress:
 - HOMETOWN: ✅100/100 [Completely done.]
 - GATEWAY: ✅99/100 [May require more bug-testing.]
 - DEPTHS: ✅95/100 [May have one or two more rooms added for pacing.]

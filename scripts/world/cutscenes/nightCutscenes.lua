@@ -47,7 +47,7 @@ local nightCutsenes = {
         plainText(Game:locRaw("nightcutscenes_intro_susie_phoning_4"))
         plainText(Game:locRaw("nightcutscenes_intro_susie_phoning_5"))
         plainText(Game:locRaw("nightcutscenes_intro_susie_phoning_6"))
-        /*
+        --[[
         TODO: text to be updated
         plainText("Hello?")
         plainText("You picked up!![wait:10]\nI was getting worried my\nnew phone wasn't working.")
@@ -57,7 +57,7 @@ local nightCutsenes = {
         **plainText("And I don't really want\nthe same thing to happen as\nlast time, so...")
         **plainText("Y'know what to do, Kris.")
         plainText("I'll be waiting by QC's,[wait:5] 'kay?")
-        */
+        ]]--
         Assets.playSound("item")
         cutscene:setSpeaker("kris")
         cutscene:wait(1)
@@ -112,10 +112,10 @@ local nightCutsenes = {
         cutscene:text(Game:locRaw("nightcutscenes_check_tv_3"))
     end;
 
-    /*picture = function(cutscene, event)
+    --[[picture = function(cutscene, event)
         cutscene:text(Game:locRaw("nightcutscenes_check_picture_frame_1"))
         cutscene:text(Game:locRaw("nightcutscenes_check_picture_frame_2"))
-    end;*/
+    end;]]--
 
     curtain = function(cutscene, event)
         cutscene:text(Game:locRaw("nightcutscenes_check_bathroom_1"))

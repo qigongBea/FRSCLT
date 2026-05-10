@@ -39,7 +39,7 @@ local nightCutsenes = {
             end)
         
             text:remove()
-        end             
+        end  
 
         plainText(Game:locRaw("nightcutscenes_intro_susie_phoning_1"))
         plainText(Game:locRaw("nightcutscenes_intro_susie_phoning_2"))
@@ -47,11 +47,23 @@ local nightCutsenes = {
         plainText(Game:locRaw("nightcutscenes_intro_susie_phoning_4"))
         plainText(Game:locRaw("nightcutscenes_intro_susie_phoning_5"))
         plainText(Game:locRaw("nightcutscenes_intro_susie_phoning_6"))
+        /*
+        TODO: text to be updated
+        plainText("Hello?")
+        plainText("You picked up!![wait:10]\nI was getting worried my\nnew phone wasn't working.")
+        plainText("Get your ass up and\nmeet me in town!! [wait:10]\nI found something...[wait:10] bad.")
+        plainText("I'll explain more when you get here.")
+        **plainText("But try not to wake up Toriel.[wait:10]\nShe's probably sleeping right now.")
+        **plainText("And I don't really want\nthe same thing to happen as\nlast time, so...")
+        **plainText("Y'know what to do, Kris.")
+        plainText("I'll be waiting by QC's,[wait:5] 'kay?")
+        */
         Assets.playSound("item")
         cutscene:setSpeaker("kris")
         cutscene:wait(1)
 
         Game.world:loadMap("hometown/torielhouse/kris_room")
+        Game.world.music:stop()
         local kris = assert(cutscene:getCharacter("kris"), "no kris???")
         local susie = cutscene:getCharacter("susie")
         kris:setSprite("laying_phone")
@@ -100,10 +112,10 @@ local nightCutsenes = {
         cutscene:text(Game:locRaw("nightcutscenes_check_tv_3"))
     end;
 
-    picture = function(cutscene, event)
+    /*picture = function(cutscene, event)
         cutscene:text(Game:locRaw("nightcutscenes_check_picture_frame_1"))
         cutscene:text(Game:locRaw("nightcutscenes_check_picture_frame_2"))
-    end;
+    end;*/
 
     curtain = function(cutscene, event)
         cutscene:text(Game:locRaw("nightcutscenes_check_bathroom_1"))
@@ -113,6 +125,11 @@ local nightCutsenes = {
     cracks = function(cutscene, event)
         cutscene:text(Game:locRaw("nightcutscenes_check_flower_shop_1"))
         cutscene:text(Game:locRaw("nightcutscenes_check_flower_shop_2"))
+    end;
+
+    bathroom = function(cutscene, event)
+        Game.world.player.x = Game.world.player.x + 5
+        cutscene:text("* (Not the right time for toilet flushing.)") --TODO
     end;
 
     susieMeeting = function(cutscene, event)
@@ -223,14 +240,14 @@ local nightCutsenes = {
 
     dumpstablook = function(cutscene, event)
         if event.interact_count == 1 then
-            Assets.playSound("slurp")
+            local sound = Assets.playSound("slurp")
             cutscene:text("* ") -- add slurp noise here
             cutscene:wait(0.03)
+            sound:stop()
             cutscene:text(Game:locRaw("nightcutscenes_check_dumpstablook_1"))
             cutscene:text(Game:locRaw("nightcutscenes_check_dumpstablook_2"))
         else
-            Assets.playSound("slurp")
-            cutscene:wait(1)
+            Assets.stopAndPlaySound("slurp", 1, Utils.random(.9, 1.1))
         end
     end;
 

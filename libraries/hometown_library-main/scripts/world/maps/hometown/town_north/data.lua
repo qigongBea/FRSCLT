@@ -1033,8 +1033,8 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text1"] = "* (It's a broken grill.)",
-            ["text2"] = "* (... It smells like burnt cat food.)"
+            ["text1"] = Game:locRaw("town_north_interactable_1"),
+            ["text2"] = Game:locRaw("town_north_interactable_2")
           }
         },
         {
@@ -1100,7 +1100,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* (There's some kind of scratching and hissing from inside.)"
+            ["text"] = Game:locRaw("town_north_interactable_1")
           }
         },
         {
@@ -1130,9 +1130,9 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* (There's a cat flap.)",
-            ["text2"] = "* (It's locked.)",
-            ["text3"] = "* (Somehow.)"
+            ["text1"] = Game:locRaw("town_north_interactable_1"),
+            ["text2"] = Game:locRaw("town_north_interactable_2"),
+            ["text3"] = Game:locRaw("town_north_interactable_3")
           }
         },
         {
@@ -1147,8 +1147,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* (Various cat-themed junk is piled up inside the house.)",
-            ["text2"] = "* (It seems to be a bit of a cat-sty...)"
+            ["text1"] = Game:locRaw("town_north_interactable_1"),
+            ["text2"] = Game:locRaw("town_north_interactable_2")
           }
         },
         {
@@ -1163,7 +1163,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* (It's locked...)"
+            ["text1"] = Game:locRaw("town_north_interactable_1")
           }
         },
         {
@@ -1178,7 +1178,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* I'm afraid I can't let you in there,[wait:5] darling."
+            ["text1"] = Game:locRaw("town_north_interactable_1")
           }
         },
         {
@@ -1224,8 +1224,8 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text1"] = "* (It's your dad's truck.)",
-            ["text2"] = "* (The floor of the front seat is littered with old papers and country CDs...)"
+            ["text1"] = Game:locRaw("town_north_interactable_1"),
+            ["text2"] = Game:locRaw("town_north_interactable_2")
           }
         },
         {
@@ -1303,7 +1303,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* (It's locked...)"
+            ["text1"] = Game:locRaw("town_north_interactable_1")
           }
         }
       }

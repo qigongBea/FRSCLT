@@ -4,7 +4,7 @@ function Fomnis:init()
     super.init(self)
 
     -- Text displayed at the bottom of the screen at the start of the encounter
-    self.text = Game:locRaw("fomnis_encounter")--"* Something stands in your way..?"
+    self.text = "* Something stands in your way..?"
 
     -- Battle music ("battle" is rude buster)
     self.music = "enemy"

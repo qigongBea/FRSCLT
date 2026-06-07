@@ -175,7 +175,7 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text"] = "* There's nothing useful in the drawer."
+            ["text"] = Game:locRaw("kris_room_interactable_1")
           }
         },
         {
@@ -191,7 +191,7 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text"] = "* There's nothing useful in the drawer."
+            ["text"] = Game:locRaw("kris_room_interactable_1")
           }
         },
         {
@@ -207,8 +207,8 @@ return {
           visible = true,
           properties = {
             ["solid"] = false,
-            ["text1"] = "* A picture frame has fallen off the dresser onto the floor.",
-            ["text2"] = "* What an unfortunate sight."
+            ["text1"] = Game:locRaw("kris_room_interactable_1"),
+            ["text2"] = Game:locRaw("kris_room_interactable_2")
           }
         },
         {
@@ -224,8 +224,8 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text1"] = "* It's a bed.",
-            ["text2"] = "* It's better to not shuffle around it."
+            ["text1"] = Game:locRaw("kris_room_interactable_1"),
+            ["text2"] = Game:locRaw("kris_room_interactable_2")
           }
         },
         {
@@ -241,8 +241,8 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text1"] = "* It's your bed.",
-            ["text2"] = "* It lacks a lot, but it is still pleasant to lie on."
+            ["text1"] = Game:locRaw("kris_room_interactable_1"),
+            ["text2"] = Game:locRaw("kris_room_interactable_2")
           }
         },
         {
@@ -318,7 +318,7 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text"] = "* The computer's off."
+            ["text"] = Game:locRaw("kris_room_interactable_1")
           }
         },
         {
@@ -333,7 +333,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* It's stained."
+            ["text"] = Game:locRaw("kris_room_interactable_1")
           }
         },
         {
@@ -378,7 +378,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* The curtrains are closed."
+            ["text"] = Game:locRaw("kris_room_interactable_1")
           }
         }
       }

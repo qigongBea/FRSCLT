@@ -133,7 +133,7 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text"] = "* (It's a dirty trash can.)"
+            ["text"] = Game:locRaw("apartments_interactable_1")
           }
         },
         {
@@ -149,7 +149,7 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text"] = "* (It's a dirty trash can.)"
+            ["text"] = Game:locRaw("apartments_interactable_1")
           }
         },
         {
@@ -165,7 +165,7 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text"] = "* (It's a trash can full of well-kept flowers.)"
+            ["text"] = Game:locRaw("apartments_interactable_1")
           }
         },
         {
@@ -181,7 +181,7 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text"] = "* (It's a trash can full of well-kept flowers.)"
+            ["text"] = Game:locRaw("apartments_interactable_1")
           }
         },
         {
@@ -197,7 +197,7 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text"] = "* (It's a trash can full of well-kept flowers.)"
+            ["text"] = Game:locRaw("apartments_interactable_1")
           }
         },
         {
@@ -213,7 +213,7 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text"] = "* (It's a saucer of milk.)"
+            ["text"] = Game:locRaw("apartments_interactable_1")
           }
         }
       }

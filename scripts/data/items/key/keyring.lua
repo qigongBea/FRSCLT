@@ -51,7 +51,7 @@ end
 
 function item:onWorldUse()
     Game.world:startCutscene(function(cutscene)
-        cutscene:text("* You look at the Key Ring in admiration.")      
+        cutscene:text(Game:locRaw("keyring_line54_1"))      
     end)
 end
 

@@ -563,7 +563,7 @@ return {
           visible = true,
           properties = {
             ["plotmin"] = "boat_act3_room101_confrontation",
-            ["text1"] = "* You probably shouldn't jump out of the broken window."
+            ["text1"] = Game:locRaw("room101_interactable_1")
           }
         }
       }

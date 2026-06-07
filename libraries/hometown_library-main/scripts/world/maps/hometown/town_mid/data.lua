@@ -773,7 +773,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* (Here at ICE-E'S PEZZA, You're Family.)"
+            ["text"] = Game:locRaw("town_mid_interactable_1")
           }
         },
         {
@@ -788,7 +788,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* (Here at ICE-E'S PEZZA, You're Family.)"
+            ["text"] = Game:locRaw("town_mid_interactable_1")
           }
         },
         {
@@ -803,8 +803,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* (It's locked...)",
-            ["text2"] = "* (...[wait:5] the town it's pretty empty today.)"
+            ["text1"] = Game:locRaw("town_mid_interactable_1"),
+            ["text2"] = Game:locRaw("town_mid_interactable_2")
           }
         },
         {
@@ -819,8 +819,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* (It's locked...)",
-            ["text2"] = "* (...[wait:5] the town it's pretty empty today.)"
+            ["text1"] = Game:locRaw("town_mid_interactable_1"),
+            ["text2"] = Game:locRaw("town_mid_interactable_2")
           }
         },
         {
@@ -898,7 +898,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* (Despite the store's sign, it's closed.)"
+            ["text1"] = Game:locRaw("town_mid_interactable_1")
           }
         },
         {
@@ -913,7 +913,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* (Despite the store's sign, it's closed.)"
+            ["text1"] = Game:locRaw("town_mid_interactable_1")
           }
         },
         {
@@ -928,7 +928,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* (Despite the store's sign, it's closed.)"
+            ["text1"] = Game:locRaw("town_mid_interactable_1")
           }
         }
       }

@@ -274,8 +274,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* Inaccuracies echo in the light and dark of this incomprehensible scenery.",
-            ["text2"] = "* You are filled with the power of not knowing how long a bridge should be."
+            ["text1"] = Game:locRaw("ending_savepoint_1"),
+            ["text2"] = Game:locRaw("ending_savepoint_2")
           }
         },
         {

@@ -168,7 +168,7 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text"] = "* (It's a regular sink.)"
+            ["text"] = Game:locRaw("hospital_room2_interactable_1")
           }
         },
         {
@@ -184,8 +184,8 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text1"] = "* (It's a clone of the other sink.)",
-            ["text2"] = "* (Perhaps there was originally one tall sink that was cut in half to create both of them.)"
+            ["text1"] = Game:locRaw("hospital_room2_interactable_1"),
+            ["text2"] = Game:locRaw("hospital_room2_interactable_2")
           }
         },
         {
@@ -201,7 +201,7 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text"] = "* (It's an empty bed)"
+            ["text"] = Game:locRaw("hospital_room2_interactable_1")
           }
         },
         {
@@ -217,8 +217,8 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text1"] = "* (You looked inside the cupboard.)",
-            ["text2"] = "* (... a very small obligatory piano is hiding inside.)"
+            ["text1"] = Game:locRaw("hospital_room2_interactable_1"),
+            ["text2"] = Game:locRaw("hospital_room2_interactable_2")
           }
         },
         {
@@ -233,8 +233,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* (It's a classic 1-to-10 pain scale,[wait:5] using ICE-E as a model.)",
-            ["text2"] = "* (At 0 pain,[wait:5] he's happy.)\n[wait:5](At 10 pain,[wait:5] he's happy and sweating.)"
+            ["text1"] = Game:locRaw("hospital_room2_interactable_1"),
+            ["text2"] = Game:locRaw("hospital_room2_interactable_2")
           }
         },
         {

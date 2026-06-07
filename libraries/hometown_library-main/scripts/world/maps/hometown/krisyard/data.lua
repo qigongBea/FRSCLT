@@ -584,7 +584,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* It's your mother's car."
+            ["text"] = Game:locRaw("krisyard_interactable_1")
           }
         }
       }

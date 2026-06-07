@@ -282,8 +282,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* You look out into the darkness, and then down at yourself.",
-            ["text2"] = "* The light of your SOUL shines within you."
+            ["text1"] = Game:locRaw("start_savepoint_1"),
+            ["text2"] = Game:locRaw("start_savepoint_2")
           }
         }
       }

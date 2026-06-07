@@ -251,8 +251,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "[color:#ff00ff]* Welcome to Gateway Sector:[wait:5] B.",
-            ["text2"] = "[color:#ff00ff]* Current status: DEGRADED"
+            ["text1"] = Game:locRaw("hallway_interactable_1"),
+            ["text2"] = Game:locRaw("hallway_interactable_2")
           }
         },
         {
@@ -298,8 +298,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* A feeling of relief washes over you after defeating the security guards.",
-            ["text2"] = "* You are filled with the power\nof being where you shouldn't be."
+            ["text1"] = Game:locRaw("hallway_savepoint_1"),
+            ["text2"] = Game:locRaw("hallway_savepoint_2")
           }
         },
         {

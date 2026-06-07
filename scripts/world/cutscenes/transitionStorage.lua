@@ -44,7 +44,7 @@ device = function(cutscene, event)
 
 	cutscene:wait(5)
 
-	local choice = cutscene:choicer({"1", "2", "3", "0"})
+	local choice = Game:locRaw("transitionstorage_device_1_opt")scGame:locRaw("transitionstorage_device_2_opt"):cGame:locRaw("transitionstorage_device_3_opt")ceGame:locRaw("transitionstorage_device_4_opt")"1", "2", "3", "0"})
 
 
 	if choice == 3 then
@@ -78,7 +78,7 @@ device = function(cutscene, event)
 		Unsaved data was found. Would you like to save?
 		]])
 		cutscene:wait(1)
-		local choice = cutscene:choicer({"Save Data", "Cancel"})
+		local choice = Game:locRaw("transitionstorage_device_5_opt")oiGame:locRaw("transitionstorage_device_6_opt")ve Data", "Cancel"})
 		if choice == 1 then
 			cutscene:wait(1)
 			textbox:setText([[

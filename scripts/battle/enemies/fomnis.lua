@@ -28,24 +28,17 @@ function Omnice:init()
     }
 
     -- Dialogue randomly displayed in the enemy's speech bubble
-    self.dialogue = {
-        "* Tomorrow means the\nsurface.",
-        "* The Gateway will\nbe what saves\nus.",
-        "* Must protect all\nof the Gateway...",
-        "* Error: Shutdown\naccess denied."
+    self.dialGame:locRaw("fomnis_omnice_dialogue_1")ns the\nsuGame:locRaw("fomnis_omnice_dialogue_2") what saveGame:locRaw("fomnis_omnice_dialogue_3")f the GateGame:locRaw("fomnis_omnice_dialogue_4")\naccess denied."
     }
 
     -- Check text (automatically has "ENEMY NAME - " at the start)
-    self.check = "AT?? DF?? \n* Tomorrow means the surface."
+    self.check = Game:locRaw("fomnis_omnice_check_1")
 
     -- Text randomly displayed at the bottom of the screen each turn
-    self.text = {
-        "* They're just fulfilling their purpose.",
-        "* Their code seems to be glitching out.",
-        "* They cannot look any other way. They cannot lie. They must defeat you.",
+    self.textGame:locRaw("fomnis_omnice_text_1")eir purposGame:locRaw("fomnis_omnice_text_2")itching ouGame:locRaw("fomnis_omnice_text_3") defeat you.",
     }
     -- Text displayed at the bottom of the screen when the enemy has low health
-    self.low_health_text = "* They cannot look any other way. They cannot lie. They must defeat you."
+    self.low_health_text = Game:locRaw("fomnis_omnice_low_health_text_1")
 
     -- Register act called "Smile"
     self:registerAct("Directive", "", {"susie"})

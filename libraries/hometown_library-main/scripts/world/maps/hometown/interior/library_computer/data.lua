@@ -266,8 +266,8 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text1"] = "* (It's a recycling bin.)",
-            ["text2"] = "* (Looks like someone accidentally printed off a lot of useless emails.)"
+            ["text1"] = Game:locRaw("library_computer_interactable_1"),
+            ["text2"] = Game:locRaw("library_computer_interactable_2")
           }
         },
         {
@@ -283,8 +283,8 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text1"] = "* (It's a trashcan. You get the feeling it doesn't have any friends.)",
-            ["text2"] = "* (It's hard to explain why you feel this way about a trashcan.)"
+            ["text1"] = Game:locRaw("library_computer_interactable_1"),
+            ["text2"] = Game:locRaw("library_computer_interactable_2")
           }
         },
         {
@@ -300,7 +300,7 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text"] = "* (It's full of many backup devices,[wait:5] like extra mice,[wait:5] extra keyboards,[wait:5] or extra maracas.)"
+            ["text"] = Game:locRaw("library_computer_interactable_1")
           }
         },
         {
@@ -315,8 +315,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* (The closet is spacious and full of old electronics.)",
-            ["text2"] = "* (A large person could easily fit inside.)"
+            ["text1"] = Game:locRaw("library_computer_interactable_1"),
+            ["text2"] = Game:locRaw("library_computer_interactable_2")
           }
         },
         {
@@ -331,7 +331,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* (Various posters talking about Internet safety.)"
+            ["text"] = Game:locRaw("library_computer_interactable_1")
           }
         },
         {
@@ -391,8 +391,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* (Looks like the library's state-of-the-art public laptop.)",
-            ["text2"] = "* (Someone left it on.)"
+            ["text1"] = Game:locRaw("library_computer_interactable_1"),
+            ["text2"] = Game:locRaw("library_computer_interactable_2")
           }
         },
         {
@@ -407,7 +407,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* (It's a computer. The monitor is flickering brightly.)"
+            ["text"] = Game:locRaw("library_computer_interactable_1")
           }
         },
         {
@@ -422,7 +422,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* (It's a computer. The monitor is flickering brightly.)"
+            ["text"] = Game:locRaw("library_computer_interactable_1")
           }
         },
         {
@@ -437,8 +437,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* (It's a computer.)",
-            ["text2"] = "* (Someone tried to check their email,[wait:5] but the Internet is down.)"
+            ["text1"] = Game:locRaw("library_computer_interactable_1"),
+            ["text2"] = Game:locRaw("library_computer_interactable_2")
           }
         },
         {
@@ -453,8 +453,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* (It's a computer.)",
-            ["text2"] = "* (Someone tried to check their email,[wait:5] but the Internet is down.)"
+            ["text1"] = Game:locRaw("library_computer_interactable_1"),
+            ["text2"] = Game:locRaw("library_computer_interactable_2")
           }
         },
         {
@@ -469,7 +469,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* (It's a computer. The monitor is flickering brightly.)"
+            ["text"] = Game:locRaw("library_computer_interactable_1")
           }
         }
       }

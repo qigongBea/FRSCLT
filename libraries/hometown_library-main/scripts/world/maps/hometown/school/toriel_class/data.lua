@@ -371,8 +371,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* (\"Ms. Toriel\" is written in cursive on the dry-erase board.)",
-            ["text2"] = "* (Seems like it hasn't been erased in a very long time.)"
+            ["text1"] = Game:locRaw("toriel_class_interactable_1"),
+            ["text2"] = Game:locRaw("toriel_class_interactable_2")
           }
         },
         {
@@ -387,8 +387,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* (You uncapped the scented green marker.)",
-            ["text2"] = "* (It's almost dry,[wait:5] but that gives it a refined,[wait:5] aged apple bouquet.)"
+            ["text1"] = Game:locRaw("toriel_class_interactable_1"),
+            ["text2"] = Game:locRaw("toriel_class_interactable_2")
           }
         },
         {
@@ -403,7 +403,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* (Kids' books.)\n[wait:5]* (Some of them used to be yours.)"
+            ["text"] = Game:locRaw("toriel_class_interactable_1")
           }
         },
         {
@@ -418,7 +418,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* (It's a primitive drawing of your mom.)"
+            ["text"] = Game:locRaw("toriel_class_interactable_1")
           }
         },
         {
@@ -434,7 +434,7 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text"] = "* (The Throne of the Gods grows even higher.)\n* (Almost an sky-scrapper)"
+            ["text"] = Game:locRaw("toriel_class_interactable_1")
           }
         },
         {
@@ -449,7 +449,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* (Hey Apple!)"
+            ["text"] = Game:locRaw("toriel_class_interactable_1")
           }
         },
         {
@@ -464,7 +464,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* (Hyperdodecahedron...)"
+            ["text"] = Game:locRaw("toriel_class_interactable_1")
           }
         },
         {
@@ -479,8 +479,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* (The computer wallpaper is updated.)",
-            ["text2"] = "* (It's a picture of your brother and you playing video games.)"
+            ["text1"] = Game:locRaw("toriel_class_interactable_1"),
+            ["text2"] = Game:locRaw("toriel_class_interactable_2")
           }
         }
       }

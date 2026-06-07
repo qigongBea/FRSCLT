@@ -29,19 +29,17 @@ function Omnice:init()
     }
 
     -- Dialogue randomly displayed in the enemy's speech bubble
-    self.dialogue = {
-        "tomorrow."
+    self.dialGame:locRaw("sans_omnice_dialogue_1")      "tomorrow."
     }
 
     -- Check text (automatically has "ENEMY NAME - " at the start)
-    self.check = "AT 2 DF MORROW,[wait:5] Tomorrow.[wait:5] Tomorrow.[wait:5] Tomorrow."
+    self.check = Game:locRaw("sans_omnice_check_1")
 
     -- Text randomly displayed at the bottom of the screen each turn
-    self.text = {
-        "* Tomorrow",
+    self.textGame:locRaw("sans_omnice_text_1") "* Tomorrow",
     }
     -- Text displayed at the bottom of the screen when the enemy has low health
-    self.low_health_text = "* It seems scared."
+    self.low_health_text = Game:locRaw("sans_omnice_low_health_text_1")
 
     -- Register act called "Smile"
     self:registerAct("Tomorrow")

@@ -6,32 +6,32 @@ local pirates = {
 these cannonballs!
 ]=], nil, "pirates/ralsei")
 
-        cutscene:text("[miniface:kris]Show them Cap'n!!!", nil, "pirates/kris")
+        cutscene:text(Game:locRaw("pirates_start_1"), nil, "pirates/kris")
 
-        cutscene:text("* I can keep batting these things all day!!", "smile", "susie")
+        cutscene:text(Game:locRaw("pirates_start_2"), "smile", "susie")
 
-        cutscene:text("[miniface:scientist]Greetings.")
+        cutscene:text(Game:locRaw("pirates_start_3"))
 
-        cutscene:text("* AHH!!", "teeth_b", "susie")
-        cutscene:text("* WHAT THE HELL ARE YOU DOING HERE?!", "teeth", "susie")
+        cutscene:text(Game:locRaw("pirates_start_4"), "teeth_b", "susie")
+        cutscene:text(Game:locRaw("pirates_start_5"), "teeth", "susie")
 
-        cutscene:text("[miniface:scientist]So...[wait:10]\n[miniface:scientist]You're fighting the pirates huh?")
-        cutscene:text("[miniface:scientist]I guess the gig is up.[wait:10]")
-        cutscene:text("[miniface:scientist]Not like I actually cared to help them,[wait:5] of course")
-        cutscene:text("[miniface:scientist]They made a big ruckus in the hall...[wait:5]\n[miniface:scientist]I was bound to hear them.")
-        cutscene:text("[miniface:scientist]Really,[wait:5]\nwhat a terrible plan they had.")
-        cutscene:text("[miniface:scientist]If it wasnt for me th-", nil, nil, {auto=true})
+        cutscene:text(Game:locRaw("pirates_start_6"))
+        cutscene:text(Game:locRaw("pirates_start_7"))
+        cutscene:text(Game:locRaw("pirates_start_8"))
+        cutscene:text(Game:locRaw("pirates_start_9"))
+        cutscene:text(Game:locRaw("pirates_start_10"))
+        cutscene:text(Game:locRaw("pirates_start_11"), nil, nil, {auto=true})
 
-        cutscene:text("* SHUT UP!!!!", "teeth", "susie")
-        cutscene:text("* GET OUT OF HERE!!!!", "teeth_b", "susie")
+        cutscene:text(Game:locRaw("pirates_start_12"), "teeth", "susie")
+        cutscene:text(Game:locRaw("pirates_start_13"), "teeth_b", "susie")
 
-        cutscene:text("[miniface:scientist]...")
-        cutscene:text("[miniface:scientist]I'll leave you to it...")
+        cutscene:text(Game:locRaw("pirates_start_14"))
+        cutscene:text(Game:locRaw("pirates_start_15"))
         
     end,
 
     playerGetHitA = function (cutscene)
-        cutscene:text("* Kris! Watch out!", "angry", "susie")
+        cutscene:text(Game:locRaw("pirates_playerGetHitA_1"), "angry", "susie")
         cutscene:text([=[
 [miniface:noelle]YAAAHAHAHAHA
 ]=], nil, "pirates/noelle")
@@ -52,7 +52,7 @@ cutscene:text([=[
 
     end,
     playerGetHitB = function (cutscene)
-        cutscene:text("* Damnit,[wait:5] Kris![wait:5] We're gonna sink if you're not careful!", "teeth", "susie")
+        cutscene:text(Game:locRaw("pirates_playerGetHitB_1"), "teeth", "susie")
         cutscene:text([=[
 [miniface:noelle]YAAAHAHAHAHA,[wait:5]
 [miniface:noelle]WE'RE WINNIN'!
@@ -70,7 +70,7 @@ cutscene:text([=[
     end,
     
     enemyGetHitA = function (cutscene)
-        cutscene:text("* HA![wait:5]\n* How do you like that?!", "teeth", "susie")
+        cutscene:text(Game:locRaw("pirates_enemyGetHitA_1"), "teeth", "susie")
         cutscene:text([=[
 [miniface:ralsei]Yarghhh,[wait:5] tis' but a scratch!!
 ]=], nil, "pirates/ralsei")
@@ -130,7 +130,7 @@ keep going on a little more...
         cutscene:text([=[
 [miniface:ralsei]ME SHIP, ME PRECIOUS SHIP!
 ]=], nil, "pirates/ralsei")
-        cutscene:text("* Hell yeah![wait:10] How do you like THAT!", "teeth_smile", "susie")
+        cutscene:text(Game:locRaw("pirates_victory_1"), "teeth_smile", "susie")
         cutscene:text([=[
 [miniface:ralsei]Don't ye see what ye have done!?[wait:10]
 [miniface:ralsei]Ye stressing me parrot out!!!
@@ -168,7 +168,7 @@ his ship...
 
 
     losery = function (cutscene)
-        cutscene:text("* That doesn't sound good.", "shock", "susie")
+        cutscene:text(Game:locRaw("pirates_losery_1"), "shock", "susie")
     end,
     ---@param losing_paddle PongPaddle?
     preroundstart = function (cutscene, losing_paddle)
@@ -206,9 +206,9 @@ his ship...
 [miniface:pirates/noelle]fuck
 [miniface:pirates/kris]fuck
 ]==])
-            cutscene:text("* Fuck yeah", "sincere_smile", "susie")
+            cutscene:text(Game:locRaw("pirates_game_end_1"), "sincere_smile", "susie")
         else
-            cutscene:text("* Some point of no return this is!", "agitated", "susie")
+            cutscene:text(Game:locRaw("pirates_game_end_2"), "agitated", "susie")
         end
     end,
 }

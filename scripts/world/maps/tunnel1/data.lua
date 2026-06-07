@@ -423,8 +423,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* You cough on a piece of dust.",
-            ["text2"] = "* The power of old corridors fills you with courage."
+            ["text1"] = Game:locRaw("tunnel1_savepoint_1"),
+            ["text2"] = Game:locRaw("tunnel1_savepoint_2")
           }
         },
         {

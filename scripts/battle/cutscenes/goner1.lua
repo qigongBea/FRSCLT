@@ -13,19 +13,19 @@ return {
         Assets.playSound("bump")
         enemy:shake(3, 3)
 
-        cutscene:text("* It cries and cries,[wait:5]\nbut no tears come out.")
+        cutscene:text(Game:locRaw("goner1_cry_1"))
 
         enemy.hidden_mercy = enemy.hidden_mercy + 1
     end,
     comfort = function(cutscene, battler, enemy)
         
-        cutscene:text("* H-Hey...[wait:5] no need to cry.", "sad_b", "noelle")
+        cutscene:text(Game:locRaw("goner1_comfort_1"), "sad_b", "noelle")
 
         Assets.playSound("bump")
         enemy:shake(2, 2)
         
-        cutscene:text("* You'll be okay.[wait:10] I promise.", "smile_closed", "noelle")
-        cutscene:text("* Yeah![wait:5] We're cheering you on!", "closed_grin", "susie")
+        cutscene:text(Game:locRaw("goner1_comfort_2"), "smile_closed", "noelle")
+        cutscene:text(Game:locRaw("goner1_comfort_3"), "closed_grin", "susie")
         Assets.playSound("bump")
         enemy:shake(2, 2)
 
@@ -40,6 +40,6 @@ return {
             attacker.check = "AT 6 DF 0 \n* It's ready to go into hibernation."
         end
 
-        cutscene:text("* The Guard seems to appriciate that.")
+        cutscene:text(Game:locRaw("goner1_comfort_4"))
     end,
 }

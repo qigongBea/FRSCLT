@@ -28,9 +28,9 @@ return {
             Game.battle.party[3].x = enemy.x - 80
             Game.battle.party[3].y = enemy.y + 50
         end
-        cutscene:text("* Everyone chatted around the watercooler.")
+        cutscene:text(Game:locRaw("watercooler_actcool_1"))
         enemy:addMercy(25)
-        cutscene:text("* The watercooler felt included!")
+        cutscene:text(Game:locRaw("watercooler_actcool_2"))
         for _,battler in ipairs(Game.battle.party) do
             battler.x = battler.start_x
             battler.y = battler.start_y
@@ -41,13 +41,13 @@ return {
     flirt = function(cutscene, battler, enemy)
         local chance = love.math.random(1,3)
         if chance == 1 then
-            cutscene:text("* You told the watercooler it should actually be called a watercoolest.")
+            cutscene:text(Game:locRaw("watercooler_flirt_1"))
         end
         if chance == 2 then
-            cutscene:text("* You took a slow sip of water and then asked if it cooled it itself.")
+            cutscene:text(Game:locRaw("watercooler_flirt_2"))
         end
         if chance == 3 then
-            cutscene:text("* You asked the watercooler, \"water\" they doing later.")
+            cutscene:text(Game:locRaw("watercooler_flirt_3"))
         end
 
         if Game.party[2].health < 1 or (Game.party[2].health < 1 and Game.party[3].health < 1) then --there's probably a better way to check this
@@ -70,7 +70,7 @@ return {
         flash.layer = enemy.layer + 2
         flash:setScale(2)
         Game.battle:addChild(flash)
-        cutscene:text("* The water turns pink for a second.")
+        cutscene:text(Game:locRaw("watercooler_flirt_4"))
         for _,battler in ipairs(Game.battle.party) do
             battler:resetSprite()
         end

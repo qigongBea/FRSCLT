@@ -29,21 +29,18 @@ function AsrielDust:init()
     }
 
     -- Dialogue randomly displayed in the enemy's speech bubble
-    self.dialogue = {
+    self.dialGame:locRaw("asrieldust_asrieldust_dialogue_1")= {
         "..."
     }
 
     -- Check text (automatically has "ENEMY NAME - " at the start)
-    self.check = "AT 4 DF 0\n* Cotton heart and button eye\n* Looks just like a fluffy guy."
+    self.check = Game:locRaw("asrieldust_asrieldust_check_1")
 
     -- Text randomly displayed at the bottom of the screen each turn
-    self.text = {
-        "* The dummy gives you a soft\nsmile.",
-        "* The power of fluffy boys is\nin the air.",
-        "* Smells like cardboard.",
+    self.textGame:locRaw("asrieldust_asrieldust_text_1")soft\nsmilGame:locRaw("asrieldust_asrieldust_text_2")nin the aiGame:locRaw("asrieldust_asrieldust_text_3")e cardboard.",
     }
     -- Text displayed at the bottom of the screen when the enemy has low health
-    self.low_health_text = "* The dummy looks like it's\nabout to fall over."
+    self.low_health_text = Game:locRaw("asrieldust_asrieldust_low_health_text_1")
 
     -- Register act called "Smile"
     self:registerAct("Smile")

@@ -30,24 +30,17 @@ function Warstalker:init()
     }
 
     -- Dialogue randomly displayed in the enemy's speech bubble
-    self.dialogue = {
-        "[shake:20]gateway must be protected\n",
-        "[shake:20]tomorrow means the\n                    surface",
-        "[shake:20]is something wrong?",
-        "[shake:20]finding nearest power line...\naccess denied.\naccess denied.\naccess denied."
+    self.dialGame:locRaw("warstalker_warstalker_dialogue_1")t be proteGame:locRaw("warstalker_warstalker_dialogue_2")         sGame:locRaw("warstalker_warstalker_dialogue_3")something Game:locRaw("warstalker_warstalker_dialogue_4")\naccess denied."
     }
 
     -- Check text (automatically has "ENEMY NAME - " at the start)
-    self.check = "AT?? DF?? \n* You couldn't find the enemy."
+    self.check = Game:locRaw("warstalker_warstalker_check_1")
 
     -- Text randomly displayed at the bottom of the screen each turn
-    self.text = {
-        "* ??? is shattering.",
-        "* Nothing is wrong but everything is wrong but nothing is wrong but everything is wrong but but nothing is wrong but everything is wrong but nothing is wrong but everything is wrong but",
-        "* Smells like [MISSING SMELL.GSF]",
+    self.textGame:locRaw("warstalker_warstalker_text_1") shatterinGame:locRaw("warstalker_warstalker_text_2")is wrong bGame:locRaw("warstalker_warstalker_text_3")G SMELL.GSF]",
     }
     -- Text displayed at the bottom of the screen when the enemy has low health
-    self.low_health_text = "* ??? is about\n    s     &    )321gs\n            cat."
+    self.low_health_text = Game:locRaw("warstalker_warstalker_low_health_text_1")
 
     -- Register act called "Smile"
     self:registerAct("Hit")

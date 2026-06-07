@@ -376,7 +376,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* It's a sink.[wait:5]\n* Turning it on would cause too much noise."
+            ["text"] = Game:locRaw("tor_house_interactable_1")
           }
         },
         {
@@ -391,7 +391,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* (Mom didn't cooked anything today.)"
+            ["text"] = Game:locRaw("tor_house_interactable_1")
           }
         },
         {
@@ -406,7 +406,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* (Cookie cutters for gingerbread monsters and gingerbread humans.)"
+            ["text"] = Game:locRaw("tor_house_interactable_1")
           }
         },
         {
@@ -421,7 +421,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* There's nothing useful in the fridge."
+            ["text"] = Game:locRaw("tor_house_interactable_1")
           }
         },
         {
@@ -467,7 +467,7 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text"] = "* It's a table for books."
+            ["text"] = Game:locRaw("tor_house_interactable_1")
           }
         },
         {
@@ -482,7 +482,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* It's a trashcan.\n* It smells like campfire."
+            ["text"] = Game:locRaw("tor_house_interactable_1")
           }
         },
         {

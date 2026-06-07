@@ -290,8 +290,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* This lift will take you to the evergroves.",
-            ["text2"] = "* Unfortunately,[wait:5] you're already there."
+            ["text1"] = Game:locRaw("start_interactable_1"),
+            ["text2"] = Game:locRaw("start_interactable_2")
           }
         },
         {

@@ -50,7 +50,7 @@ end
 function item:onWorldUse()
     Game.world:startCutscene(function(cutscene)
         Assets.playSound("phone", 0.7)
-        cutscene:text("* (You tried to call on the Cell\nPhone.)", nil, nil, {advance = false})
+        cutscene:text(Game:locRaw("cell_phone_line53_1"), nil, nil, {advance = false})
         cutscene:wait(40/30)
         local was_playing = Game.world.music:isPlaying()
         if was_playing then
@@ -61,7 +61,7 @@ function item:onWorldUse()
         if was_playing then
             Game.world.music:resume()
         end
-        cutscene:text("* Must be a signal jammer.")
+        cutscene:text(Game:locRaw("cell_phone_line64_1"))
     end)
 end
 

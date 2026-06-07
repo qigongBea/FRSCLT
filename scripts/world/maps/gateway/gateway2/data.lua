@@ -345,8 +345,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* A great feeling of electricity\ncourses through you.",
-            ["text2"] = "* You are filled with the power\nof Hometown."
+            ["text1"] = Game:locRaw("gateway2_savepoint_1"),
+            ["text2"] = Game:locRaw("gateway2_savepoint_2")
           }
         },
         {
@@ -361,7 +361,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* It's run out of power."
+            ["text1"] = Game:locRaw("gateway2_interactable_1")
           }
         },
         {
@@ -376,8 +376,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "[color:#ff00ff]* Welcome to Gateway Sector:[wait:5] A.",
-            ["text2"] = "[color:#ff00ff]* Current status:[wait:5] NOMINAL."
+            ["text1"] = Game:locRaw("gateway2_interactable_1"),
+            ["text2"] = Game:locRaw("gateway2_interactable_2")
           }
         },
         {
@@ -392,8 +392,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "[color:#ff00ff]* Gateway Sector:[wait:5] A:[wait:5] is currently under maintenance.",
-            ["text2"] = "[color:#ff00ff]* Security Guards are deployed in the:[wait:5] Control Offices."
+            ["text1"] = Game:locRaw("gateway2_interactable_1"),
+            ["text2"] = Game:locRaw("gateway2_interactable_2")
           }
         },
         {
@@ -408,8 +408,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "[color:#ff00ff]* Thank you for visiting Gateway Sector:[wait:5] A.",
-            ["text2"] = "[color:#ff00ff]* Gateway Guide:\n[wait:5]- Sector B [wait:5]>[wait:5]>[wait:5]>"
+            ["text1"] = Game:locRaw("gateway2_interactable_1"),
+            ["text2"] = Game:locRaw("gateway2_interactable_2")
           }
         }
       }

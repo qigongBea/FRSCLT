@@ -101,7 +101,7 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text1"] = "* (It's too dark to go further.)"
+            ["text1"] = Game:locRaw("basket_interactable_1")
           }
         },
         {
@@ -117,7 +117,7 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text1"] = "* (It's too dark to go further.)"
+            ["text1"] = Game:locRaw("basket_interactable_1")
           }
         },
         {
@@ -133,7 +133,7 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text1"] = "* (It's too dark to go further.)"
+            ["text1"] = Game:locRaw("basket_interactable_1")
           }
         },
         {
@@ -304,8 +304,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* (It's a basket.)",
-            ["text2"] = "* (It will not accept your offering at this time.)"
+            ["text1"] = Game:locRaw("basket_interactable_1"),
+            ["text2"] = Game:locRaw("basket_interactable_2")
           }
         },
         {
@@ -362,7 +362,7 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text1"] = "* (It's too dark to go further.)"
+            ["text1"] = Game:locRaw("basket_interactable_1")
           }
         }
       }

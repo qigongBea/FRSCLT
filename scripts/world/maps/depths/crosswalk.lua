@@ -336,7 +336,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* The terminal is relaying the signals from all across the Depths."
+            ["text1"] = Game:locRaw("crosswalk_interactable_1")
           }
         }
       }

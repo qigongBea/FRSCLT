@@ -310,7 +310,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* GATEWAY COLLAPSE IMMINENT. AUDIO LOGS OFFLINE."
+            ["text1"] = Game:locRaw("albumart_interactable_1")
           }
         },
         {

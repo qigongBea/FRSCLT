@@ -885,8 +885,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* You look at the endless expanse ahead of you and think about the Forest Dream.",
-            ["text2"] = "* A feeling of courage courses through you."
+            ["text1"] = Game:locRaw("path1_savepoint_1"),
+            ["text2"] = Game:locRaw("path1_savepoint_2")
           }
         },
         {

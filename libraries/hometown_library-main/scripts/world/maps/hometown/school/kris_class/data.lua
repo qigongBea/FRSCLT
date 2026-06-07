@@ -628,8 +628,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* (You checked the time...)",
-            ["text2"] = "* (It's an enigma.)"
+            ["text1"] = Game:locRaw("kris_class_interactable_1"),
+            ["text2"] = Game:locRaw("kris_class_interactable_2")
           }
         },
         {
@@ -644,9 +644,9 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* (Looks like motivational quotes from various literature.)",
-            ["text2"] = "* \"Try your best,[wait:5] Astral Wolf!\"\n[wait:5]* \"Even in your darkest hour...!\"",
-            ["text3"] = "* (... that one seems to be from a video game.)"
+            ["text1"] = Game:locRaw("kris_class_interactable_1"),
+            ["text2"] = Game:locRaw("kris_class_interactable_2"),
+            ["text3"] = Game:locRaw("kris_class_interactable_3")
           }
         },
         {
@@ -661,9 +661,9 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* (The computer wallpaper is updated.)",
-            ["text2"] = "* (... it's from the newely released season of Mew Mew Kissy Cutie.)",
-            ["text3"] = "* (You decide to keep a safe distance.)"
+            ["text1"] = Game:locRaw("kris_class_interactable_1"),
+            ["text2"] = Game:locRaw("kris_class_interactable_2"),
+            ["text3"] = Game:locRaw("kris_class_interactable_3")
           }
         },
         {
@@ -678,7 +678,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* (It's a bunch of roses.)"
+            ["text"] = Game:locRaw("kris_class_interactable_1")
           }
         },
         {

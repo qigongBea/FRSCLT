@@ -724,9 +724,9 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* (There's more police tape.)",
-            ["text2"] = "* (It says \"NGAHHHH!!![wait:5] I MEAN IT!!!\")",
-            ["text3"] = "* (It's not clear what is meant by that.)"
+            ["text1"] = Game:locRaw("town_south_interactable_1"),
+            ["text2"] = Game:locRaw("town_south_interactable_2"),
+            ["text3"] = Game:locRaw("town_south_interactable_3")
           }
         },
         {
@@ -741,9 +741,9 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* (There's more police tape.)",
-            ["text2"] = "* (It says \"NGAHHHH!!![wait:5] I MEAN IT!!!\")",
-            ["text3"] = "* (It's not clear what is meant by that.)"
+            ["text1"] = Game:locRaw("town_south_interactable_1"),
+            ["text2"] = Game:locRaw("town_south_interactable_2"),
+            ["text3"] = Game:locRaw("town_south_interactable_3")
           }
         },
         {
@@ -758,9 +758,9 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* (There's more police tape.)",
-            ["text2"] = "* (It says \"NGAHHHH!!![wait:5] I MEAN IT!!!\")",
-            ["text3"] = "* (It's not clear what is meant by that.)"
+            ["text1"] = Game:locRaw("town_south_interactable_1"),
+            ["text2"] = Game:locRaw("town_south_interactable_2"),
+            ["text3"] = Game:locRaw("town_south_interactable_3")
           }
         }
       }

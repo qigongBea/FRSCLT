@@ -31,24 +31,17 @@ function Scrapscallion:init()
     }
 
     -- Dialogue randomly displayed in the enemy's speech bubble
-    self.dialogue = {
-        "[instant]BZ[stopinstant][wait:3][instant]ZZT![stopinstant]",
-        "[instant]SCR[stopinstant][wait:3][instant]AP![stopinstant][wait:5] [instant]SCR[stopinstant][wait:3][instant]AP![stopinstant]\n[instant]BZ[stopinstant][wait:3][instant]ZZT![stopinstant]",
-        "[instant]CL[stopinstant][wait:3][instant]INK![stopinstant][wait:5] [instant]CLA[stopinstant][wait:3][instant]NK![stopinstant]"
+    self.dialGame:locRaw("scrapscallion_scrapscallion_dialogue_1")ZT![stopinGame:locRaw("scrapscallion_scrapscallion_dialogue_2")ZT![stopinGame:locRaw("scrapscallion_scrapscallion_dialogue_3")NK![stopinstant]"
     }
 
     -- Check text (automatically has "ENEMY NAME - " at the start)
-    self.check = "AT 15 DF 2\n* Made of a mysterious steel.[wait:5] Not to be confused with the dish."
+    self.check = Game:locRaw("scrapscallion_scrapscallion_check_1")
 
     -- Text randomly displayed at the bottom of the screen each turn
-    self.text = {
-        "* Smog is filling the air.",
-        "* Scrapscallion shifts nervously.",
-        "* Smells like an oil spill.",
-        "* Neutralizing the enemies...",
+    self.textGame:locRaw("scrapscallion_scrapscallion_text_1")ing the aiGame:locRaw("scrapscallion_scrapscallion_text_2")s nervouslGame:locRaw("scrapscallion_scrapscallion_text_3")n oil spilGame:locRaw("scrapscallion_scrapscallion_text_4")e enemies...",
     }
     -- Text displayed at the bottom of the screen when the enemy has low health
-    self.low_health_text = "* Scrapscallion's inner mechanisms don't sound too good."
+    self.low_health_text = Game:locRaw("scrapscallion_scrapscallion_low_health_text_1")
 
     -- Register act called "Smile"
     self:registerAct("Tighten", "", nil, 15)

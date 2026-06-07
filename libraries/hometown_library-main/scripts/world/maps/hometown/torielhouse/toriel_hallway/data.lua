@@ -183,7 +183,7 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text"] = "* (There's nothing useful in the drawer.)"
+            ["text"] = Game:locRaw("toriel_hallway_interactable_1")
           }
         },
         {
@@ -198,8 +198,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* (Looking at yourself after all these days...)",
-            ["text2"] = "* (... You don't feel like yourself.)"
+            ["text1"] = Game:locRaw("toriel_hallway_interactable_1"),
+            ["text2"] = Game:locRaw("toriel_hallway_interactable_2")
           }
         },
         {
@@ -215,7 +215,7 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text"] = "* (Toriel's sleeping there.)\n* (Better to be quiet around this room.)"
+            ["text"] = Game:locRaw("toriel_hallway_interactable_1")
           }
         },
         {
@@ -231,7 +231,7 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text"] = "* (There's no time to read books. Just generally.)"
+            ["text"] = Game:locRaw("toriel_hallway_interactable_1")
           }
         },
         {

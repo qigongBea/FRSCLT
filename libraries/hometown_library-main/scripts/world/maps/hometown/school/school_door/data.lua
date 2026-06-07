@@ -407,7 +407,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* (The door is locked.)"
+            ["text"] = Game:locRaw("school_door_interactable_1")
           }
         },
         {

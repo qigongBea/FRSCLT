@@ -1140,11 +1140,11 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* There's an audio log here.[wait:5] It reads as follows:",
-            ["text2"] = "[color:purple]* HELLO.[wait:5] THIS IS DR. G.",
-            ["text3"] = "[color:purple]* HERE IS WHERE I START MY TREK INTO THE SHADOWS.",
-            ["text4"] = "[color:purple]* I PLAN TO MAKE THIS A GATEWAY FOR MY EXPERIMENTS...[wait:10] YES,[wait:5] A GATEWAY AMIDST LIGHT AND DARK.",
-            ["text5"] = "[color:purple]* I SHALL CONTINUE MONITORING OUR SOURCE OF POWER, DARKNESS."
+            ["text1"] = Game:locRaw("creation_interactable_1"),
+            ["text2"] = Game:locRaw("creation_interactable_2"),
+            ["text3"] = Game:locRaw("creation_interactable_3"),
+            ["text4"] = Game:locRaw("creation_interactable_4"),
+            ["text5"] = Game:locRaw("creation_interactable_5")
           }
         },
         {
@@ -1237,7 +1237,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "[color:#ff00ff]* Welcome to Gateway Control Office:[wait:5] A.[wait:5] Owned by:[wait:5] Dr. G."
+            ["text1"] = Game:locRaw("creation_interactable_1")
           }
         },
         {
@@ -1266,15 +1266,15 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* There's an audio log here.[wait:5] It reads as follows:",
-            ["text2"] = "[color:purple]* HELLO.[wait:5] THIS IS DR. G.",
-            ["text3"] = "[color:purple]* THIS IS VERY IMPORTANT TO KNOW IF YOU ARE WORKING FOR ME.[wait:5] THAT MEANS YOU,[wait:5] OMNIS.",
-            ["text4"] = "[color:purple]* THIS IS A CONTROL STATION.[wait:5] THERE ARE TWO ACROSS THIS WHOLE GATEWAY.",
-            ["text5"] = "[color:purple]* AND FOR PROTECTION,[wait:5] THEY ARE POSITIONED ON OPPOSITE SIDES.",
-            ["text6"] = "[color:purple]* IF I EVER BE NOT PRESENT IN AN EMERGENCY,[wait:5] YOU MUST GET TO THE SHELTER AS SOON AS POSSIBLE.",
-            ["text7"] = "[color:purple]* THEN,[wait:5] OPEN THE DOOR NEXT TO OMNIS' ROOM.",
-            ["text8"] = "[color:purple]* THERE I HAVE THE MAIN CONTROL PANEL.",
-            ["text9"] = "[color:purple]* IF YOU CANNOT GET TO IT,[wait:5] YOU MUST PRESS BOTH BUTTONS."
+            ["text1"] = Game:locRaw("creation_interactable_1"),
+            ["text2"] = Game:locRaw("creation_interactable_2"),
+            ["text3"] = Game:locRaw("creation_interactable_3"),
+            ["text4"] = Game:locRaw("creation_interactable_4"),
+            ["text5"] = Game:locRaw("creation_interactable_5"),
+            ["text6"] = Game:locRaw("creation_interactable_6"),
+            ["text7"] = Game:locRaw("creation_interactable_7"),
+            ["text8"] = Game:locRaw("creation_interactable_8"),
+            ["text9"] = Game:locRaw("creation_interactable_9")
           }
         },
         {
@@ -1305,7 +1305,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "[color:#ff00ff]* You have now passed the Hometown Town Limits.[wait:5] Thank you for visiting!"
+            ["text1"] = Game:locRaw("creation_interactable_1")
           }
         },
         {
@@ -1320,8 +1320,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "[color:#ff00ff]* I may be a robot but I'm still controlled by a lazy human.",
-            ["text2"] = "[color:#ff00ff]* So since this elevator won't work,[wait:5] that means these are TEST FUCKING TILES!!"
+            ["text1"] = Game:locRaw("creation_interactable_1"),
+            ["text2"] = Game:locRaw("creation_interactable_2")
           }
         },
         {
@@ -1336,11 +1336,11 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* There's an audio log here.[wait:5] It reads as follows:",
-            ["text2"] = "[color:purple]* HELLO.[wait:5] THIS IS DR. G.",
-            ["text3"] = "[color:purple]* DUE TO THE CONFIDENTIALITY OF MY EXPERIMENTS IN B2,[wait:5] THIS AREA IS THE MOST PROTECTED.",
-            ["text4"] = "[color:purple]* MOST GUARDS ARE POSITIONED HERE,[wait:5] SO DO NOT TRY TO FIGHT THEM.",
-            ["text5"] = "[color:purple]* I WOULDN'T WANT YOU TO LOSE YOUR LEGS AGAIN,[wait:5] OMNIS."
+            ["text1"] = Game:locRaw("creation_interactable_1"),
+            ["text2"] = Game:locRaw("creation_interactable_2"),
+            ["text3"] = Game:locRaw("creation_interactable_3"),
+            ["text4"] = Game:locRaw("creation_interactable_4"),
+            ["text5"] = Game:locRaw("creation_interactable_5")
           }
         },
         {
@@ -1571,7 +1571,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "Welcome to Floor B1"
+            ["text"] = Game:locRaw("creation_teevie_marquee_1")
           }
         },
         {
@@ -1667,8 +1667,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "[color:#ff00ff]* To protect from intruders, the path to vital equipment has been concealed.",
-            ["text2"] = "[color:#ff00ff]* Please do not attempt to walk off the edge in this area."
+            ["text1"] = Game:locRaw("creation_interactable_1"),
+            ["text2"] = Game:locRaw("creation_interactable_2")
           }
         },
         {
@@ -1683,7 +1683,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "Welcome Dr. G"
+            ["text"] = Game:locRaw("creation_teevie_marquee_1")
           }
         },
         {
@@ -1699,8 +1699,8 @@ return {
           visible = true,
           properties = {
             ["plotmin"] = "gateway_lockdown_off",
-            ["text1"] = "[color:#ff4444]* Power levels:[wait:5] UNSTABLE.",
-            ["text2"] = "[color:#ff4444]* Recharging will take 48 days...[wait:5] Recharging..."
+            ["text1"] = Game:locRaw("creation_interactable_1"),
+            ["text2"] = Game:locRaw("creation_interactable_2")
           }
         },
         {

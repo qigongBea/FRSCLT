@@ -184,8 +184,8 @@ return {
           visible = true,
           properties = {
             ["plotmax"] = "*gateway_terminal1",
-            ["text1"] = "[color:#ff4444]* Warning:[wait:5] Gateway Elevator is on Lockdown.",
-            ["text2"] = "[color:#ff4444]* Please disable Lockdown to continue use."
+            ["text1"] = Game:locRaw("gateway_elevator_interactable_1"),
+            ["text2"] = Game:locRaw("gateway_elevator_interactable_2")
           }
         }
       }

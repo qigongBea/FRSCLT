@@ -10,7 +10,7 @@ return {
         local sound = Assets.newSound("noise")
         sound:play()
         cutscene:wait(5)
-        local choice = cutscene:choicer({"Hello?", "Hello?"})
+        local choice = Game:locRaw("reconnection_connect_1_opt"):cGame:locRaw("reconnection_connect_2_opt")"Hello?", "Hello?"})
         cutscene:wait(2)
         --start gonerText
         local text

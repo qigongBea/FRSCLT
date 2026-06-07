@@ -758,8 +758,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* (It's locked...)",
-            ["text2"] = "* (...[wait:5] you sit for second and think about your previous adventures.)"
+            ["text1"] = Game:locRaw("town_church_interactable_1"),
+            ["text2"] = Game:locRaw("town_church_interactable_2")
           }
         }
       }

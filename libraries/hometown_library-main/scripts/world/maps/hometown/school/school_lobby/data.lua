@@ -439,9 +439,9 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* Do you like,[wait:5] breathing?[wait:5] Moving fast,[wait:5] with or without,[wait:5] legs?",
-            ["text2"] = "* But usually,[wait:5] with legs?",
-            ["text3"] = "* Join the Track Team with Jockington,[wait:5] and Noelle!"
+            ["text1"] = Game:locRaw("school_lobby_interactable_1"),
+            ["text2"] = Game:locRaw("school_lobby_interactable_2"),
+            ["text3"] = Game:locRaw("school_lobby_interactable_3")
           }
         },
         {
@@ -456,7 +456,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* (You ran the water fountain.)\n[wait:5]* (It's lukewarm.)"
+            ["text"] = Game:locRaw("school_lobby_interactable_1")
           }
         },
         {
@@ -471,9 +471,9 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* (There's a paper here.)",
-            ["text2"] = "* (It's an advertisement for the Sadie Hawkmans' Dance.)",
-            ["text3"] = "* (... it's been postponed.)"
+            ["text1"] = Game:locRaw("school_lobby_interactable_1"),
+            ["text2"] = Game:locRaw("school_lobby_interactable_2"),
+            ["text3"] = Game:locRaw("school_lobby_interactable_3")
           }
         },
         {
@@ -488,7 +488,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* (Locker.[wait:5] It's locked.)"
+            ["text"] = Game:locRaw("school_lobby_interactable_1")
           }
         },
         {
@@ -503,7 +503,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* (Locker.[wait:5] It's locked.)"
+            ["text"] = Game:locRaw("school_lobby_interactable_1")
           }
         },
         {
@@ -518,7 +518,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* (Locker.[wait:5] It's locked.)"
+            ["text"] = Game:locRaw("school_lobby_interactable_1")
           }
         },
         {
@@ -533,7 +533,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* (It's your locker.)\n[wait:5]* (It's empty.)"
+            ["text"] = Game:locRaw("school_lobby_interactable_1")
           }
         },
         {
@@ -548,7 +548,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* (This used to be your brother's locker.)"
+            ["text"] = Game:locRaw("school_lobby_interactable_1")
           }
         },
         {
@@ -563,7 +563,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* The locker is locked."
+            ["text"] = Game:locRaw("school_lobby_interactable_1")
           }
         },
         {
@@ -578,7 +578,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* The locker is locked."
+            ["text"] = Game:locRaw("school_lobby_interactable_1")
           }
         },
         {
@@ -593,7 +593,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* The locker is locked."
+            ["text"] = Game:locRaw("school_lobby_interactable_1")
           }
         },
         {
@@ -608,7 +608,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* The locker is locked."
+            ["text"] = Game:locRaw("school_lobby_interactable_1")
           }
         },
         {
@@ -623,8 +623,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* (The locker is covered in Jockington memorabilia.)",
-            ["text2"] = "* (One of them is depicted wielding a basketball attached to a fork.)"
+            ["text1"] = Game:locRaw("school_lobby_interactable_1"),
+            ["text2"] = Game:locRaw("school_lobby_interactable_2")
           }
         },
         {

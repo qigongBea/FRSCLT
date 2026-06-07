@@ -225,7 +225,7 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text"] = "* (It's a chair.)"
+            ["text"] = Game:locRaw("town_hall_interactable_1")
           }
         },
         {
@@ -240,7 +240,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* (It's a painting of the town.)"
+            ["text"] = Game:locRaw("town_hall_interactable_1")
           }
         },
         {
@@ -255,7 +255,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* (It's a small pine tree.)"
+            ["text"] = Game:locRaw("town_hall_interactable_1")
           }
         },
         {

@@ -450,7 +450,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* You tried to open the chest,[wait:5] but it wouldn't budge."
+            ["text1"] = Game:locRaw("sansarea_interactable_1")
           }
         },
         {
@@ -510,7 +510,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* It seems like the platform is just out of reach."
+            ["text1"] = Game:locRaw("sansarea_interactable_1")
           }
         },
         {
@@ -525,7 +525,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* It seems like a boat is supposed to be here."
+            ["text1"] = Game:locRaw("sansarea_interactable_1")
           }
         },
         {

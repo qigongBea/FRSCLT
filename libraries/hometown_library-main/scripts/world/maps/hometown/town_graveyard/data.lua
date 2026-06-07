@@ -411,7 +411,7 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text"] = "* SHYRA\n[wait:5]* A KARAOKE MICROPHONE FOR A BRAVE SINGER"
+            ["text"] = Game:locRaw("town_graveyard_interactable_1")
           }
         },
         {
@@ -427,7 +427,7 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text"] = "* MUTTLER\n[wait:5]* A BIG BONE FOR THE LEADER OF THE PACK"
+            ["text"] = Game:locRaw("town_graveyard_interactable_1")
           }
         },
         {
@@ -443,7 +443,7 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text"] = "* CRYSTAL\n[wait:5]* A SNOWY GEMSTONE FOR A PROUD MOTHER"
+            ["text"] = Game:locRaw("town_graveyard_interactable_1")
           }
         },
         {
@@ -459,7 +459,7 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text"] = "* GERSON\n[wait:5]* RENOWNED HISTORIAN,[wait:5] AUTHOR,[wait:5] AND TEACHER"
+            ["text"] = Game:locRaw("town_graveyard_interactable_1")
           }
         },
         {
@@ -475,10 +475,10 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text1"] = "* (Gerson Boom Memorial Bench)",
-            ["text2"] = "* \"Throughout my career, some of my best ideas came from dreams.\"",
-            ["text3"] = "* \"Take a rest here.[wait:5] If anyone asks -- you're writing!\"",
-            ["text4"] = "* (You decided not to sit.)"
+            ["text1"] = Game:locRaw("town_graveyard_interactable_1"),
+            ["text2"] = Game:locRaw("town_graveyard_interactable_2"),
+            ["text3"] = Game:locRaw("town_graveyard_interactable_3"),
+            ["text4"] = Game:locRaw("town_graveyard_interactable_4")
           }
         },
         {

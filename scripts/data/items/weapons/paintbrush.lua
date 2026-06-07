@@ -15,7 +15,7 @@ function item:init(inventory)
     self.description = "It's my paintbrush."
 
     -- Light world check text
-    self.check = "It's my paintbrush.\nI'm not sure how I got it."
+    self.check = Game:locRaw("paintbrush_item_check_1")
 
     -- Where this item can be used (world, battle, all, or none)
     self.usable_in = "all"
@@ -40,29 +40,29 @@ end
 function item:onToss()
     Game.world:startCutscene(function(cutscene)
         if Game.chapter == 1 then
-            cutscene:text("* I didn't want to let it go.\nit away.")
+            cutscene:text(Game:locRaw("paintbrush_line43_1"))
         else
-            cutscene:text("* I hold the paintbrush in my hand.[wait:5]\n"..
+            cutscene:text(Game:locRaw("paintbrush_line45_1")..
                           "* I don't want to let it go.")
         end
-        cutscene:text("* Should I drop it anyways?")
+        cutscene:text(Game:locRaw("paintbrush_line48_1"))
 
         local dropped
         if Game.chapter == 1 then
-            dropped = cutscene:choicer({"No", "Yes"}) == 2
+            dropped = Game:locRaw("paintbrush_line48_1_opt_1")ceGame:locRaw("paintbrush_line48_1_opt_2")oicer({"No", "Yes"}) == 2
         else
-            dropped = cutscene:choicer({"Yes", "No"}) == 1
+            dropped = Game:locRaw("paintbrush_line48_1_opt_3")enGame:locRaw("paintbrush_line48_1_opt_4")oicer({"Yes", "No"}) == 1
         end
 
         if dropped then
             Game.inventory:removeItem(self)
 
             Assets.playSound("bageldefeat")
-            cutscene:text("* Reluctantly,[wait:5] I open my hand and it falls, shattering into bits.")
-            cutscene:text("* Liquid drips down my face.")
-            cutscene:text("* I am filled with a new[color:blue] overwhelming emotion.")
+            cutscene:text(Game:locRaw("paintbrush_line61_1"))
+            cutscene:text(Game:locRaw("paintbrush_line62_1"))
+            cutscene:text(Game:locRaw("paintbrush_line63_1"))
         else
-            cutscene:text("* I put the paintbrush away.")
+            cutscene:text(Game:locRaw("paintbrush_line65_1"))
         end
     end)
     return false

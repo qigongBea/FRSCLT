@@ -799,9 +799,9 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* There's a Transferer here.",
-            ["text2"] = "* Unfortunately,[wait:5] it's been deactivated.",
-            ["text3"] = "* You may be able to activate it at the Evergroves Control Center."
+            ["text1"] = Game:locRaw("shop_docks_r_interactable_1"),
+            ["text2"] = Game:locRaw("shop_docks_r_interactable_2"),
+            ["text3"] = Game:locRaw("shop_docks_r_interactable_3")
           }
         },
         {
@@ -816,9 +816,9 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* There's a Transferer here.",
-            ["text2"] = "* Unfortunately,[wait:5] it's been deactivated.",
-            ["text3"] = "* You may be able to activate it at the Evergroves Control Center."
+            ["text1"] = Game:locRaw("shop_docks_r_interactable_1"),
+            ["text2"] = Game:locRaw("shop_docks_r_interactable_2"),
+            ["text3"] = Game:locRaw("shop_docks_r_interactable_3")
           }
         },
         {

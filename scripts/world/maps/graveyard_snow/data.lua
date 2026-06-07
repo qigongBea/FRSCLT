@@ -251,7 +251,7 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text"] = "* SHYRA\n[wait:5]* A KARAOKE MICROPHONE FOR A BRAVE SINGER"
+            ["text"] = Game:locRaw("graveyard_snow_interactable_1")
           }
         },
         {
@@ -267,7 +267,7 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text"] = "* CRYSTAL\n[wait:5]* A SNOWY GEMSTONE FOR A PROUD MOTHER"
+            ["text"] = Game:locRaw("graveyard_snow_interactable_1")
           }
         },
         {
@@ -283,10 +283,10 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text1"] = "* (It's a bench built by Gerson Boom.)",
-            ["text2"] = "* \"Throughout my career, some of my best ideas came from dreams.\"",
-            ["text3"] = "* \"Take a rest here.[wait:5] If anyone asks -- you're writing!\"",
-            ["text4"] = "* (You decided not to sit.)"
+            ["text1"] = Game:locRaw("graveyard_snow_interactable_1"),
+            ["text2"] = Game:locRaw("graveyard_snow_interactable_2"),
+            ["text3"] = Game:locRaw("graveyard_snow_interactable_3"),
+            ["text4"] = Game:locRaw("graveyard_snow_interactable_4")
           }
         }
       }

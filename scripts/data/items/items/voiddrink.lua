@@ -21,7 +21,7 @@ function item:init()
     -- Menu description
     self.description = "A cure to your pain. +10HP"
     -- Light world check text
-    self.check = "It's made to cure your pain.[wait:5] +10HP."
+    self.check = Game:locRaw("voiddrink_item_check_1")
     -- Amount healed (HealItem variable)
     self.heal_amount = 20
     -- Amount this item heals for specific characters

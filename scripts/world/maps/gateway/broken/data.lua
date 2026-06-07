@@ -671,7 +671,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "Welcome to Floor B3"
+            ["text"] = Game:locRaw("broken_teevie_marquee_1")
           }
         },
         {
@@ -737,7 +737,7 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text1"] = "* The path seems to be under maintenance."
+            ["text1"] = Game:locRaw("broken_interactable_1")
           }
         },
         {
@@ -753,7 +753,7 @@ return {
           visible = true,
           properties = {
             ["solid"] = false,
-            ["text1"] = "[color:#ff4444]* Gateway Floor B3 is closed for maintenance."
+            ["text1"] = Game:locRaw("broken_interactable_1")
           }
         }
       }

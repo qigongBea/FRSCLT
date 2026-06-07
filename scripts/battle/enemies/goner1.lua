@@ -26,23 +26,20 @@ function goner1:init()
     }
 
     -- Dialogue randomly displayed in the enemy's speech bubble
-    self.dialogue = {
+    self.dialGame:locRaw("goner1_goner1_dialogue_1")= {
         "..."
     }
     --very hidden indeed
     self.hidden_mercy = 0
 
     -- Check text (automatically has "ENEMY NAME - " at the start)
-    self.check = "AT 6 DF 0\n* You're not sure why, but...\n* It's radiating something."
+    self.check = Game:locRaw("goner1_goner1_check_1")
 
     -- Text randomly displayed at the bottom of the screen each turn
-    self.text = {
-        "* It appears to be in pain.",
-        "* Is that a gash on it's face?",
-        "* It's cold in here.",
+    self.textGame:locRaw("goner1_goner1_text_1") be in paiGame:locRaw("goner1_goner1_text_2")n it's facGame:locRaw("goner1_goner1_text_3")old in here.",
     }
     -- Text displayed at the bottom of the screen when the enemy has low health
-    self.low_health_text = "* The Guard looks like it's\nglitching out."
+    self.low_health_text = Game:locRaw("goner1_goner1_low_health_text_1")
 
     -- Register act called "Smile"
     self:registerAct("Cry")

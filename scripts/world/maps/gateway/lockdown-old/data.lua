@@ -247,8 +247,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "[color:#880000]* Warning:[wait:5] Gateway Sector B is on Lockdown.[wait:5] If maintenance is needed,[wait:5] disable the lockdown.",
-            ["text2"] = "[color:#880000]* You can turn off the two Gateway terminals to disable Lockdown."
+            ["text1"] = Game:locRaw("lockdown_old_interactable_1"),
+            ["text2"] = Game:locRaw("lockdown_old_interactable_2")
           }
         }
       }

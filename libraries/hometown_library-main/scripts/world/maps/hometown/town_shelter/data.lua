@@ -641,7 +641,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* (It's locked.)"
+            ["text"] = Game:locRaw("town_shelter_interactable_1")
           }
         },
         {

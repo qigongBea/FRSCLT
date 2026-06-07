@@ -60,7 +60,7 @@ return {
     [1] = function(cutscene)
     local num1 = keypadInput(cutscene)
     --make a textbox that will ignore our input and that will not wait for our input
-    local _, textbox = cutscene:text("number inputed: "..num1.."\nnow give a 3 digit number. ill stay here unti you're done.",nil,nil,{wait = false})
+    local _, textbox = cutscene:text(Game:locRaw("keypad_key_callback_1")..num1.."\nnow give a 3 digit number. ill stay here unti you're done.",nil,nil,{wait = false})
     textbox:setText(textbox.text.text, function() end)
 
     cutscene:wait(1)
@@ -73,6 +73,6 @@ return {
             end
         end
     )
-    cutscene:text("number inputed: "..num2.."\nsum is ".. (num1+num2))
+    cutscene:text(Game:locRaw("keypad_key_callback_2")..num2.."\nsum is ".. (num1+num2))
 end
 }

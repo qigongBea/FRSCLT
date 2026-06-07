@@ -868,7 +868,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "COMING SOON TO YOUR LOCAL DEPTHS![wait:10] THE DEPTHS UPDATE WILL RELEASE EVENTUALLY!"
+            ["text1"] = Game:locRaw("depths_interactable_1")
           }
         }
       }

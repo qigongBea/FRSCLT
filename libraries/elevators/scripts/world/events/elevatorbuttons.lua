@@ -11,8 +11,8 @@ end
 function ElevatorButtons:onInteract(chara)
     if #self.elevator.floors == 2 then
         Game.world:startCutscene(function(cutscene)
-            cutscene:text("* (Ride the elevator?)")
-            local choice = cutscene:choicer({"Ride", "Do not"})
+            cutscene:text(Game:locRaw("elevatorbuttons_line14_1"))
+            local choice = Game:locRaw("elevatorbuttons_line14_1_opt_1")neGame:locRaw("elevatorbuttons_line14_1_opt_2")({"Ride", "Do not"})
             if choice == 1 then
                 local mod = self.elevator.floors[(self.elevator.current_floor == 1 and 2 or 1)].mod
                 if self.elevator.current_floor == 1 then
@@ -42,7 +42,7 @@ function ElevatorButtons:onInteract(chara)
         end)
     else
         Game.world:startCutscene(function(cutscene)
-            cutscene:text("* (Where will you ride the elevator to?)")
+            cutscene:text(Game:locRaw("elevatorbuttons_line45_1"))
 
 
             local names = {}
@@ -63,7 +63,7 @@ function ElevatorButtons:onInteract(chara)
             incmenu:remove()
             if decision == self.elevator.current_floor then
                 if Input.pressed("cancel") or incmenu.cancel then return end
-                cutscene:text("* (You're there.)")
+                cutscene:text(Game:locRaw("elevatorbuttons_line66_1"))
                 return
             end
             if incmenu.mod and incmenu.mod ~= Mod.info.id then 
@@ -89,21 +89,21 @@ function ElevatorButtons:confirmModSwitch(floor, mod)
     local mod = mod
     local cutscene = Game.world.cutscene
     if Kristal.Mods.data[mod] == nil then
-        cutscene:text("* But the elevator remained motionless.")
+        cutscene:text(Game:locRaw("elevatorbuttons_line92_1"))
         cutscene:text(string.format("* (Are you missing the %q DLC?)", mod))
         return
     end
 
 
     local has_dess = cutscene:getCharacter("dess") ~= nil
-    cutscene:text("* Your "
+    cutscene:text(Game:locRaw("elevatorbuttons_line99_1")
         .. (has_dess and "desstination" or "destination")
         .." is "
         ..(has_dess and "in another castle" or "infinitely far away")
         ..".\n* Leave this "
         .. (has_dess and "Dark " or "")
         .."Place?")
-    local enter = cutscene:choicer({"Yes", "No"})
+    local enter = Game:locRaw("elevatorbuttons_line99_1_opt_1")enGame:locRaw("elevatorbuttons_line99_1_opt_2")oicer({"Yes", "No"})
 
     if enter == 1 then
 
@@ -148,7 +148,7 @@ function ElevatorButtons:confirmModSwitch(floor, mod)
         self.elevator.infinite = true
 
     else
-        cutscene:text("* You elevaten't.")
+        cutscene:text(Game:locRaw("elevatorbuttons_line151_1"))
     end
 
 end

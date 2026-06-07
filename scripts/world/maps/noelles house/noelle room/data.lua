@@ -428,7 +428,7 @@ return {
           visible = true,
           properties = {
             ["solid"] = false,
-            ["text1"] = "* There's a couple of pill bottles on the bedside table."
+            ["text1"] = Game:locRaw("noelleroom_interactable_1")
           }
         },
         {
@@ -444,7 +444,7 @@ return {
           visible = true,
           properties = {
             ["solid"] = false,
-            ["text1"] = "* It's just a simple wardrobe.[wait:5] All of the clothes are the same."
+            ["text1"] = Game:locRaw("noelleroom_interactable_1")
           }
         },
         {
@@ -460,7 +460,7 @@ return {
           visible = true,
           properties = {
             ["solid"] = false,
-            ["text1"] = "* It's an old television.[wait:5] It's off."
+            ["text1"] = Game:locRaw("noelleroom_interactable_1")
           }
         },
         {
@@ -477,7 +477,7 @@ return {
           properties = {
             ["border"] = "leaves",
             ["solid"] = false,
-            ["text1"] = "* It's a game console.[wait:5] There's a game of Dragon Blazers inserted."
+            ["text1"] = Game:locRaw("noelleroom_interactable_1")
           }
         }
       }

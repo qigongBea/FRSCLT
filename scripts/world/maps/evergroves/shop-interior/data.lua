@@ -271,8 +271,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* The backdoor has been blocked off by some new construction.",
-            ["text2"] = "* It seems the new visitors have really messed the place up."
+            ["text1"] = Game:locRaw("shop_interior_interactable_1"),
+            ["text2"] = Game:locRaw("shop_interior_interactable_2")
           }
         }
       }

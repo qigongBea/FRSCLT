@@ -230,7 +230,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* (It's a toilet.)\n[wait:5]* (Kross is too lazy to program the flush cutscene.)"
+            ["text"] = Game:locRaw("toriel_bathroom_interactable_1")
           }
         },
         {
@@ -245,9 +245,9 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* You looked inside the sink cupboard.\n[wait:5]* There's...",
-            ["text2"] = "* A can of Ice-E's Cool Boys Body Spray \"Spray For The Boys,\" Flamin' Hot Pizza Flavor.",
-            ["text3"] = "* It seems to be almost entirely full."
+            ["text1"] = Game:locRaw("toriel_bathroom_interactable_1"),
+            ["text2"] = Game:locRaw("toriel_bathroom_interactable_2"),
+            ["text3"] = Game:locRaw("toriel_bathroom_interactable_3")
           }
         }
       }

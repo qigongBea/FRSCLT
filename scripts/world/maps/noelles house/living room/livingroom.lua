@@ -512,7 +512,7 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text1"] = "* (No need to go upstairs...)"
+            ["text1"] = Game:locRaw("livingroom_interactable_1")
           }
         },
         {
@@ -544,7 +544,7 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text1"] = "* No need to go back..."
+            ["text1"] = Game:locRaw("livingroom_interactable_1")
           }
         },
         {

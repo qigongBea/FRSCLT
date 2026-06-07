@@ -638,7 +638,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* It's an empty help desk.[wait:5] It seems the cruise might be leaving soon."
+            ["text"] = Game:locRaw("sans_store_interactable_1")
           }
         },
         {
@@ -653,7 +653,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* (It's an empty seat.)"
+            ["text1"] = Game:locRaw("sans_store_interactable_1")
           }
         },
         {
@@ -783,7 +783,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* (It's an empty seat.)"
+            ["text1"] = Game:locRaw("sans_store_interactable_1")
           }
         }
       }

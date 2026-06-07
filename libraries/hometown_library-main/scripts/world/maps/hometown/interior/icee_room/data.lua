@@ -228,8 +228,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* (There's some condiments at the table.)",
-            ["text2"] = "* ICE-E's \"Original\" Parmajohn Che\"E\"ese!"
+            ["text1"] = Game:locRaw("icee_room_interactable_1"),
+            ["text2"] = Game:locRaw("icee_room_interactable_2")
           }
         },
         {
@@ -259,8 +259,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* (Try our new CHOCCOLATE PEZZA)",
-            ["text2"] = "* (Melts in your pants not in your mouth)"
+            ["text1"] = Game:locRaw("icee_room_interactable_1"),
+            ["text2"] = Game:locRaw("icee_room_interactable_2")
           }
         },
         {

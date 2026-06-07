@@ -30,21 +30,18 @@ function Dummy:init()
     }
 
     -- Dialogue randomly displayed in the enemy's speech bubble
-    self.dialogue = {
+    self.dialGame:locRaw("omnis_boss_dummy_dialogue_1")= {
         "..."
     }
 
     -- Check text (automatically has "ENEMY NAME - " at the start)
-    self.check = "AT 10 DF 6\n* The Omnis of your journey."
+    self.check = Game:locRaw("omnis_boss_dummy_check_1")
 
     -- Text randomly displayed at the bottom of the screen each turn
-    self.text = {
-        "* Omnis is readying his next attack.",
-        "* You look out the window, the statue stares back.",
-        "* Ursula looks nervous.",
+    self.textGame:locRaw("omnis_boss_dummy_text_1")next attacGame:locRaw("omnis_boss_dummy_text_2")stares bacGame:locRaw("omnis_boss_dummy_text_3")oks nervous.",
     }
     -- Text displayed at the bottom of the screen when the enemy has low health
-    self.low_health_text = "* Omnis looks like he's about to bleed."
+    self.low_health_text = Game:locRaw("omnis_boss_dummy_low_health_text_1")
 
     -- Register act called "Smile"
     -- Register party act with Ralsei called "Tell Story"

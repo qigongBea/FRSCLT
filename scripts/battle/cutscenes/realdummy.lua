@@ -5,7 +5,7 @@ return {
     ---@param cutscene BattleCutscene
     smile = function(cutscene, battler, enemy)
         -- Open textbox and wait for completion
-        cutscene:text("* You smiled at the Guard.[wait:5] The Guard smiled back.")
+        cutscene:text(Game:locRaw("realdummy_smile_1"))
         enemy.hidden_mercy = enemy.hidden_mercy + 1
         for _, attacker in ipairs(Game.battle.enemies) do
             attacker:addMercy(50)
@@ -13,15 +13,15 @@ return {
     end,
     smile2 = function(cutscene, battler, enemy)
         -- Open textbox and wait for completion
-        cutscene:text("* You smiled at the Guard,[wait:5] but the Guard was already smiling.")
+        cutscene:text(Game:locRaw("realdummy_smile2_1"))
     end,
     fluff = function(cutscene, battler, enemy)
         -- Open textbox and wait for completion
-        cutscene:text("* H-hey...[wait:5] just stand still Mr. Guard...", "blush_surprise_smile", "noelle")
-        cutscene:text("* Noelle put some of the Guard's fluff back inside of it.")
+        cutscene:text(Game:locRaw("realdummy_fluff_1"), "blush_surprise_smile", "noelle")
+        cutscene:text(Game:locRaw("realdummy_fluff_2"))
         Assets.playSound("bump")
         enemy:shake(3, 3)
-        cutscene:text("* The Guard was very thankful!")
+        cutscene:text(Game:locRaw("realdummy_fluff_3"))
         enemy.hidden_mercy2 = enemy.hidden_mercy2 + 1
         for _, attacker in ipairs(Game.battle.enemies) do
             attacker:addMercy(50)
@@ -29,7 +29,7 @@ return {
     end,
     fluff2 = function(cutscene, battler, enemy)
         -- Open textbox and wait for completion
-        cutscene:text("* You tried to help the Guard,[wait:5] but you couldn't think of any other way to help it.")
+        cutscene:text(Game:locRaw("realdummy_fluff2_1"))
     end,
     cry = function(cutscene, battler, enemy)
         Assets.playSound("bump")
@@ -41,20 +41,20 @@ return {
         Assets.playSound("bump")
         enemy:shake(3, 3)
 
-        cutscene:text("* It cries and cries,[wait:5]\n despite no tears coming out.")
-        cutscene:text("* Oh![wait:10] Cry me a river!")
-        cutscene:text("* What?[wait:10] You didn't say that.")
+        cutscene:text(Game:locRaw("realdummy_cry_1"))
+        cutscene:text(Game:locRaw("realdummy_cry_2"))
+        cutscene:text(Game:locRaw("realdummy_cry_3"))
 
         enemy.hidden_mercy = enemy.hidden_mercy + 1
     end,
     comfort = function(cutscene, battler, enemy)
         
-        cutscene:text("* Hey hey,[wait:5] no need to cry.", "smile", "ralsei")
+        cutscene:text(Game:locRaw("realdummy_comfort_1"), "smile", "ralsei")
 
         Assets.playSound("bump")
         enemy:shake(2, 2)
         
-        cutscene:text("* You'll be okay.[wait:10] I promise.", "smile_b", "ralsei")
+        cutscene:text(Game:locRaw("realdummy_comfort_2"), "smile_b", "ralsei")
 
         Assets.playSound("bump")
         enemy:shake(2, 2)
@@ -72,7 +72,7 @@ return {
             attacker:setAnimation("grow")
         end
 
-        cutscene:text("* Strangeman seems to appriciate that.")
+        cutscene:text(Game:locRaw("realdummy_comfort_3"))
 
     end,
 }

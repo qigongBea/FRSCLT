@@ -279,8 +279,8 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text1"] = "* (It's a toy with beads on a track.)",
-            ["text2"] = "* (The beads of the toy march on.)"
+            ["text1"] = Game:locRaw("hospital_lobby_interactable_1"),
+            ["text2"] = Game:locRaw("hospital_lobby_interactable_2")
           }
         },
         {

@@ -1331,7 +1331,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "Welcome to Floor B2"
+            ["text"] = Game:locRaw("basement_teevie_marquee_1")
           }
         },
         {
@@ -1503,7 +1503,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "Welcome"
+            ["text"] = Game:locRaw("basement_teevie_marquee_1")
           }
         },
         {
@@ -1638,8 +1638,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "[color:#ff00ff]* To protect from intruders,[wait:5] the path to vital offices has been concealed.",
-            ["text2"] = "[color:#ff00ff]* Please do not attempt to walk off the edge in this area without access."
+            ["text1"] = Game:locRaw("basement_interactable_1"),
+            ["text2"] = Game:locRaw("basement_interactable_2")
           }
         },
         {
@@ -1654,7 +1654,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* It's run out of power.[wait:5] It seems this wasn't the right path."
+            ["text1"] = Game:locRaw("basement_interactable_1")
           }
         },
         {
@@ -1669,11 +1669,11 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* There's an audio log here.[wait:5] It reads as follows:",
-            ["text2"] = "[color:purple]* HELLO.[wait:5] THIS IS DR. G.",
-            ["text3"] = "[color:purple]* I HAVE DECIDED TO CREATE AN ACCESS DRIVE BASED ON OMNIS' DEVICE.",
-            ["text4"] = "[color:purple]* VERY BRIGHT SCIENTIST HE IS...",
-            ["text5"] = "[color:purple]* I WILL CONTINUE TO MAKE THE GATEWAY GREATER."
+            ["text1"] = Game:locRaw("basement_interactable_1"),
+            ["text2"] = Game:locRaw("basement_interactable_2"),
+            ["text3"] = Game:locRaw("basement_interactable_3"),
+            ["text4"] = Game:locRaw("basement_interactable_4"),
+            ["text5"] = Game:locRaw("basement_interactable_5")
           }
         },
         {
@@ -1688,11 +1688,11 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* There's an audio log here.[wait:5] It reads as follows:",
-            ["text2"] = "[color:purple]* HELLO.[wait:5] THIS IS DR. OMINS.",
-            ["text3"] = "[color:purple]* THIS IS MY FIRST EXPERIMENT, GIVING AN INANIMATE OBJECT LIFE.",
-            ["text4"] = "[color:purple]* IT SEEMS THAT IT HAS GROWN STRONG OVER TRAINING.",
-            ["text5"] = "[color:purple]* I WILL CONTINUE MONITORING THIS CREATION."
+            ["text1"] = Game:locRaw("basement_interactable_1"),
+            ["text2"] = Game:locRaw("basement_interactable_2"),
+            ["text3"] = Game:locRaw("basement_interactable_3"),
+            ["text4"] = Game:locRaw("basement_interactable_4"),
+            ["text5"] = Game:locRaw("basement_interactable_5")
           }
         },
         {
@@ -1707,11 +1707,11 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* There's an audio log here.[wait:5] It reads as follows:",
-            ["text2"] = "[color:purple]* HELLO.[wait:5] THIS IS DR. OMINS.",
-            ["text3"] = "[color:purple]* THIS SEEMS TO BE MY BEST CREATION YET.",
-            ["text4"] = "[color:purple]* IT IS A DEVICE, IT MAY CUT DOWN ON UNNECESSARY LOGS IN THE GATEWAY.",
-            ["text5"] = "[color:purple]* I WILL LET DR. G KNOW IMMEDIATELY."
+            ["text1"] = Game:locRaw("basement_interactable_1"),
+            ["text2"] = Game:locRaw("basement_interactable_2"),
+            ["text3"] = Game:locRaw("basement_interactable_3"),
+            ["text4"] = Game:locRaw("basement_interactable_4"),
+            ["text5"] = Game:locRaw("basement_interactable_5")
           }
         },
         {
@@ -1726,7 +1726,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* It's run out of power.[wait:5] It seems this wasn't the right path."
+            ["text1"] = Game:locRaw("basement_interactable_1")
           }
         },
         {
@@ -1741,7 +1741,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* It's run out of power.[wait:5] It seems this wasn't the right path."
+            ["text1"] = Game:locRaw("basement_interactable_1")
           }
         },
         {
@@ -1756,7 +1756,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "THE GATEWAY AMIDST LIGHT AND DARK"
+            ["text"] = Game:locRaw("basement_teevie_marquee_1")
           }
         },
         {
@@ -1771,8 +1771,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "[color:#ff00ff]* Due to the Gateway being in hibernation,[wait:5] the GPP has been activated.",
-            ["text2"] = "[color:#ff00ff]* The Gateway Protection Protocol has hidden vital paths."
+            ["text1"] = Game:locRaw("basement_interactable_1"),
+            ["text2"] = Game:locRaw("basement_interactable_2")
           }
         },
         {
@@ -1805,8 +1805,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* A great feeling of doom\ncourses through you.",
-            ["text2"] = "* You are filled with the power\nof being deep underground."
+            ["text1"] = Game:locRaw("basement_savepoint_1"),
+            ["text2"] = Game:locRaw("basement_savepoint_2")
           }
         },
         {

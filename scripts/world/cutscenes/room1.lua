@@ -5,7 +5,7 @@ return {
     ---@param cutscene WorldCutscene
     wall = function(cutscene, event)
         -- Open textbox and wait for completion
-        cutscene:text("* The wall seems cracked.")
+        cutscene:text(Game:locRaw("room1_wall_1"))
 
         -- If we have Susie, play a cutscene
         local susie = cutscene:getCharacter("susie")
@@ -16,7 +16,7 @@ return {
 
             -- All text from now is spoken by Susie
             cutscene:setSpeaker(susie)
-            cutscene:text("* Hey,[wait:5] think I can break\nthis wall?", "smile")
+            cutscene:text(Game:locRaw("room1_wall_2"), "smile")
 
             -- Get the bottom-center of the broken wall
             local x = event.x + event.width/2
@@ -56,7 +56,7 @@ return {
             Assets.playSound("wing")
 
             cutscene:wait(1)
-            cutscene:text("* Guess not.", "nervous")
+            cutscene:text(Game:locRaw("room1_wall_3"), "nervous")
 
             -- Reset Susie's sprite
             susie:resetSprite()
@@ -70,7 +70,7 @@ return {
             cutscene:attachFollowers()
             Game:setFlag("wall_hit", true)
             cutscene:wait(1)
-            cutscene:text("* Test dialogue", "owo", "ralsei")
+            cutscene:text(Game:locRaw("room1_wall_4"), "owo", "ralsei")
         end
     end
 }

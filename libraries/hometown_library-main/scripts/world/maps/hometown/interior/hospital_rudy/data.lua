@@ -219,7 +219,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* (Patient Name:)\n[wait:5]* (Rudolph \"Rudy\" Holiday)"
+            ["text"] = Game:locRaw("hospital_rudy_interactable_1")
           }
         },
         {
@@ -234,7 +234,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* (It's an angel doll.)\n[wait:5]* (Its lack of facial features is unsettling.)"
+            ["text"] = Game:locRaw("hospital_rudy_interactable_1")
           }
         },
         {
@@ -249,7 +249,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* (It's a chair.)"
+            ["text"] = Game:locRaw("hospital_rudy_interactable_1")
           }
         },
         {
@@ -264,7 +264,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* (It's a bunch of roses in a glass container.)"
+            ["text"] = Game:locRaw("hospital_rudy_interactable_1")
           }
         },
         {
@@ -279,7 +279,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* (It's a sink.)"
+            ["text"] = Game:locRaw("hospital_rudy_interactable_1")
           }
         },
         {

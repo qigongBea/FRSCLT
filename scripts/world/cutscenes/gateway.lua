@@ -39,12 +39,12 @@ function gateway.chasestart(cutscene)
     Game.world.timer:tween(3, Mod.shared_gonerbg, {container = {timescale = 10},saturation = 1})
     Mod.shared_gonerbg.sprite = Assets.getTexture("world/cutscenes/intro/DEPTH_MONO")
     if Game["gateway_collapse_chase_started"] then
-        cutscene:text("* We have to go NOW.", "angry_c", susie)
+        cutscene:text(Game:locRaw("gateway_line42_1"), "angry_c", susie)
         Game.world.music:play("gateway_collapse_chase")
     else
-        cutscene:text("[color:#ff00ff]* Current status: CRITICAL.[wait:5]\n[color:#ff6666]* Collapse imminent.")
-        cutscene:text("* Uh, that's a bit concerning.", "suspicious", "susie")
-        cutscene:text("* Do you think this was...[wait:5] intentional?", "afraid", noelle)
+        cutscene:text(Game:locRaw("gateway_line45_1"))
+        cutscene:text(Game:locRaw("gateway_line46_1"), "suspicious", "susie")
+        cutscene:text(Game:locRaw("gateway_line47_1"), "afraid", noelle)
         local debris = Sprite("world/cutscenes/gateway/debris_3", Game.world.map:getMarker("debris_impact"))
         debris:setScale(2)
         debris:setOrigin(0.5)
@@ -60,7 +60,7 @@ function gateway.chasestart(cutscene)
             noelle:setSprite("shocked")
             done = true
         end)
-        cutscene:text("* That asshole doctor![wait:5]\n* We gotta get the hell out of here!", "angry_b", susie)
+        cutscene:text(Game:locRaw("gateway_line63_1"), "angry_b", susie)
         cutscene:wait(function() return done end)
 
         waitAll({
@@ -76,13 +76,13 @@ function gateway.chasestart(cutscene)
         susie:setSprite("exasperated_left")
         Assets.playSound("whip_crack_only")
         susie.y = susie.y + 4
-        cutscene:text("* NOELLE, WHAT THE HELL IS WRONG WITH YOU!?", "teeth_b", susie)
+        cutscene:text(Game:locRaw("gateway_line79_1"), "teeth_b", susie)
     end
     
     Assets.playSound("grab")
     local waiter
     if not Game["gateway_collapse_chase_started"] then
-        waiter = cutscene:text("* DON'T JUST STAND THERE!!", "teeth_b", susie, {wait = false})
+        waiter = cutscene:text(Game:locRaw("gateway_line85_1"), "teeth_b", susie, {wait = false})
     end
     Game["gateway_collapse_chase_started"]=true
     Plot:set("gateway_collapse")

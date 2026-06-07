@@ -315,9 +315,9 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text1"] = "* (There's a crude drawing of an ice-cube wearing a headband.)",
-            ["text2"] = "* (\"The TeenZone: Where Teen's Can Be Kid's.\")",
-            ["text3"] = "* (A feeling of immense relief washes over you.)"
+            ["text1"] = Game:locRaw("library_lobby_interactable_1"),
+            ["text2"] = Game:locRaw("library_lobby_interactable_2"),
+            ["text3"] = Game:locRaw("library_lobby_interactable_3")
           }
         },
         {
@@ -333,10 +333,10 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text1"] = "* (It's an unlabelled book. You look inside...)",
-            ["text2"] = "* oh.... i accidentally returned my personal journal instead of my book...",
-            ["text3"] = "* oh no.... they're putting it into their catalogue...",
-            ["text4"] = "* oh no... i have to take it out every time i want to write a new entry..."
+            ["text1"] = Game:locRaw("library_lobby_interactable_1"),
+            ["text2"] = Game:locRaw("library_lobby_interactable_2"),
+            ["text3"] = Game:locRaw("library_lobby_interactable_3"),
+            ["text4"] = Game:locRaw("library_lobby_interactable_4")
           }
         },
         {
@@ -352,8 +352,8 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text1"] = "* \"Lord of the Hammer\"",
-            ["text2"] = "* (First in the award-winning fiction series by lauded historian Gerson Boom.)"
+            ["text1"] = Game:locRaw("library_lobby_interactable_1"),
+            ["text2"] = Game:locRaw("library_lobby_interactable_2")
           }
         },
         {
@@ -369,8 +369,8 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text1"] = "* (It's a book of magic tricks.)",
-            ["text2"] = "* (Most of them require orbs or floating hands.)"
+            ["text1"] = Game:locRaw("library_lobby_interactable_1"),
+            ["text2"] = Game:locRaw("library_lobby_interactable_2")
           }
         },
         {
@@ -386,8 +386,8 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text1"] = "* (There's a book here.)\n[wait:5]* (You lick the page...)\n[wait:5]* (It's delicious!)",
-            ["text2"] = "* (This must be what they meant by flavor text.)"
+            ["text1"] = Game:locRaw("library_lobby_interactable_1"),
+            ["text2"] = Game:locRaw("library_lobby_interactable_2")
           }
         },
         {
@@ -403,8 +403,8 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text1"] = "* (Computer Lab.)\n[wait:5]* (Please surf the web responsibly.)",
-            ["text2"] = "* (In fact,[wait:5] maybe don't do it at all.)"
+            ["text1"] = Game:locRaw("library_lobby_interactable_1"),
+            ["text2"] = Game:locRaw("library_lobby_interactable_2")
           }
         },
         {
@@ -420,8 +420,8 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text1"] = "* (It's the weekly cartoon review.)",
-            ["text2"] = "* (Just looking at cartoon criticism is sapping your energy rapidly.)"
+            ["text1"] = Game:locRaw("library_lobby_interactable_1"),
+            ["text2"] = Game:locRaw("library_lobby_interactable_2")
           }
         }
       }

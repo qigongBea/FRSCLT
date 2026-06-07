@@ -25,7 +25,7 @@ function item:init()
     -- Whether the item can be sold
     self.can_sell = false
     -- Light world check text
-    self.check = "A tool used to access data. A [color:yellow]device[color:reset] could use it..."
+    self.check = Game:locRaw("flashdrive_item_check_1")
     -- Consumable target mode (ally, party, enemy, enemies, or none)
     self.target = "none"
     -- Where this item can be used (world, battle, all, or none)
@@ -52,7 +52,7 @@ end
 
 function item:onWorldUse()
     Game.world:startCutscene(function(cutscene)
-        cutscene:text("* You looked at the FlashDrive in admiration.")      
+        cutscene:text(Game:locRaw("flashdrive_line55_1"))      
     end)
 end
 

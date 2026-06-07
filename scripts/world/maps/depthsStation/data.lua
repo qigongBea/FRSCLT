@@ -416,7 +416,7 @@ return {
           properties = {
             ["plotmax"] = "*boat_leadup_keyget",
             ["solid"] = true,
-            ["text1"] = "* You need your Suite Key before continuing..."
+            ["text1"] = Game:locRaw("depthsstation_interactable_1")
           }
         }
       }

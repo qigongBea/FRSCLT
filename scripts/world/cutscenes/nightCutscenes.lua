@@ -41,23 +41,14 @@ local nightCutsenes = {
             text:remove()
         end  
 
-        plainText(Game:locRaw("nightcutscenes_intro_susie_phoning_1"))
-        plainText(Game:locRaw("nightcutscenes_intro_susie_phoning_2"))
-        plainText(Game:locRaw("nightcutscenes_intro_susie_phoning_3"))
-        plainText(Game:locRaw("nightcutscenes_intro_susie_phoning_4"))
-        plainText(Game:locRaw("nightcutscenes_intro_susie_phoning_5"))
-        plainText(Game:locRaw("nightcutscenes_intro_susie_phoning_6"))
-        --[[
-        TODO: text to be updated
-        plainText("Hello?")
-        plainText("You picked up!![wait:10]\nI was getting worried my\nnew phone wasn't working.")
-        plainText("Get your ass up and\nmeet me in town!! [wait:10]\nI found something...[wait:10] bad.")
-        plainText("I'll explain more when you get here.")
-        **plainText("But try not to wake up Toriel.[wait:10]\nShe's probably sleeping right now.")
-        **plainText("And I don't really want\nthe same thing to happen as\nlast time, so...")
-        **plainText("Y'know what to do, Kris.")
-        plainText("I'll be waiting by QC's,[wait:5] 'kay?")
-        ]]--
+        plainText(Game:locRaw("nightcutscenes_susie_1"))
+        plainText(Game:locRaw("nightcutscenes_susie_2"))
+        plainText(Game:locRaw("nightcutscenes_susie_3"))
+        plainText(Game:locRaw("nightcutscenes_susie_4"))
+        plainText(Game:locRaw("nightcutscenes_susie_5"))
+        plainText(Game:locRaw("nightcutscenes_susie_6"))
+        plainText(Game:locRaw("nightcutscenes_susie_7"))
+        plainText(Game:locRaw("nightcutscenes_susie_8"))
         Assets.playSound("item")
         cutscene:setSpeaker("kris")
         cutscene:wait(1)
@@ -90,46 +81,41 @@ local nightCutsenes = {
     end;
 
     chariel = function(cutscene, event)
-        cutscene:text(Game:locRaw("nightcutscenes_check_chariel_1"))
-        cutscene:text(Game:locRaw("nightcutscenes_check_chariel_2"))
+        cutscene:text(Game:locRaw("nightcutscenes_chariel_1"))
+        cutscene:text(Game:locRaw("nightcutscenes_chariel_2"))
     end;
 
     phone = function(cutscene, event)
-        cutscene:text(Game:locRaw("nightcutscenes_check_phone_1"))
+        cutscene:text(Game:locRaw("nightcutscenes_phone_1"))
         Assets.playSound("phone1")
         cutscene:wait(5)
-        cutscene:text(Game:locRaw("nightcutscenes_check_phone_2"))
+        cutscene:text(Game:locRaw("nightcutscenes_phone_2"))
     end;
 
     flowers = function(cutscene, event)
-        cutscene:text(Game:locRaw("nightcutscenes_check_vase_1"))
-        cutscene:text(Game:locRaw("nightcutscenes_check_vase_2"))
+        cutscene:text(Game:locRaw("nightcutscenes_flowers_1"))
+        cutscene:text(Game:locRaw("nightcutscenes_flowers_2"))
     end;
 
     TV = function(cutscene, event)
-        cutscene:text(Game:locRaw("nightcutscenes_check_tv_1"))
-        cutscene:text(Game:locRaw("nightcutscenes_check_tv_2"))
-        cutscene:text(Game:locRaw("nightcutscenes_check_tv_3"))
+        cutscene:text(Game:locRaw("nightcutscenes_TV_1"))
+        cutscene:text(Game:locRaw("nightcutscenes_TV_2"))
+        cutscene:text(Game:locRaw("nightcutscenes_TV_3"))
     end;
 
-    --[[picture = function(cutscene, event)
-        cutscene:text(Game:locRaw("nightcutscenes_check_picture_frame_1"))
-        cutscene:text(Game:locRaw("nightcutscenes_check_picture_frame_2"))
-    end;]]--
-
     curtain = function(cutscene, event)
-        cutscene:text(Game:locRaw("nightcutscenes_check_bathroom_1"))
-        cutscene:text(Game:locRaw("nightcutscenes_check_bathroom_2"))
+        cutscene:text(Game:locRaw("nightcutscenes_curtain_1"))
+        cutscene:text(Game:locRaw("nightcutscenes_curtain_2"))
     end;
 
     cracks = function(cutscene, event)
-        cutscene:text(Game:locRaw("nightcutscenes_check_flower_shop_1"))
-        cutscene:text(Game:locRaw("nightcutscenes_check_flower_shop_2"))
+        cutscene:text(Game:locRaw("nightcutscenes_cracks_1"))
+        cutscene:text(Game:locRaw("nightcutscenes_cracks_2"))
     end;
 
     bathroom = function(cutscene, event)
         Game.world.player.x = Game.world.player.x + 5
-        cutscene:text("* (Not the right time for toilet flushing.)") --TODO
+        cutscene:text(Game:locRaw("nightcutscenes_bathroom_1"))
     end;
 
     susieMeeting = function(cutscene, event)
@@ -159,12 +145,12 @@ local nightCutsenes = {
             cutscene:wait(2)
             susie:setSprite("unhappy_left")
             cutscene:look(susie, "left")
-            cutscene:text(Game:locRaw("nightcutscenes_night_met_susie_1"), "nervous_side")
+            cutscene:text(Game:locRaw("nightcutscenes_susieMeeting_1"), "nervous_side")
             Assets.playSound("bump")
             susie:setSprite("away_scratch")
             susie.sprite:play(0.3, loop)
             cutscene:wait(1)
-            cutscene:text(Game:locRaw("nightcutscenes_night_met_susie_2"), "nervous_side")
+            cutscene:text(Game:locRaw("nightcutscenes_susieMeeting_2"), "nervous_side")
             local x, y = cutscene:getMarker("susie2")
             susie:resetSprite()
             cutscene:walkTo(susie, x, y, 2, "down")
@@ -173,22 +159,22 @@ local nightCutsenes = {
             cutscene:wait(1.3)
             cutscene:look(susie, "right")
             cutscene:wait(0.3)
-            cutscene:text(Game:locRaw("nightcutscenes_night_met_susie_3"), "nervous_side")
+            cutscene:text(Game:locRaw("nightcutscenes_susieMeeting_3"), "nervous_side")
             cutscene:look(susie, "down")
-            cutscene:text(Game:locRaw("nightcutscenes_night_met_susie_4"), "nervous_side")
-            cutscene:text(Game:locRaw("nightcutscenes_night_met_susie_5"), "smirk")
-            cutscene:text(Game:locRaw("nightcutscenes_night_met_susie_6"), "smirk")
-            cutscene:text(Game:locRaw("nightcutscenes_night_met_susie_7"),
+            cutscene:text(Game:locRaw("nightcutscenes_susieMeeting_4"), "nervous_side")
+            cutscene:text(Game:locRaw("nightcutscenes_susieMeeting_5"), "smirk")
+            cutscene:text(Game:locRaw("nightcutscenes_susieMeeting_6"), "smirk")
+            cutscene:text(Game:locRaw("nightcutscenes_susieMeeting_7"),
                 "nervous")
             cutscene:shakeCharacter("kris")
             Assets.playSound("bump")
             cutscene:wait(0.5)
             cutscene:look(susie, "right")
             cutscene:wait(2)
-            cutscene:text(Game:locRaw("nightcutscenes_night_met_susie_8"), "annoyed_down")
-            cutscene:text(Game:locRaw("nightcutscenes_night_met_susie_9"), "annoyed")
-            cutscene:text(Game:locRaw("nightcutscenes_night_met_susie_10"), "teeth_smile")
-            cutscene:text(Game:locRaw("nightcutscenes_night_met_susie_11"), "closed_grin", { auto = true })
+            cutscene:text(Game:locRaw("nightcutscenes_susieMeeting_8"), "annoyed_down")
+            cutscene:text(Game:locRaw("nightcutscenes_susieMeeting_9"), "annoyed")
+            cutscene:text(Game:locRaw("nightcutscenes_susieMeeting_10"), "teeth_smile")
+            cutscene:text(Game:locRaw("nightcutscenes_susieMeeting_11"), "closed_grin", { auto = true })
             local rumble = Assets.playSound("rumble")
             rumble:setLooping(true)
             susie:setSprite("shocked")
@@ -203,13 +189,13 @@ local nightCutsenes = {
             Assets.stopSound("rumble")
             cutscene:wait(0.3)
             cutscene:wait(0.3)
-            cutscene:text(Game:locRaw("nightcutscenes_night_met_susie_12"), "suspicious")
+            cutscene:text(Game:locRaw("nightcutscenes_susieMeeting_12"), "suspicious")
             cutscene:text(
-            Game:locRaw("nightcutscenes_night_met_susie_13"), "smirk")
+            Game:locRaw("nightcutscenes_susieMeeting_13"), "smirk")
             cutscene:wait(2)
-            cutscene:text(Game:locRaw("nightcutscenes_night_met_susie_14"), "neutral")
-            cutscene:text(Game:locRaw("nightcutscenes_night_met_susie_15"), "neutral")
-            cutscene:text(Game:locRaw("nightcutscenes_night_met_susie_16"), "smile")
+            cutscene:text(Game:locRaw("nightcutscenes_susieMeeting_14"), "neutral")
+            cutscene:text(Game:locRaw("nightcutscenes_susieMeeting_15"), "neutral")
+            cutscene:text(Game:locRaw("nightcutscenes_susieMeeting_16"), "smile")
 
 
             Game:addPartyMember("susie")
@@ -234,18 +220,18 @@ local nightCutsenes = {
         susie:setSprite("turn_around")
         Assets.playSound("whip_hard")
         cutscene:wait(1.5)
-        cutscene:text(Game:locRaw("nightcutscenes_susie_silly_1"), "teeth")
+        cutscene:text(Game:locRaw("nightcutscenes_damnitkris_1"), "teeth")
         susie:resetSprite()
     end;
 
     dumpstablook = function(cutscene, event)
         if event.interact_count == 1 then
             local sound = Assets.playSound("slurp")
-            cutscene:text("* ") -- add slurp noise here
+            cutscene:text(Game:locRaw("nightcutscenes_dumpstablook_1")) -- add slurp noise here
             cutscene:wait(0.03)
             sound:stop()
-            cutscene:text(Game:locRaw("nightcutscenes_check_dumpstablook_1"))
-            cutscene:text(Game:locRaw("nightcutscenes_check_dumpstablook_2"))
+            cutscene:text(Game:locRaw("nightcutscenes_dumpstablook_2"))
+            cutscene:text(Game:locRaw("nightcutscenes_dumpstablook_3"))
         else
             Assets.stopAndPlaySound("slurp", 1, Utils.random(.9, 1.1))
         end
@@ -253,77 +239,77 @@ local nightCutsenes = {
 
     happstablook = function(cutscene, event)
         if event.interact_count == 1 then
-            cutscene:text(Game:locRaw("nightcutscenes_check_happstablook_1"))
-            cutscene:text(Game:locRaw("nightcutscenes_check_happstablook_2"))
-            cutscene:text(Game:locRaw("nightcutscenes_check_happstablook_3"))
+            cutscene:text(Game:locRaw("nightcutscenes_happstablook_1"))
+            cutscene:text(Game:locRaw("nightcutscenes_happstablook_2"))
+            cutscene:text(Game:locRaw("nightcutscenes_happstablook_3"))
             cutscene:text(
-            Game:locRaw("nightcutscenes_check_happstablook_4"))
+            Game:locRaw("nightcutscenes_happstablook_4"))
         elseif event.interact_count == 2 then
-            cutscene:text(Game:locRaw("nightcutscenes_check_happstablook_5"))
+            cutscene:text(Game:locRaw("nightcutscenes_happstablook_5"))
         elseif event.interact_count > 2 then
-            cutscene:text(Game:locRaw("nightcutscenes_check_happstablook_6"))
+            cutscene:text(Game:locRaw("nightcutscenes_happstablook_6"))
         end
     end;
 
 
     madstablook = function(cutscene, event)
         if event.interact_count == 1 then
-            cutscene:text(Game:locRaw("nightcutscenes_check_madstablook_1"))
-            cutscene:text(Game:locRaw("nightcutscenes_check_madstablook_2"))
-            cutscene:text(Game:locRaw("nightcutscenes_check_madstablook_3"))
-            cutscene:text(Game:locRaw("nightcutscenes_check_madstablook_4"))
-            cutscene:text(Game:locRaw("nightcutscenes_check_madstablook_5"))
+            cutscene:text(Game:locRaw("nightcutscenes_madstablook_1"))
+            cutscene:text(Game:locRaw("nightcutscenes_madstablook_2"))
+            cutscene:text(Game:locRaw("nightcutscenes_madstablook_3"))
+            cutscene:text(Game:locRaw("nightcutscenes_madstablook_4"))
+            cutscene:text(Game:locRaw("nightcutscenes_madstablook_5"))
         elseif event.interact_count == 2 then
-            cutscene:text(Game:locRaw("nightcutscenes_check_madstablook_6"))
-            cutscene:text(Game:locRaw("nightcutscenes_check_madstablook_7"))
+            cutscene:text(Game:locRaw("nightcutscenes_madstablook_6"))
+            cutscene:text(Game:locRaw("nightcutscenes_madstablook_7"))
         elseif event.interact_count >= 3 then
-            cutscene:text(Game:locRaw("nightcutscenes_check_madstablook_8"))
+            cutscene:text(Game:locRaw("nightcutscenes_madstablook_8"))
         end
     end;
 
 
     catti = function(cutscene, event)
         cutscene:setSpeaker("alphys")
-        cutscene:text(Game:locRaw("nightcutscenes_check_catti_1"), "catti_up")
-        cutscene:text(Game:locRaw("nightcutscenes_check_catti_2"), "catti_down")
+        cutscene:text(Game:locRaw("nightcutscenes_catti_1"), "catti_up")
+        cutscene:text(Game:locRaw("nightcutscenes_catti_2"), "catti_down")
     end;
 
     mkid = function(cutscene, event)
-        cutscene:text(Game:locRaw("nightcutscenes_check_mkid_1"))
-        cutscene:text(Game:locRaw("nightcutscenes_check_mkid_2"))
+        cutscene:text(Game:locRaw("nightcutscenes_mkid_1"))
+        cutscene:text(Game:locRaw("nightcutscenes_mkid_2"))
     end;
 
     tem = function(cutscene, event)
         if event.interact_count == 1 then
-            cutscene:text(Game:locRaw("nightcutscenes_check_tem_1"))
+            cutscene:text(Game:locRaw("nightcutscenes_tem_1"))
         elseif event.interact_count >= 2 then
-            cutscene:text(Game:locRaw("nightcutscenes_check_tem_2"))
+            cutscene:text(Game:locRaw("nightcutscenes_tem_2"))
         end
     end;
 
     snowy = function(cutscene, event)
-        cutscene:text(Game:locRaw("nightcutscenes_check_snowy_1"))
-        cutscene:text(Game:locRaw("nightcutscenes_check_snowy_2"))
-        cutscene:text(Game:locRaw("nightcutscenes_check_snowy_3"))
-        cutscene:text(Game:locRaw("nightcutscenes_check_snowy_4"))
+        cutscene:text(Game:locRaw("nightcutscenes_snowy_1"))
+        cutscene:text(Game:locRaw("nightcutscenes_snowy_2"))
+        cutscene:text(Game:locRaw("nightcutscenes_snowy_3"))
+        cutscene:text(Game:locRaw("nightcutscenes_snowy_4"))
     end;
     
     jockington = function(cutscene, event)
-        cutscene:text(Game:locRaw("nightcutscenes_check_jockington_1"))
-        cutscene:text(Game:locRaw("nightcutscenes_check_jockington_2"))
+        cutscene:text(Game:locRaw("nightcutscenes_jockington_1"))
+        cutscene:text(Game:locRaw("nightcutscenes_jockington_2"))
     end;
 
     blocked = function(cutscene, event)
         local kris = assert(cutscene:getCharacter("kris"))
         cutscene:setSpeaker("susie")
-        cutscene:text(Game:locRaw("nightcutscenes_school_blocked_1"), "shy")
+        cutscene:text(Game:locRaw("nightcutscenes_blocked_1"), "shy")
         cutscene:wait(cutscene:walkTo(kris, kris.x, kris.y+30))
     end;
 
     blockedalph = function(cutscene, event)
         local kris = assert(cutscene:getCharacter("kris"))
         cutscene:setSpeaker("alphys")
-        cutscene:text(Game:locRaw("nightcutscenes_school_blocked_alphys_1"), "nervous_angry")
+        cutscene:text(Game:locRaw("nightcutscenes_blockedalph_1"), "nervous_angry")
         cutscene:wait(cutscene:walkTo(kris, kris.x, kris.y+30))
     end;
 
@@ -546,40 +532,40 @@ local nightCutsenes = {
             local susie = cutscene:getCharacter("susie_lw")
             local kris = cutscene:getCharacter("kris")
             cutscene:setSpeaker("berdly")
-            cutscene:text(Game:locRaw("nightcutscenes_check_berdly_1"), "neutral")
-            cutscene:text(Game:locRaw("nightcutscenes_check_berdly_2"), "neutral")
-            cutscene:text(Game:locRaw("nightcutscenes_check_berdly_3"), "LMAO")
-            cutscene:text(Game:locRaw("nightcutscenes_check_berdly_4"), "smirk")
+            cutscene:text(Game:locRaw("nightcutscenes_berdly_1"), "neutral")
+            cutscene:text(Game:locRaw("nightcutscenes_berdly_2"), "neutral")
+            cutscene:text(Game:locRaw("nightcutscenes_berdly_3"), "LMAO")
+            cutscene:text(Game:locRaw("nightcutscenes_berdly_4"), "smirk")
             local x, y = cutscene:getMarker("alphys1")
             cutscene:walkTo(alphys, x, y, 2, "right")
-            cutscene:text(Game:locRaw("nightcutscenes_check_berdly_5"), "smirk")
-            cutscene:text(Game:locRaw("nightcutscenes_check_berdly_6"), "LMAO")
+            cutscene:text(Game:locRaw("nightcutscenes_berdly_5"), "smirk")
+            cutscene:text(Game:locRaw("nightcutscenes_berdly_6"), "LMAO")
             cutscene:look(alphys, "up")
             cutscene:wait(1)
             cutscene:look(berdly, "up")
             cutscene:wait(1)
             cutscene:look(berdly, "left")
             cutscene:wait(0.5)
-            cutscene:text(Game:locRaw("nightcutscenes_check_berdly_7"), "neutral")
-            cutscene:text(Game:locRaw("nightcutscenes_check_berdly_8"), "surprised")
-            cutscene:text(Game:locRaw("nightcutscenes_check_berdly_9"), "worried_smile", "berdly")
-            local choice = cutscene:choicer({ "Yes", "No" })
+            cutscene:text(Game:locRaw("nightcutscenes_berdly_7"), "neutral")
+            cutscene:text(Game:locRaw("nightcutscenes_berdly_8"), "surprised")
+            cutscene:text(Game:locRaw("nightcutscenes_berdly_9"), "worried_smile", "berdly")
+            local choice = cGame:locRaw("nightcutscenes_berdly_9_opt_1")neGame:locRaw("nightcutscenes_berdly_9_opt_2")icer({ "Yes", "No" })
             if choice == 1 then
-                cutscene:text(Game:locRaw("nightcutscenes_check_berdly_10"), "surprised")
-                cutscene:text(Game:locRaw("nightcutscenes_check_berdly_11"), "LMAO")
+                cutscene:text(Game:locRaw("nightcutscenes_berdly_10"), "surprised")
+                cutscene:text(Game:locRaw("nightcutscenes_berdly_11"), "LMAO")
                 cutscene:look(alphys, "down")
-                cutscene:text(Game:locRaw("nightcutscenes_check_berdly_12"), "smirk", { auto = true })
+                cutscene:text(Game:locRaw("nightcutscenes_berdly_12"), "smirk", { auto = true })
             else
-                cutscene:text(Game:locRaw("nightcutscenes_check_berdly_13"), "angry")
+                cutscene:text(Game:locRaw("nightcutscenes_berdly_13"), "angry")
                 cutscene:look(alphys, "down")
-                cutscene:text(Game:locRaw("nightcutscenes_check_berdly_14"), "angry", { auto = true })
+                cutscene:text(Game:locRaw("nightcutscenes_berdly_14"), "angry", { auto = true })
             end
             cutscene:setSpeaker("alphys")
             cutscene:look(berdly, "up")
             cutscene:look(kris, "up")
-            cutscene:text(Game:locRaw("nightcutscenes_check_berdly_15"), "concern_lw")
-            cutscene:text(Game:locRaw("nightcutscenes_check_berdly_16"), "nervous")
-            cutscene:text(Game:locRaw("nightcutscenes_check_berdly_17"), "nervous_concern", { auto = true })
+            cutscene:text(Game:locRaw("nightcutscenes_berdly_15"), "concern_lw")
+            cutscene:text(Game:locRaw("nightcutscenes_berdly_16"), "nervous")
+            cutscene:text(Game:locRaw("nightcutscenes_berdly_17"), "nervous_concern", { auto = true })
             Music:stop()
             local img1 = Game.world.map:getImageLayer("dooropen")
             Assets.playSound("dooropen")
@@ -588,21 +574,21 @@ local nightCutsenes = {
             local x, y = cutscene:getMarker("susie1")
             cutscene:wait(1)
             cutscene:look(alphys, "right")
-            cutscene:text(Game:locRaw("nightcutscenes_check_berdly_18"), "shock_smile")
+            cutscene:text(Game:locRaw("nightcutscenes_berdly_18"), "shock_smile")
             cutscene:walkTo(susie, x, y, 1, "down")
             cutscene:setSpeaker("susie")
             cutscene:wait(1.5)
-            cutscene:text(Game:locRaw("nightcutscenes_check_berdly_19"), "nervous_side")
-            cutscene:text(Game:locRaw("nightcutscenes_check_berdly_20"), "nervous")
+            cutscene:text(Game:locRaw("nightcutscenes_berdly_19"), "nervous_side")
+            cutscene:text(Game:locRaw("nightcutscenes_berdly_20"), "nervous")
             cutscene:wait(1)
             cutscene:look(susie, "left")
-            cutscene:text(Game:locRaw("nightcutscenes_check_berdly_21"), "smirk")
+            cutscene:text(Game:locRaw("nightcutscenes_berdly_21"), "smirk")
             local x, y = cutscene:getMarker("susie2")
             cutscene:walkTo(susie, x, y, 2, "left")
             cutscene:wait(2.5)
             Assets.playSound("bump")
             cutscene:wait(1)
-            cutscene:text(Game:locRaw("nightcutscenes_check_berdly_22"), "teeth_smile")
+            cutscene:text(Game:locRaw("nightcutscenes_berdly_22"), "teeth_smile")
             cutscene:wait(0.5)
             cutscene:setSpeaker("alphys")
             cutscene:wait(1)
@@ -614,36 +600,36 @@ local nightCutsenes = {
             cutscene:wait(0.3)
             cutscene:look(alphys, "right")
             cutscene:wait(1)
-            cutscene:text(Game:locRaw("nightcutscenes_check_berdly_23"), "nervous_b")
-            cutscene:text(Game:locRaw("nightcutscenes_check_berdly_24"), "nervous_blush")
-            cutscene:text(Game:locRaw("nightcutscenes_check_berdly_25"), "nervous_concern")
+            cutscene:text(Game:locRaw("nightcutscenes_berdly_23"), "nervous_b")
+            cutscene:text(Game:locRaw("nightcutscenes_berdly_24"), "nervous_blush")
+            cutscene:text(Game:locRaw("nightcutscenes_berdly_25"), "nervous_concern")
             cutscene:wait(1)
-            cutscene:text(Game:locRaw("nightcutscenes_check_berdly_26"), "nervous")
-            cutscene:text(Game:locRaw("nightcutscenes_check_berdly_27"), "nervous_b")
+            cutscene:text(Game:locRaw("nightcutscenes_berdly_26"), "nervous")
+            cutscene:text(Game:locRaw("nightcutscenes_berdly_27"), "nervous_b")
             cutscene:wait(1)
             cutscene:wait(0.5)
             cutscene:setSpeaker("susie")
             cutscene:look(susie, "right")
             cutscene:wait(0.5)
             cutscene:look(susie, "left")
-            cutscene:text(Game:locRaw("nightcutscenes_check_berdly_28"), "sus_nervous")
-            cutscene:text(Game:locRaw("nightcutscenes_check_berdly_29"), "neutral")
+            cutscene:text(Game:locRaw("nightcutscenes_berdly_28"), "sus_nervous")
+            cutscene:text(Game:locRaw("nightcutscenes_berdly_29"), "neutral")
             cutscene:setSpeaker("alphys")
             local x, y = cutscene:getMarker("susie1")
             cutscene:walkTo(susie, x, y, 3, "right")
             cutscene:wait(1)
-            cutscene:text(Game:locRaw("nightcutscenes_check_berdly_30"), "nervous_concern")
+            cutscene:text(Game:locRaw("nightcutscenes_berdly_30"), "nervous_concern")
             cutscene:look(susie, "left")
-            cutscene:text(Game:locRaw("nightcutscenes_check_berdly_31"), "nervous_concern")
+            cutscene:text(Game:locRaw("nightcutscenes_berdly_31"), "nervous_concern")
             cutscene:wait(1)
             cutscene:look(susie, "right")
             cutscene:setSpeaker("susie")
-            cutscene:text(Game:locRaw("nightcutscenes_check_berdly_32"), "suspicious")
-            cutscene:text(Game:locRaw("nightcutscenes_check_berdly_33"), "nervous_side")
+            cutscene:text(Game:locRaw("nightcutscenes_berdly_32"), "suspicious")
+            cutscene:text(Game:locRaw("nightcutscenes_berdly_33"), "nervous_side")
             cutscene:look(susie, "right")
             cutscene:wait(2)
             cutscene:look(susie, "left")
-            cutscene:text(Game:locRaw("nightcutscenes_check_berdly_34"), "sincere")
+            cutscene:text(Game:locRaw("nightcutscenes_berdly_34"), "sincere")
             cutscene:wait(1)
             local x, y = cutscene:getMarker("susie3")
             cutscene:walkTo(susie, x, y, 2, "up")
@@ -653,16 +639,16 @@ local nightCutsenes = {
             img1.visible = false
             cutscene:wait(2)
             cutscene:setSpeaker("alphys_lw")
-            cutscene:text(Game:locRaw("nightcutscenes_check_berdly_35"), "nervous_concern")
+            cutscene:text(Game:locRaw("nightcutscenes_berdly_35"), "nervous_concern")
             cutscene:wait(2)
             cutscene:look(alphys, "down")
-            cutscene:text(Game:locRaw("nightcutscenes_check_berdly_36"), "smile")
-            cutscene:text(Game:locRaw("nightcutscenes_check_berdly_37"), "neutral_L")
+            cutscene:text(Game:locRaw("nightcutscenes_berdly_36"), "smile")
+            cutscene:text(Game:locRaw("nightcutscenes_berdly_37"), "neutral_L")
             Game.world.music:play("school")
             cutscene:look(kris, "down")
             Plot:set("nf_school_interact2Alph")
         else
-            cutscene:text(Game:locRaw("nightcutscenes_check_berdly_38"), "LMAO", "berdly")
+            cutscene:text(Game:locRaw("nightcutscenes_berdly_38"), "LMAO", "berdly")
         end;
     end;
 
@@ -749,7 +735,7 @@ local nightCutsenes = {
             kris.sprite:play(0.08)
             cutscene:text(Game:locRaw("nightcutscenes_outside_8"), "teeth")
 
-            local choice = cutscene:choicer({ "Yes", "I don't remember you" })
+            local choice = cGame:locRaw("nightcutscenes_outside_8_opt_1")neGame:locRaw("nightcutscenes_outside_8_opt_2")on't remember you" })
             Assets.playSound("bump")
             susie.visible = true
             kris:resetSprite()
@@ -766,7 +752,7 @@ local nightCutsenes = {
             Assets.playSound("wing")
             cutscene:text(Game:locRaw("nightcutscenes_outside_11"), "teeth_b")
             --Cutscene choicer "Yes, No"
-            local choice = cutscene:choicer({ "I'm alright", "No I'm not" })
+            local choice = cGame:locRaw("nightcutscenes_outside_11_opt_1")erGame:locRaw("nightcutscenes_outside_11_opt_2")ght", "No I'm not" })
             susie:resetSprite()
             if choice == 2 then
                 cutscene:text(Game:locRaw("nightcutscenes_outside_12"), "nervous")
@@ -1180,7 +1166,7 @@ local nightCutsenes = {
         cutscene:setSpeaker(susie)
         cutscene:text(Game:locRaw("nightcutscenes_gate_3"), "neutral")
         cutscene:text(Game:locRaw("nightcutscenes_gate_4"), "neutral")
-        if cutscene:choicer({ Game:locRaw("nightcutscenes_gate_choice_1"), Game:locRaw("nightcutscenes_gate_choice_2") }) == 1 then
+        if cGame:locRaw("nightcutscenes_gate_4_opt_1")ceGame:locRaw("nightcutscenes_gate_4_opt_2")er", "Brute force" }) == 1 then
             cutscene:text(Game:locRaw("nightcutscenes_gate_5"), "smile")
             cutscene:detachFollowers()
             cutscene:detachCamera()
@@ -1224,11 +1210,11 @@ local nightCutsenes = {
 
     susieApartment = function (cutscene)
         if not Plot:isBefore("apartment_exit") then
-            cutscene:text(Game:locRaw("nightcutscenes_susie_apartment_1"))
+            cutscene:text(Game:locRaw("nightcutscenes_susieApartment_1"))
             return
         elseif Plot:isBefore("holidayhouse_enter") then
             cutscene:setSpeaker("susie")
-            cutscene:text(Game:locRaw("nightcutscenes_susie_apartment_2"), "sad")
+            cutscene:text(Game:locRaw("nightcutscenes_susieApartment_2"), "sad")
             return
         end
         -- All placeholder. Eventually, there will be a whole scene that plays. Hopefully. Mason note: no thanks.
@@ -1237,8 +1223,8 @@ local nightCutsenes = {
         local susie = cutscene:getCharacter("susie") or kris
         local noelle = cutscene:getCharacter("noelle") or susie
         cutscene:setSpeaker(susie)
-        cutscene:text(Game:locRaw("nightcutscenes_susie_apartment_3"), "neutral")
-        cutscene:text(Game:locRaw("nightcutscenes_susie_apartment_4"), "annoyed")
+        cutscene:text(Game:locRaw("nightcutscenes_susieApartment_3"), "neutral")
+        cutscene:text(Game:locRaw("nightcutscenes_susieApartment_4"), "annoyed")
         local rumble = Assets.playSound("rumble")
         rumble:setLooping(true)
         susie:setSprite("shocked")
@@ -1254,15 +1240,15 @@ local nightCutsenes = {
         Assets.stopSound("rumble")
         cutscene:wait(0.3)
         cutscene:wait(0.3)
-        cutscene:text(Game:locRaw("nightcutscenes_susie_apartment_5"), "suspicious")
+        cutscene:text(Game:locRaw("nightcutscenes_susieApartment_5"), "suspicious")
         cutscene:wait(cutscene:fadeOut())
         cutscene:wait(1)
         cutscene:setSpeaker(noelle)
-        cutscene:text(Game:locRaw("nightcutscenes_susie_apartment_6"))
+        cutscene:text(Game:locRaw("nightcutscenes_susieApartment_6"))
         cutscene:setSpeaker(susie)
-        cutscene:text(Game:locRaw("nightcutscenes_susie_apartment_7"))
+        cutscene:text(Game:locRaw("nightcutscenes_susieApartment_7"))
         cutscene:setSpeaker(noelle)
-        cutscene:text(Game:locRaw("nightcutscenes_susie_apartment_8"))
+        cutscene:text(Game:locRaw("nightcutscenes_susieApartment_8"))
         cutscene:wait(1)
         Assets.playSound("wing")
         cutscene:wait(1)
@@ -1279,9 +1265,9 @@ local nightCutsenes = {
         Assets.playSound("wing")
         cutscene:wait(2)
         cutscene:setSpeaker(susie)
-        cutscene:text(Game:locRaw("nightcutscenes_susie_apartment_9"))
+        cutscene:text(Game:locRaw("nightcutscenes_susieApartment_9"))
         cutscene:wait(cutscene:fadeIn())
-        cutscene:text(Game:locRaw("nightcutscenes_susie_apartment_10"), "sad")
+        cutscene:text(Game:locRaw("nightcutscenes_susieApartment_10"), "sad")
         Game:getQuest("supplies"):complete()
         Game:getQuest("shelter"):unlock()
     end;
@@ -1291,14 +1277,14 @@ local nightCutsenes = {
         local kris = assert(cutscene:getCharacter("kris"))
         local susie = cutscene:getCharacter("susie")
         local noelle = cutscene:getCharacter("noelle")
-        cutscene:text(Game:locRaw("nightcutscenes_no_shelter_yet_1"), "neutral_side")
+        cutscene:text(Game:locRaw("nightcutscenes_noShelterYet_1"), "neutral_side")
 
         if Plot:isBefore("holidayhouse_enter") then
-            cutscene:text("* But you couldn't find Noelle.", "nervous")
+            cutscene:text(Game:locRaw("nightcutscenes_noShelterYet_2"), "nervous")
         else
-            cutscene:text(Game:locRaw("nightcutscenes_no_shelter_yet_4"), "nervous")
+            cutscene:text(Game:locRaw("nightcutscenes_noShelterYet_3"), "nervous")
         end
-        cutscene:text(Game:locRaw("nightcutscenes_no_shelter_yet_5"))
+        cutscene:text(Game:locRaw("nightcutscenes_noShelterYet_4"))
         cutscene:wait(cutscene:walkTo(kris, kris.x, kris.y-20))
     end;
 
@@ -1309,7 +1295,7 @@ local nightCutsenes = {
         cutscene:setSpeaker(susie)
         susie:setSprite("turn_around")
         Assets.playSound("whip_crack_only")
-        cutscene:text(Game:locRaw("nightcutscenes_gate_silly_1"), "neutral", nil,
+        cutscene:text(Game:locRaw("nightcutscenes_gateSilly_1"), "neutral", nil,
             {
                 functions = {
                     endfunny = function()
@@ -1319,9 +1305,9 @@ local nightCutsenes = {
             })
         susie:resetSprite()
         cutscene:wait(2)
-        cutscene:text(Game:locRaw("nightcutscenes_gate_silly_2"), "smile")
-        cutscene:choicer({ "Hell Yeah", "Hell Yeah" })
-        cutscene:text(Game:locRaw("nightcutscenes_gate_silly_3"), "smile")
+        cutscene:text(Game:locRaw("nightcutscenes_endfunny_1"), "smile")
+        cGame:locRaw("nightcutscenes_endfunny_1_opt_1")icGame:locRaw("nightcutscenes_endfunny_1_opt_2")Yeah", "Hell Yeah" })
+        cutscene:text(Game:locRaw("nightcutscenes_endfunny_2"), "smile")
         cutscene:detachFollowers()
         cutscene:detachCamera()
         kris:walkTo(susie.x - 20, susie.y, 0.5, "left")
@@ -1331,7 +1317,7 @@ local nightCutsenes = {
         cutscene:wait(0.5)
         kris:slideTo(susie.x, susie.y - 80, 0.5)
         cutscene:wait(1)
-        cutscene:text(Game:locRaw("nightcutscenes_gate_silly_4"), "surprise_frown")
+        cutscene:text(Game:locRaw("nightcutscenes_endfunny_3"), "surprise_frown")
         local carol_improvement = Sprite("sillymode/carol_improvement/a")
         carol_improvement:play(1 / 4)
         carol_improvement:setOrigin(1, 1)

@@ -49,7 +49,7 @@ end
 
 function item:onWorldUse()
     Game.world:startCutscene(function(cutscene)
-        cutscene:text("* .[wait:5].[wait:5].[wait:5] you need to use this on a door.")      
+        cutscene:text(Game:locRaw("exitkey_line52_1"))      
     end)
 end
 

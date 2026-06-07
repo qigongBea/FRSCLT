@@ -317,8 +317,8 @@ return {
           visible = true,
           properties = {
             ["plotmax"] = "*gateway_lockdown_off",
-            ["text1"] = "[color:#ff4444]* Warning:[wait:5] Gateway Sector B is on Lockdown.[wait:5] If maintenance is needed,[wait:5] disable the lockdown.",
-            ["text2"] = "[color:#ff4444]* You can turn off the two Gateway terminals to disable Lockdown."
+            ["text1"] = Game:locRaw("lockdown_interactable_1"),
+            ["text2"] = Game:locRaw("lockdown_interactable_2")
           }
         },
         {
@@ -336,7 +336,7 @@ return {
             ["plotmax"] = "*gateway_lockdown_off",
             ["plotmin"] = "gateway_enter",
             ["solid"] = true,
-            ["text1"] = "* There's a giant metal door blocking the way to Sector B."
+            ["text1"] = Game:locRaw("lockdown_interactable_1")
           }
         },
         {
@@ -352,8 +352,8 @@ return {
           visible = true,
           properties = {
             ["plotmin"] = "gateway_lockdown_off",
-            ["text1"] = "[color:#ff4444]* Power levels:[wait:5] UNSTABLE.",
-            ["text2"] = "[color:#ff4444]* Recharging will take 48 days...[wait:5] Recharging..."
+            ["text1"] = Game:locRaw("lockdown_interactable_1"),
+            ["text2"] = Game:locRaw("lockdown_interactable_2")
           }
         }
       }

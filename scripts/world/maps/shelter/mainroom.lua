@@ -355,7 +355,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* Too late to back out now."
+            ["text1"] = Game:locRaw("mainroom_interactable_1")
           }
         }
       }

@@ -24,17 +24,13 @@ function Watercooler:init()
     self.spare_points = 8
 
     -- Check text (automatically has "ENEMY NAME - " at the start)
-    self.check = "The water was confirmed to be \n[color:blue]cool[color:reset]."
+    self.check = Game:locRaw("watercooler_watercooler_check_1")
 
     -- Text randomly displayed at the bottom of the screen each turn
-    self.text = {
-        "* The watercooler shows no mercy.",
-        "* The watercooler doesn't do \nanything in particular.",
-        "* The watercooler leaves an icy \nsilence.",
-		"* The watercooler cools water, \ncoolly.",
+    self.textGame:locRaw("watercooler_watercooler_text_1")ws no mercGame:locRaw("watercooler_watercooler_text_2") particulaGame:locRaw("watercooler_watercooler_text_3")y \nGame:locRaw("watercooler_watercooler_text_4")r, \ncoolly.",
     }
     -- Text displayed at the bottom of the screen when the enemy has low health
-    self.low_health_text = "* The watercooler looks like it needs a refill."
+    self.low_health_text = Game:locRaw("watercooler_watercooler_low_health_text_1")
 	self.tired_text = "* The watercooler's bubbles rest on the surface."
 	self.spareable_text = "* The watercooler's water blushes \na cranberry pink."
 	

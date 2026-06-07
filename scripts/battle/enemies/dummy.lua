@@ -33,24 +33,17 @@ function dummy:init()
     }
 
     -- Dialogue randomly displayed in the enemy's speech bubble
-    self.dialogue = {
-        "I only w-want to\nheeeeeelp...",
-        "Waaaaaant tto\nj-j-o-o-oin our\nt-team?",
-        "T-tomorrow means\nt-the s-surface...\nB-but when will it\nc-c-co-ome?",
-        "M-Must...\nf-follow a-all\ninstructions...",
+    self.dialGame:locRaw("dummy_dummy_dialogue_1")to\nheeeeeGame:locRaw("dummy_dummy_dialogue_2")oin our\ntGame:locRaw("dummy_dummy_dialogue_3") it\nc-c-cGame:locRaw("dummy_dummy_dialogue_4")ninstructions...",
     }
 
     -- Check text (automatically has "ENEMY NAME - " at the start)
-    self.check = "AT 4 DF 0\n* The second generation of Gateway Guards. It only wants to help."
+    self.check = Game:locRaw("dummy_dummy_check_1")
 
     -- Text randomly displayed at the bottom of the screen each turn
-    self.text = {
-        "* The smell of home is in the air.",
-        "* The fluff is leaking onto the floor.",
-        "* The guard cannot help itself.\n* It must only help you.",
+    self.textGame:locRaw("dummy_dummy_text_1") in the aiGame:locRaw("dummy_dummy_text_2")o the flooGame:locRaw("dummy_dummy_text_3")ly help you.",
     }
     -- Text displayed at the bottom of the screen when the enemy has low health
-    self.low_health_text = "* The guard looks like it's\nabout to fall over."
+    self.low_health_text = Game:locRaw("dummy_dummy_low_health_text_1")
 
     -- Register act called "Smile"
     self:registerAct("Smile")

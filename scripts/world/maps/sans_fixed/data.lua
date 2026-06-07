@@ -225,7 +225,7 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text"] = "* (Various frozen bagels and treats.)"
+            ["text"] = Game:locRaw("sans_fixed_interactable_1")
           }
         },
         {
@@ -240,8 +240,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* Ice-E's Pizza Pin-Ups Mangazine.",
-            ["text2"] = "* HOt and fresh chease,[wait:5] pepperonie,[wait:5] Just like in your Dream's..."
+            ["text1"] = Game:locRaw("sans_fixed_interactable_1"),
+            ["text2"] = Game:locRaw("sans_fixed_interactable_2")
           }
         },
         {
@@ -256,9 +256,9 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* There're some car magazines on the racks.",
-            ["text2"] = "* It might be fun to look at them,",
-            ["text3"] = "* But there's other people around..."
+            ["text1"] = Game:locRaw("sans_fixed_interactable_1"),
+            ["text2"] = Game:locRaw("sans_fixed_interactable_2"),
+            ["text3"] = Game:locRaw("sans_fixed_interactable_3")
           }
         },
         {
@@ -273,7 +273,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* It's a zine for Jockington fans. Seems popular."
+            ["text"] = Game:locRaw("sans_fixed_interactable_1")
           }
         },
         {
@@ -288,8 +288,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* It's a bunch of cards and heart shaped chocolates.",
-            ["text2"] = "* \"Get well soon!\"\n* \"I'm glad your bike crashed\""
+            ["text1"] = Game:locRaw("sans_fixed_interactable_1"),
+            ["text2"] = Game:locRaw("sans_fixed_interactable_2")
           }
         },
         {
@@ -305,7 +305,7 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text"] = "* It's a trash can."
+            ["text"] = Game:locRaw("sans_fixed_interactable_1")
           }
         },
         {
@@ -321,8 +321,8 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text1"] = "* (You can't reach the top,[wait:5] rendering it impossible to get a basket.)",
-            ["text2"] = "* (You'll never be able to buy something in this state...)"
+            ["text1"] = Game:locRaw("sans_fixed_interactable_1"),
+            ["text2"] = Game:locRaw("sans_fixed_interactable_2")
           }
         },
         {
@@ -337,7 +337,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* (It's a rack of candy[wait:5], jerky,[wait:5] and various nuts.)"
+            ["text"] = Game:locRaw("sans_fixed_interactable_1")
           }
         },
         {
@@ -352,8 +352,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* LOOSE EGGS $1",
-            ["text2"] = "* (It's too much responsibility for an egg.)"
+            ["text1"] = Game:locRaw("sans_fixed_interactable_1"),
+            ["text2"] = Game:locRaw("sans_fixed_interactable_2")
           }
         },
         {
@@ -368,8 +368,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* (It looks like a normal basket of fruit,[wait:5] but when you reach in...)",
-            ["text2"] = "* (...[wait:5] It's incredibly deep and holds all sorts of things.)"
+            ["text1"] = Game:locRaw("sans_fixed_interactable_1"),
+            ["text2"] = Game:locRaw("sans_fixed_interactable_2")
           }
         },
         {
@@ -384,7 +384,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* (Grapes,[wait:5] melons,,[wait:5] oranges,,[wait:5] and the scent of fresh pineapples...)"
+            ["text"] = Game:locRaw("sans_fixed_interactable_1")
           }
         },
         {
@@ -399,7 +399,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* (It looks like a normal palm tree,[wait:5] but it's chock-full of useful groceries.)"
+            ["text"] = Game:locRaw("sans_fixed_interactable_1")
           }
         },
         {

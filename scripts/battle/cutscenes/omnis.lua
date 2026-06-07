@@ -15,16 +15,16 @@ local omnis_cutscenes = {
 
             cutscene:battlerText(omnis, "D-[wait:5]Damnit,[wait:5] looks like I made...")
             cutscene:battlerText(omnis, "... a m-miscalculation\nin your strength...")
-            cutscene:text("* Well guess what,[wait:5] asshole?[wait:10]\n* It's over.[wait:10] So give us our friend back and-", "teeth_smile", "susie", { auto = true })
+            cutscene:text(Game:locRaw("omnis_deathapproaches_1"), "teeth_smile", "susie", { auto = true })
             cutscene:battlerText(omnis, "Y-You mean the final piece\nto my GALLERY...?[wait:5]\nHa... ha... ha...")
 
             Game.battle.music:play("gallery")
             Game.battle.music:resume()
 
             cutscene:battlerText(omnis, "I wouldn't give that\nup for my LIFE!")
-            cutscene:text("* Then how about we take your life for real this time?", "smile", "susie")
-            cutscene:text("* Omnis,[wait:5] you've taken my mansion and my kingdom...")
-            cutscene:text("* ... and we're NOT letting you go this time.")
+            cutscene:text(Game:locRaw("omnis_deathapproaches_2"), "smile", "susie")
+            cutscene:text(Game:locRaw("omnis_deathapproaches_3"))
+            cutscene:text(Game:locRaw("omnis_deathapproaches_4"))
             cutscene:battlerText(omnis, "Well,[wait:5] let's see if\nyou can kill me...")
             cutscene:battlerText(omnis, "[noskip][speed:0.5][shake:1]While you're dead on\nthe floor.")
             Game.fader.alpha = 1

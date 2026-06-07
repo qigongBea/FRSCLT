@@ -441,8 +441,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* This is placeholder text.",
-            ["text2"] = "* Now,[wait:5] I am going to wait.[wait:10] I love waiting."
+            ["text1"] = Game:locRaw("sailorshop_interactable_1"),
+            ["text2"] = Game:locRaw("sailorshop_interactable_2")
           }
         },
         {

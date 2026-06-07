@@ -239,7 +239,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "\"* (It's an expertly trimmed arrangement.)"
+            ["text"] = Game:locRaw("flower_shop_interactable_1")
           }
         },
         {
@@ -254,7 +254,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* (There are various flowers inside.)"
+            ["text"] = Game:locRaw("flower_shop_interactable_1")
           }
         },
         {
@@ -269,7 +269,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* (There are various flowers inside.)"
+            ["text"] = Game:locRaw("flower_shop_interactable_1")
           }
         },
         {
@@ -284,7 +284,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* (It's a flower.)"
+            ["text"] = Game:locRaw("flower_shop_interactable_1")
           }
         },
         {
@@ -299,7 +299,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* (It's a cash register.)\n[wait:5]* (There's not much change inside.)"
+            ["text"] = Game:locRaw("flower_shop_interactable_1")
           }
         },
         {
@@ -314,7 +314,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* (It's some kind of catalogue...[wait:5] There's a car magazine underneath.)"
+            ["text"] = Game:locRaw("flower_shop_interactable_1")
           }
         },
         {

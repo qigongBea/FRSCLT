@@ -5,7 +5,7 @@ elevatorcutscene = function(cutscene, event)
 local img = Game.world.map:getImageLayer("Image Layer 1")
   
 	cutscene:playSound("bell")
-	cutscene:text("* You hit the elevator button labeled \"Floor 120.\"")
+	cutscene:text(Game:locRaw("elevator_copy_elevatorcutscene_1"))
   
     img.wrap_texture_x = true -- this infinitely wraps the texture horizontally when set to true
     img:setScale(1) -- sets the scale of the sprite
@@ -84,9 +84,9 @@ local img = Game.world.map:getImageLayer("Image Layer 1")
 		cutscene:wait(2)
 		
 		cutscene:setSpeaker(susie)
-		cutscene:text("* Wow! These adventures are so much fun Kris!", "susie_dream_smile" )
-		cutscene:text("* We should, like... Totally go on these more often.", "susie_dream_smug" )
-		cutscene:text("* Wouldn't It Be Cool If We Could Go On These All The Time Kris?", "susie_dream_grin" )
+		cutscene:text(Game:locRaw("elevator_copy_elevatorcutscene_2"), "susie_dream_smile" )
+		cutscene:text(Game:locRaw("elevator_copy_elevatorcutscene_3"), "susie_dream_smug" )
+		cutscene:text(Game:locRaw("elevator_copy_elevatorcutscene_4"), "susie_dream_grin" )
 		
 
 		

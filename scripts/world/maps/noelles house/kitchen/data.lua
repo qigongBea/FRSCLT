@@ -393,7 +393,7 @@ return {
           visible = true,
           properties = {
             ["solid"] = false,
-            ["text1"] = "* It's a sink.[wait:5] You don't need to wash your hands."
+            ["text1"] = Game:locRaw("kitchen_interactable_1")
           }
         },
         {

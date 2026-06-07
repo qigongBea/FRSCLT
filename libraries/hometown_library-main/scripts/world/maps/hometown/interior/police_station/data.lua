@@ -338,7 +338,7 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text"] = "* (Well-cared-for flowers.)"
+            ["text"] = Game:locRaw("police_station_interactable_1")
           }
         }
       }

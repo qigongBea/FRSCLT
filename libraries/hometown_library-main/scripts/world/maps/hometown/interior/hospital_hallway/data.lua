@@ -253,7 +253,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* (It's a diagram showing a bunch of lines and a circle.)"
+            ["text"] = Game:locRaw("hospital_hallway_interactable_1")
           }
         }
       }

@@ -87,7 +87,7 @@ function item:onWorldUse(target)
         local rng = love.math.random(1, 15)
         local message, sound = self:selectNote()
 
-        cutscene:text("* There's a note on the wrapper...")
+        cutscene:text(Game:locRaw("dualdrink_line90_1"))
         local old_volume = Game.world.music.volume
         Game.world.music:setVolume(0.3 * old_volume)
         Assets.playSound(sound)

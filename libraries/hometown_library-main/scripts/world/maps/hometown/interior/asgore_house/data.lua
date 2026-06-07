@@ -299,7 +299,7 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text"] = "* (There is some dirty fur stuck in the drain.)"
+            ["text"] = Game:locRaw("asgore_house_interactable_1")
           }
         },
         {
@@ -331,7 +331,7 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text"] = "* (It's a small TV.)"
+            ["text"] = Game:locRaw("asgore_house_interactable_1")
           }
         },
         {
@@ -347,7 +347,7 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text"] = "* (Various bags of soil.)"
+            ["text"] = Game:locRaw("asgore_house_interactable_1")
           }
         },
         {
@@ -363,7 +363,7 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text"] = "* (It's a door.)\n[wait:5]* (It's locked.)"
+            ["text"] = Game:locRaw("asgore_house_interactable_1")
           }
         },
         {
@@ -378,7 +378,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* (It's a green flower,[wait:5] protected in a container...)"
+            ["text"] = Game:locRaw("asgore_house_interactable_1")
           }
         },
         {
@@ -393,7 +393,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* (It's a orange flower,[wait:5] protected in a container...)"
+            ["text"] = Game:locRaw("asgore_house_interactable_1")
           }
         },
         {
@@ -408,7 +408,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* (It's a yellow flower,[wait:5] protected in a container...)"
+            ["text"] = Game:locRaw("asgore_house_interactable_1")
           }
         },
         {
@@ -423,7 +423,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* (It's a golden flower,[wait:5] protected in a container...)"
+            ["text"] = Game:locRaw("asgore_house_interactable_1")
           }
         },
         {
@@ -438,7 +438,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* (It's a cyan flower,[wait:5] protected in a container...)"
+            ["text"] = Game:locRaw("asgore_house_interactable_1")
           }
         },
         {
@@ -453,7 +453,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* (It's a blue flower,[wait:5] protected in a container...)"
+            ["text"] = Game:locRaw("asgore_house_interactable_1")
           }
         },
         {
@@ -468,7 +468,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* (It's a purple flower,[wait:5] protected in a container...)"
+            ["text"] = Game:locRaw("asgore_house_interactable_1")
           }
         },
         {
@@ -522,7 +522,7 @@ return {
           visible = true,
           properties = {
             ["solid"] = true,
-            ["text"] = "* (It's a dirty watering can.)"
+            ["text"] = Game:locRaw("asgore_house_interactable_1")
           }
         },
         {
@@ -537,9 +537,9 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* (It's a note.)\n* (It says...)",
-            ["text2"] = "* No rent received.[wait:5] Again.\n[wait:5]* Stop giving away flowers.\n* Start selling them.",
-            ["text3"] = "* You have one month.\n \n         - C"
+            ["text1"] = Game:locRaw("asgore_house_interactable_1"),
+            ["text2"] = Game:locRaw("asgore_house_interactable_2"),
+            ["text3"] = Game:locRaw("asgore_house_interactable_3")
           }
         },
         {
@@ -554,7 +554,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* (It's an air mattress.)\n[wait:5]* (It's certainly not king-sized...)"
+            ["text"] = Game:locRaw("asgore_house_interactable_1")
           }
         }
       }

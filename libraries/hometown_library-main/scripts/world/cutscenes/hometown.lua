@@ -2,15 +2,15 @@ return {
 
     hospitalpiano = function(cutscene, event)
 
-        cutscene:text("* (It's an obligatory hospital piano,[wait:5] shrunk to fit in the corner.)")
-        cutscene:text("* (As a result,[wait:5] it's missing most of the good keys.)")
-        cutscene:text("* (Play it?)")
-        local opinion = cutscene:choicer({"Yes", "No"})
+        cutscene:text(Game:locRaw("hometown_hospitalpiano_1"))
+        cutscene:text(Game:locRaw("hometown_hospitalpiano_2"))
+        cutscene:text(Game:locRaw("hometown_hospitalpiano_3"))
+        local opinion = Game:locRaw("hometown_hospitalpiano_3_opt_1")enGame:locRaw("hometown_hospitalpiano_3_opt_2")oicer({"Yes", "No"})
             if opinion == 1 then
                 Assets.playSound("piano")
-                cutscene:text("* (Plink...)")
+                cutscene:text(Game:locRaw("hometown_hospitalpiano_4"))
             else
-                cutscene:text("* (Your hands linger over the keys doing nothing.)")
+                cutscene:text(Game:locRaw("hometown_hospitalpiano_5"))
                 
             end
         
@@ -18,45 +18,45 @@ return {
 
     asgorefridge = function(cutscene, event)
         
-        cutscene:text("* (It's a rusty fridge with some photos on it.)")
-        local opinion = cutscene:choicer({"\nOpen\nFridge\n", "Don't", "See photos"})
+        cutscene:text(Game:locRaw("hometown_asgorefridge_1"))
+        local opinion = Game:locRaw("hometown_asgorefridge_1_opt_1")"\Game:locRaw("hometown_asgorefridge_1_opt_2")FrGame:locRaw("hometown_asgorefridge_1_opt_3")n't", "See photos"})
             if opinion == 1 then
-              cutscene:text("* (All that's inside is a jar with a single pickle in it...)")
+              cutscene:text(Game:locRaw("hometown_asgorefridge_2"))
             elseif opinion == 3 then 
-              cutscene:text("* (A photo of your mother and father on their wedding day.)")
-              cutscene:text("* (She's holding a bouquet of seven flowers.)")
-              cutscene:text("* (A reindeer-looking monster stands nearby in a tuxedo.)")
-              cutscene:text("* (They all look happy.)")
+              cutscene:text(Game:locRaw("hometown_asgorefridge_3"))
+              cutscene:text(Game:locRaw("hometown_asgorefridge_4"))
+              cutscene:text(Game:locRaw("hometown_asgorefridge_5"))
+              cutscene:text(Game:locRaw("hometown_asgorefridge_6"))
             else
-              cutscene:text("* (You decide not to look.)")  
+              cutscene:text(Game:locRaw("hometown_asgorefridge_7"))  
             end
 
     end,
 
     librarybook1 = function(cutscene, event)
 
-      cutscene:text("* How To Care For A Human")
-      cutscene:text("* (It's a book for monsters about how to care for humans.)")
-      local opinion = cutscene:choicer({"Look in\nthe back", "Look inside"})
+      cutscene:text(Game:locRaw("hometown_librarybook1_1"))
+      cutscene:text(Game:locRaw("hometown_librarybook1_2"))
+      local opinion = Game:locRaw("hometown_librarybook1_2_opt_1")LoGame:locRaw("hometown_librarybook1_2_opt_2")ck", "Look inside"})
         if opinion == 1 then
-          cutscene:text("* (According to the card in the back...)")
-          cutscene:text("* (... looks like your mother took it repeatedly many years ago.)")
+          cutscene:text(Game:locRaw("hometown_librarybook1_3"))
+          cutscene:text(Game:locRaw("hometown_librarybook1_4"))
         else
-          cutscene:text("* (There are photos of unfamiliar humans inside.)")
-          cutscene:text("* (You shut the book quickly.)")
+          cutscene:text(Game:locRaw("hometown_librarybook1_5"))
+          cutscene:text(Game:locRaw("hometown_librarybook1_6"))
         end
 
     end,
 
     librarybook2 = function(cutscene, event)
 
-      cutscene:text("* (It's BOOK 1 about SOULS. Read it?)")
-      local opinion = cutscene:choicer({"Read", "Don't"})
+      cutscene:text(Game:locRaw("hometown_librarybook2_1"))
+      local opinion = Game:locRaw("hometown_librarybook2_1_opt_1")neGame:locRaw("hometown_librarybook2_1_opt_2")r({"Read", "Don't"})
         if opinion == 1 then
-          cutscene:text("* The SOUL has been called many things.")
-          cutscene:text("* The font of our compassion. The source of our will.")
-          cutscene:text("* The container of our \"life force.\"")
-          cutscene:text("* But even now,[wait:5] the true function of it is unknown.")
+          cutscene:text(Game:locRaw("hometown_librarybook2_2"))
+          cutscene:text(Game:locRaw("hometown_librarybook2_3"))
+          cutscene:text(Game:locRaw("hometown_librarybook2_4"))
+          cutscene:text(Game:locRaw("hometown_librarybook2_5"))
         else
           
         end
@@ -66,9 +66,9 @@ return {
     papyrushouse = function(cutscene, event)
 
       Assets.playSound("knock")
-      cutscene:text("* (Knock knock knock...)")
-      cutscene:text("* (...)")
-      cutscene:text("* (No response...)\n[wait:5]* (... but the distant trousle of bones.)")
+      cutscene:text(Game:locRaw("hometown_papyrushouse_1"))
+      cutscene:text(Game:locRaw("hometown_papyrushouse_2"))
+      cutscene:text(Game:locRaw("hometown_papyrushouse_3"))
 
     end,
 
@@ -80,17 +80,17 @@ return {
 
     iceesoda = function(cutscene, event)
 
-      cutscene:text("* (It's a soda-dispensing machine.)")
-      local opinion = cutscene:choicer({"Inspect", "Not"})
+      cutscene:text(Game:locRaw("hometown_iceesoda_1"))
+      local opinion = Game:locRaw("hometown_iceesoda_1_opt_1")chGame:locRaw("hometown_iceesoda_1_opt_2")({"Inspect", "Not"})
         if opinion == 1 then
-          cutscene:text("* (You took a look at the flavors.)")
-          cutscene:text("* WATER")
-          cutscene:text("* ICE")
-          cutscene:text("* DOUBLE-ICE")
-          cutscene:text("* BREAD")
-          cutscene:text("* FLAMIN HOT CHEESE SODA")
-          cutscene:text("* GAMER BLOOD ENERGY DRINK")
-          cutscene:text("* Juice (Red Flavor)")
+          cutscene:text(Game:locRaw("hometown_iceesoda_2"))
+          cutscene:text(Game:locRaw("hometown_iceesoda_3"))
+          cutscene:text(Game:locRaw("hometown_iceesoda_4"))
+          cutscene:text(Game:locRaw("hometown_iceesoda_5"))
+          cutscene:text(Game:locRaw("hometown_iceesoda_6"))
+          cutscene:text(Game:locRaw("hometown_iceesoda_7"))
+          cutscene:text(Game:locRaw("hometown_iceesoda_8"))
+          cutscene:text(Game:locRaw("hometown_iceesoda_9"))
         else
 
         end

@@ -1,7 +1,7 @@
 return {
 
     UNUSED = function(cutscene)
-        cutscene:text(Game:locRaw("housetext_dess_1")) 
+        cutscene:text(Game:locRaw("housetext_UNUSED_1")) 
     end,
     dessroom = function(cutscene)
         local noelle = cutscene:getCharacter("noelle")
@@ -26,7 +26,7 @@ return {
     end,
     noelleroom = function(cutscene, event)
         cutscene:text(Game:locRaw("housetext_noelleroom_1"))
-        if cutscene:choicer({ Game:locRaw("housetext_noelleroom_choice_1"), Game:locRaw("housetext_noelleroom_choice_2") }) == 1 then
+        if cGame:locRaw("housetext_noelleroom_1_opt_1")neGame:locRaw("housetext_noelleroom_1_opt_2")icer({ "Yes", "No" }) == 1 then
             local kris = assert(cutscene:getCharacter("kris"))
             local noelle = cutscene:getCharacter("noelle")
             local susie = cutscene:getCharacter("susie")
@@ -173,11 +173,11 @@ return {
     sitdown = function (cutscene)
         local noelle = cutscene:getCharacter("noelle")
         local susie = cutscene:getCharacter("susie")
-        cutscene:text(Game:locRaw("housetext_fridge_5")) 
+        cutscene:text(Game:locRaw("housetext_sitdown_1")) 
         cutscene:setSpeaker(noelle)
-        cutscene:text(Game:locRaw("housetext_fridge_6"), "sad_smile_b") 
+        cutscene:text(Game:locRaw("housetext_sitdown_2"), "sad_smile_b") 
         cutscene:setSpeaker(susie)
-        cutscene:text(Game:locRaw("housetext_fridge_7"), "shy_down") 
-        cutscene:text(Game:locRaw("housetext_fridge_8"), "susie_dream_grin")
+        cutscene:text(Game:locRaw("housetext_sitdown_3"), "shy_down") 
+        cutscene:text(Game:locRaw("housetext_sitdown_4"), "susie_dream_grin")
     end,
 }

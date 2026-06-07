@@ -190,7 +190,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* (The door is locked.)"
+            ["text"] = Game:locRaw("unused_class_interactable_1")
           }
         },
         {
@@ -205,7 +205,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text"] = "* (It's a lightswitch.)"
+            ["text"] = Game:locRaw("unused_class_interactable_1")
           }
         },
         {
@@ -220,8 +220,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* (It's a yellowed, poorly-drawn picture of a green turtle.)",
-            ["text2"] = "* (It's signed 'Alvin.')"
+            ["text1"] = Game:locRaw("unused_class_interactable_1"),
+            ["text2"] = Game:locRaw("unused_class_interactable_2")
           }
         },
         {

@@ -4,7 +4,7 @@ This is the repo for the multi-language system of the DELTARUNE fangame *DELTARU
 此仓库用于DELTARUNE同人游戏《三角符文：预报》的多语言支持，将支援英语与简体中文。
 
 Note: This localization project is currently on hiatus, for avoiding conflict brought by the coming updates of the game's first half.<br>
-注：由于游戏前半部分翻新，为避免冲突，此项目项目暂停。
+注：由于游戏前半部分翻新，为避免冲突，此项目暂停。
 
 ## PREVIEWS / 预览:
 - [Multi-language Test #1](https://www.bilibili.com/video/BV1BAwMzgEyt/?spm_id_from=0.0.homepage.video_card.click)
